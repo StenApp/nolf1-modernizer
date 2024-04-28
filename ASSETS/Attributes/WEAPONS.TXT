@@ -102,19 +102,22 @@ Weapon32			= "Space Lasergun"
 Weapon33			= "Space Fists"
 Weapon34			= "Space Atomic Lasergun"
 Weapon35			= "Space Code Breaker"
-LastPlayerWeapon	= 35
+Weapon36			= "Thief Lock Pick"
+Weapon37			= "Thief Safe Cracker"
+Weapon38			= "Pen Dart"
+LastPlayerWeapon		= 38
 
 // Non player weapons (must come after the player weapons)... 
 //
-Weapon36			= "Heli_Machinegun"
-Weapon37			= "Helicopter RL"
-Weapon38			= "Scot Punch"
-Weapon39			= "Scot Slam"
-Weapon40			= "German Sword"
-Weapon41			= "Shark Bite"
-Weapon42			= "Hand Grenade"
-Weapon43			= "Dynamite"
-Weapon44			= "Super Shark Bite"
+Weapon39			= "Heli_Machinegun"
+Weapon40			= "Helicopter RL"
+Weapon41			= "Scot Punch"
+Weapon42			= "Scot Slam"
+Weapon43			= "German Sword"
+Weapon44			= "Shark Bite"
+Weapon45			= "Hand Grenade"
+Weapon46			= "Dynamite"
+Weapon47			= "Super Shark Bite"
 
 /************************************************************************
 **
@@ -2112,6 +2115,97 @@ FireFXName          = ""
 TracerFXName        = ""
 WeaponAniOverride	= ""
 
+/*
+** Dummy Ammo for aquire weapons
+*/
+
+[Ammo54]
+
+Name			= "dummy"
+NameId			= 4109
+DescId			= 4309
+Type			= 0
+Icon			= ""
+SmallIcon		= ""
+MaxAmount		= 100
+SelectionAmount		= 20
+SpawnedAmount		= 10
+InstDamage		= 80
+InstDamageType		= 2
+AreaDamage		= 0
+AreaDamageType		= 0
+AreaDamageRadius	= 0
+ProgDamage		= 0.000000
+ProgDamageType		= 0
+ProgDamageDuration	= 0.000000
+ProgDamageRadius	= 0.000000
+ProgDamageLifetime	= 0.000000
+FireRecoilMult		= 1.000000
+ImpactFXName		= ""
+UWImpactFXName		= ""
+FireFXName		= ""
+TracerFXName		= ""
+WeaponAniOverride	= ""
+
+/*
+** Ammo55 - Safe Cracker Gadget ammo
+*/
+
+[Ammo55]
+
+Name				= "Safe Cra Gadget"
+NameId              = 4146
+DescId              = 4346
+Type                = 3
+Icon                = "Interface\Photos\Ammo\Func_Cracker.dtx"
+SmallIcon           = "Interface\Photos\Ammo\Func_Cracker.dtx"
+MaxAmount           = 1
+SelectionAmount		= 1
+SpawnedAmount       = 1
+InstDamage          = 0
+InstDamageType      = 22
+AreaDamage			= 0
+AreaDamageType		= 0
+AreaDamageRadius    = 0
+ProgDamage          = 0.000000
+ProgDamageType      = 0
+ProgDamageDuration  = 0.000000
+ProgDamageRadius	= 0.000000
+ProgDamageLifetime  = 0.000000
+FireRecoilMult		= 1.000000
+
+/*
+** Ammo56 - Pen dart bolt ammo
+*/
+
+[Ammo56]
+
+Name				= "Nib"
+NameId				= 4147
+DescId				= 4347
+Type				= 1
+Icon				= "Interface\Photos\Ammo\Nib_Def.dtx"
+SmallIcon			= "Interface\Photos\Ammo\Nib_Def.dtx"
+MaxAmount			= 50
+SelectionAmount			= 20
+SpawnedAmount			= 20
+InstDamage			= 50
+InstDamageType			= 2
+AreaDamage			= 0
+AreaDamageType			= 0
+AreaDamageRadius		= 0
+ProgDamage			= 0.000000
+ProgDamageType			= 0
+ProgDamageDuration		= 0.000000
+ProgDamageRadius		= 0.000000
+ProgDamageLifetime		= 0.000000
+FireRecoilMult			= 1.000000
+ProjectileFXName		= "Nib_Bolt"
+ImpactFXName			= "Nib_Spear"
+UWImpactFXName			= "Nib_UWSpear"
+FireFXName			= "FireSoundOnly"
+TracerFXName			= ""
+WeaponAniOverride		= ""
 
 /************************************************************************
 **
@@ -5208,6 +5302,184 @@ CanBeMapped			= 0
 FireDelay			= 580
 HideWhenEmpty		= 0
 
+/*
+** Thief Levels (ps2)Gadget: Safe Cracker
+*/
+
+[Weapon45]
+
+Name				= "Thief Safe Cracker"
+NameId				 = 4033
+DescriptionId			= 4083
+Gadget				= 1
+AniType				= 2
+Icon				= "Interface\Photos\Weapons\PS2SC.dtx"
+SmallIcon			= "Interface\Photos\Weapons\PS2SC.dtx"
+Photo				= "Interface\Photos\Weapons\PS2SC.dtx"
+Pos				= <0.100000, -0.800000, 3.000000>
+MuzzlePos			= <2.100000, 1.700000, 17.400000>
+MinPerturb			= 0
+MaxPerturb			= 0
+Range				= 100
+Recoil				= <0.000000, 0.000000, 0.000000>
+VectorsPerRound			= 1
+PVModel				= "Guns\Models_PV\PS2SafeCracker_PV.abc"
+PVSkin				= "Guns\Skins_PV\PS2SafeCracker_PV.dtx"
+PVMuzzleFXName			= ""
+HHModel				= "guns\models_hh\PS2SafeCracker_HH.abc"
+HHSkin				= "Guns\Skins_PV\PS2SafeCracker_PV.dtx"  
+HHModelScale			= <1.000000, 1.000000, 1.000000>
+HHBreachOffset			= -10.000000
+HHMuzzleFXName			= ""
+InterfaceModel			= "Guns\Models_HH\PS2SafeCracker__hh.abc"
+InterfaceSkin			= "Guns\Skins_PV\PS2SafeCracker_PV.dtx"
+InterfaceModelScale		= 1.000000
+InterfaceOffset			= <0.000000, 0.000000, 0.000000>
+SilencedFireSnd			 = ""
+AltFireSnd			= ""
+FireSnd				= "Guns\Snd\safe\fire.wav"
+DryFireSnd			= ""
+ReloadSnd1			= ""
+SelectSnd			= "Guns\Snd\safe\select.wav"
+DeselectSnd			= "Guns\Snd\safe\deselect.wav"
+FireSndRadius			= 128
+AIFireSndRadius			= 64
+EnvironmentMap			= 1
+InfiniteAmmo			= 0
+ShotsPerClip			= 1
+AmmoMultiplier			= 1
+FireRecoilPitch			= 0.000000
+FireRecoilDecay			= 0.000000
+AmmoName0			= "Safe Cra Gadget"
+AIMinBurstInterval		= 0.500000
+AIMaxBurstInterval		= 1.500000
+AIMinBurstShots			= 1
+AIMaxBurstShots			= 5
+LooksDangerous			= 0
+CanBeDefault			= 0
+CanBeMapped			= 1
+FireDelay			= 810
+HideWhenEmpty			= 1
+
+/*
+** PS2 Pen Dart
+*/
+
+[Weapon46]
+
+Name				= "Pen Dart"
+NameId				= 4035
+DescriptionId			= 4085
+Gadget				= 0
+AniType				= 0
+Icon				= "Interface\Photos\Weapons\PS2pd.dtx"
+SmallIcon			= "Interface\Photos\Weapons\PS2pd.dtx"
+Photo				= "Interface\Photos\Weapons\PS2pd.dtx"
+Pos				= <-0.150000, -0.3500000, 1.8500000>
+MuzzlePos			= <2.200000, -1.400000, 17.000000>
+MinPerturb			= 3
+MaxPerturb			= 10
+Range				= 10000
+Recoil				= <0.000000, 0.000000, 0.000000>
+VectorsPerRound			= 1
+PVModel				= "Guns\Models_PV\PS2pendart_pv.abc"
+PVSkin				= "Guns\Skins_PV\PS2pendart_pv.dtx"
+PVSkin2				= "Guns\Skins_PV\ActionHands_pv.dtx"
+PVSkin3				= "Guns\Skins_PV\PS2pendart2_pv.dtx"
+PVMuzzleFXName			= ""
+HHModel				= "Guns\Models_HH\PS2pendart_hh.abc"
+HHSkin				= "Guns\Skins_PV\PS2pendart_pv.dtx"
+HHModelScale			= <1.000000, 1.000000, 1.000000>
+HHBreachOffset			= -10.000000
+HHMuzzleFXName			= ""
+InterfaceModel			= "Guns\Models_HH\PS2pendart_hh.abc"
+InterfaceSkin			= "Guns\Skins_PV\PS2pendart_pv.dtx"
+InterfaceModelScale		= 1.0
+InterfaceOffset			= <0.000000, 0.000000, 0.000000>
+SilencedFireSnd			= ""
+AltFireSnd			= ""
+FireSnd				= "Guns\Snd\Crossbow\pendart.wav"
+DryFireSnd			= "Guns\Snd\ak47\dryfire.wav"
+ReloadSnd1			= ""
+ReloadSnd2			= ""
+SelectSnd			= "Guns\Snd\barrette\fire.wav"
+DeselectSnd			= "Guns\Snd\cam_dis\deselect.wav"
+FireSndRadius			= 128
+AIFireSndRadius			= 64
+EnvironmentMap			= 1
+InfiniteAmmo			= 0
+ShotsPerClip			= 1
+AmmoMultiplier			= 1
+FireRecoilPitch			= 1.000000
+FireRecoilDecay			= 0.175000
+AmmoName0			= "Nib"
+AIMinBurstInterval		= 0.500000
+AIMaxBurstInterval		= 1.500000
+AIMinBurstShots			= 1
+AIMaxBurstShots			= 1
+LooksDangerous			= 1
+CanBeDefault			= 1
+CanBeMapped			= 1
+FireDelay			= 250
+HideWhenEmpty			= 0
+
+/*
+** Ps2 Lock Pick
+*/
+
+[Weapon47]
+
+Name				= "Thief Lock Pick"
+NameId				= 4034
+DescriptionId			= 4084
+Gadget				= 1
+AniType				= 2
+Icon				= "Interface\Photos\Weapons\PS2lp.dtx"
+SmallIcon			= "Interface\Photos\Weapons\PS2lp.dtx"
+Photo				= "Interface\Photos\Weapons\PS2lp.dtx"
+Pos				= <0.100000, -0.300000, 1.7500000>
+MuzzlePos			= <1.000000, -1.100000, 13.800000>
+MinPerturb			= 0
+MaxPerturb			= 5
+Range				= 100
+Recoil				= <0.000000, 0.000000, 0.000000>
+VectorsPerRound			= 1
+PVModel				= "Guns\Models_PV\PS2lockpick_pv.abc"
+PVSkin				= "Guns\Skins_PV\PS2lockpick_pv.dtx"
+PVMuzzleFXName			= ""
+HHModel				= "Guns\Models_HH\PS2lockpick_hh.abc"
+HHSkin				= "Guns\Skins_PV\PS2lockpick_pv.dtx" 
+HHModelScale			= <1.000000, 1.000000, 1.000000>
+HHBreachOffset			= 0.000000
+HHMuzzleFXName			= ""
+InterfaceModel			= "Guns\Models_HH\barret_hh.abc"
+InterfaceSkin			= "Guns\Skins_PV\PS2lockpick_pv.dtx"
+InterfaceModelScale		= 3.500000
+InterfaceOffset			= <0.000000, 0.000000, 0.000000>
+SilencedFireSnd			 = ""
+FireSnd				= "Guns\Snd\lipstick\reload1.wav"
+DryFireSnd			= ""
+ReloadSnd1			= ""
+SelectSnd			= "Guns\Snd\barrette\select.wav"
+DeselectSnd			= "Guns\Snd\barrette\deselect.wav"
+FireSndRadius			 = 128
+AIFireSndRadius			= 0
+EnvironmentMap			= 1
+InfiniteAmmo			= 1
+ShotsPerClip			= 1
+AmmoMultiplier			= 1
+FireRecoilPitch			= 0.100000
+FireRecoilDecay			= 0.175000
+AmmoName0			= "BarretteLockpick"
+AIMinBurstInterval		= 0.500000
+AIMaxBurstInterval		= 1.500000
+AIMinBurstShots			= 1
+AIMaxBurstShots			= 5
+LooksDangerous			= 0
+CanBeDefault			= 0
+CanBeMapped			= 1
+FireDelay			= 800
+HideWhenEmpty			= 0
 
 /************************************************************************
 **
