@@ -1417,7 +1417,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_MISSION_OBJ_5088    "Find your way out of the freighter"
-    IDS_MISSION_OBJ_5089    "<insert mission objective here>"
+    IDS_MISSION_OBJ_5089    "Break into the pub's two safes and steal contents without alerting authorities"
     IDS_MISSION_OBJ_5090    "<MISSION 7 OBJECTIVES>"
     IDS_MISSION_OBJ_5091    "Locate Baron Dumas' ""private"" office"
     IDS_MISSION_OBJ_5092    "Search for evidence linking the Baron to H.A.R.M."
@@ -7827,7 +7827,6 @@ BEGIN
     IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it"
     IDS_INTEL_TEXT_8021     "Spare change"
     IDS_MISSION_OBJ_5326    "Exit the pub"
-    IDS_MISSION_OBJ_5089    "Break into the pub's two safes and steal contents without alerting authorities"
     IDS_DIALOGUE_14001      "All right, Cate, let's not be greedy tonight.\nThree picks and come straight home."
     IDS_DIALOGUE_14002      "Which do you prefer, the violet or avocado?"
     IDS_DIALOGUE_14003      "What's wrong with the purse you have now?"
