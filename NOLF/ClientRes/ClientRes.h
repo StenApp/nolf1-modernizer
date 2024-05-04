@@ -6527,13 +6527,14 @@
 #define IDS_MISSIONFAILURE36			6535
 #define IDS_MISSIONFAILURE37			6536
 #define IDS_MISSIONFAILURE38			6537
-
+#define IDS_MISSION_OBJ_5326			5326
+  
 //IDS_MISSION_OBJ_5047 already defined
 //IDS_MISSION_OBJ_5048 already defined
 //IDS_INTEL_20541 already definded
 //IDS_INTEL_20542 already definded
 //IDS_INTEL_20543 already definded
-//IDS_MISSION_OBJ_5325 already defined
+
 //IDS_MISSION_OBJ_5089 already defined
 //IDS_MISSION_OBJ_5213 already defined
 //IDS_MISSION_OBJ_5214 already defined
