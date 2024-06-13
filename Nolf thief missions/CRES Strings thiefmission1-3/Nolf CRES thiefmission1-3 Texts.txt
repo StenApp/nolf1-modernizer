@@ -1,0 +1,160 @@
+//Nine years ago...
+//Scene 1, 2, 3
+
+//Dummy Ammo54 maps to .308 FMJ IDS
+//4109
+//4309
+
+//4146
+IDS_AMMO_55             "Safe Cracker"
+//4346
+IDS_AMMO_DESC_55        "Device to bypass the combination locking mechanism found on most safes."
+//4147
+IDS_AMMO_56             "Pen dart bolt"
+//4347
+IDS_AMMO_DESC_56        "Pen dart ammunition."
+//
+
+//4033
+IDS_WEAPON_36           "Safe Cracker" 
+//4083
+IDS_WEAPON_DESC_36      "A low-tech device that bypasses the round combination locking mechanism found on many safes./nThe more complicated the mechanism, the longer it will take to disable." 
+//4034
+IDS_WEAPON_37           "Lock Picking Tools"
+//4084
+IDS_WEAPON_DESC_37      "A standard thief's lock picking tools ideal for bypassing keyed padlocks.\nThe more complicated the mechanism, the longer it will take to pick.\n\nNote that lock picking tools only work on padlocks with keyholes."
+//4035
+IDS_WEAPON_38           "Pen Dart"
+//4085
+IDS_WEAPON_DESC_38      "A common pen dart useful for disabling foes silently. Shoots a variety of ammunition."
+
+
+
+//6535
+IDS_MISSIONFAILURE36    "You're a thief not a thug, you've been arrested for assaulting a police officer.
+//6536
+IDS_MISSIONFAILURE37    "You're a thief not a thug, you've been arrested for assaulting a civilian.
+//6537
+IDS_MISSIONFAILURE38    "You've been arrested."
+
+//688
+IDS_INTEL_MONEYBAG
+//689
+IDS_INTEL_HANDBAG
+//690
+IDS_INTEL_PAPERMONEY
+
+//IDS_INTEL_TEXT_8018 Harm Briefcase default text
+//IDS_INTEL_TEXT_8019 HandBag default text
+//8020
+IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it"
+//8021
+IDS_INTEL_TEXT_8021     "Spare change"
+
+"Nine years ago..."
+
+//thiefmission1
+
+
+
+
+IDS_MISSION_OBJ_5047    "Steal three handbags or briefcases without alerting authorities"
+IDS_MISSION_OBJ_5048    "Head back to flat"
+
+IDS_INTEL_20541         "Contains twenty pounds and a receipt for two dresses, two hats, and two pairs of shoes."
+IDS_INTEL_20542         "Contains loose change and a wad of soggy tissues"
+IDS_INTEL_20543         "Contains a man's wallet, order slip for a dozen roses and bottle of cheap cologne"
+
+
+//14001-14074
+IDS_DIALOGUE_14001      "All right, Cate, let's not be greedy tonight.\nThree picks and come straight home."
+IDS_DIALOGUE_14002      "Which do you prefer, the violet or avocado?"
+IDS_DIALOGUE_14003      "What's wrong with the purse you have now?"
+IDS_DIALOGUE_14004      "That raggedy old thing? I'm embarrassed to be seen with it in public."
+IDS_DIALOGUE_14005      "You bought it last month!"
+IDS_DIALOGUE_14006      "I know, but... well, it doesn't go with my new shoes."
+IDS_DIALOGUE_14007      "New shoes? Darling, this vacation is costing us an arm and a leg.\nYou keep spending money like this, we'll have to swim home."
+IDS_DIALOGUE_14008      "Well, you can't expect me to wear shoes that clash with my new dress."
+IDS_DIALOGUE_14009      "New dress?"
+IDS_DIALOGUE_14010      "Don't be mad, Sweetie. I just want to look good for you.\nYou don't want people thinking you married a country bumpkin, do you?"
+IDS_DIALOGUE_14011      "Darling..."
+IDS_DIALOGUE_14012      "Besides, I couldn't resist. The dress goes perfectly with the wonderful new hat I bought."
+IDS_DIALOGUE_14013      "(groans)"
+IDS_DIALOGUE_14014      "Please ring!"
+IDS_DIALOGUE_14015      "Ring, damn you!"
+IDS_DIALOGUE_14016      "C'mon, ring-a-ling-alingy?"
+IDS_DIALOGUE_14017      "Why won't she call me back?"
+IDS_DIALOGUE_14018      "Hello?"
+IDS_DIALOGUE_14019      "Is that you, Lambchop?"
+IDS_DIALOGUE_14020      "Helloooo?"
+IDS_DIALOGUE_14021      "I'm sorry about what I said. When I said plump, I meant it in a cuddly way. Really!"
+IDS_DIALOGUE_14022      "Please say something."
+IDS_DIALOGUE_14023      "You know I love your cooking, Sweet Pea. The dog looked so hungry I couldn't help myself."
+IDS_DIALOGUE_14024      "Are you mad because of what I said about your hair? Beehive, cocoon--it was an honest mistake."
+IDS_DIALOGUE_14025      "Are you still there, Lumpkins?"
+IDS_DIALOGUE_14026      "Please take me back."
+IDS_DIALOGUE_14027      "(sniffles)"
+IDS_DIALOGUE_14028      "I never want to see that big oaf again."
+IDS_DIALOGUE_14029      "I can't believe he called me plump!"
+IDS_DIALOGUE_14030      "And he hates my cooking!"
+IDS_DIALOGUE_14031      "Time to head home."
+
+//thiefmission2
+
+//5326
+IDS_MISSION_OBJ_5326    "Exit the pub"
+IDS_MISSION_OBJ_5089    "Break into the pub's two safes and steal contents without alerting authorities"
+
+IDS_DIALOGUE_14032      "This'll get you into the basement of the pub...excuse me, the 'Brasserie.'\nNormally the place would be empty this time o' night, but they had a wedding party ran late.\nMaybe you should try some other night..."
+IDS_DIALOGUE_14033      "Surely you jest. What else do I need to know?"
+IDS_DIALOGUE_14034      "There's two safes. One of 'em's near the bar on the ground level.\nThe other's in the owner's office upstairs. They're both hidden behind wall panels."
+IDS_DIALOGUE_14035      "If you don't mind me asking, how are you planning on cracking those safes?"
+IDS_DIALOGUE_14036      "That's a trade secret, laddie."
+IDS_DIALOGUE_14037      "Right-o. Be careful, then. There's a lot of coppers out tonight.\nI'm not sure what's the best way out, actually."
+IDS_DIALOGUE_14038      "The front door should do nicely."
+IDS_DIALOGUE_14039      "You've got guts. I hope you've got some brains too."
+IDS_DIALOGUE_14040      "I'll be upstairs. Your and Rory's wages are in the till."
+IDS_DIALOGUE_14041      "Oh, that's not good."
+IDS_DIALOGUE_14042      "Bloody French onion soup."
+IDS_DIALOGUE_14043      "It's a wonder we get repeat customers."
+IDS_DIALOGUE_14044      "Jumpin' hooligans, we've been robbed!"
+IDS_DIALOGUE_14045      "Now I just have to get out of here in one piece."
+
+//thiefmission3
+
+IDS_MISSION_OBJ_5212    "Find the Robin's Egg diamond on display and exchange with fake without alerting security"
+IDS_MISSION_OBJ_5213    "Pick up trash to gain the aid of the Grey Servant ghost"
+IDS_MISSION_OBJ_5214    "Replace with fake diamond"
+IDS_MISSION_OBJ_5215    "Return the diamond's exhibit case to its original state"
+IDS_MISSION_OBJ_5216    "Exit the castle"
+
+IDS_DIALOGUE_14046      "You're late. What do you have for me?"
+IDS_DIALOGUE_14047      "One bottle of Glen Rothes, Scotland's finest whiskey."
+IDS_DIALOGUE_14048      "Give her here."
+IDS_DIALOGUE_14049      "What about the replica?"
+IDS_DIALOGUE_14050      "It wasn't easy. Security's tight 'round the Robin's Egg. I took a big risk."
+IDS_DIALOGUE_14051      "I thought you might feel that way."
+IDS_DIALOGUE_14052      "You're a fine young woman. Here, catch."
+IDS_DIALOGUE_14053      "Will it fool them?"
+IDS_DIALOGUE_14054      "I can barely tell the difference myself."
+IDS_DIALOGUE_14055      "How do I get in?"
+IDS_DIALOGUE_14056      "Are you still there?"
+IDS_DIALOGUE_14057      "Just inspecting the merchandise. The way in is through the second window from the left,\nabove the north retaining wall. I've left the shutters unlocked. After that, it's up to you."
+IDS_DIALOGUE_14058      "One more thing. I've heard stories. They say this place is haunted."
+IDS_DIALOGUE_14059      "You speak of the Grey Servant."
+IDS_DIALOGUE_14060      "The story goes that Sir Alfred Cramble, the Lord of this manor,\nhad been carrying on with a pretty young maid of French descent.\n Lady Cramble, who they say wasn't right in the head to begin with,\ntook it upon herself to end the affair... with an axe.\nOne afternoon, as the poor girl was cleaning the great hall,\nLady Cramble creeps up behind her and whack, off with her head."
+IDS_DIALOGUE_14061      "Is the story true?"
+IDS_DIALOGUE_14062      "No one knows for sure, but it's believed the girl still roams these halls making sure everything stays spick and span."
+IDS_DIALOGUE_14063      "Not a very romantic legend."
+IDS_DIALOGUE_14064      "Be that as it may, I'm told that if the Grey Servant sees you picking up trash or straightening a vase, she'll be moved to aid you."
+IDS_DIALOGUE_14065      "Hmmm, I'll keep that in mind."
+IDS_DIALOGUE_14066      "This place certainly looks haunted."
+IDS_DIALOGUE_14067      "What a marvelous castle, don't you think?"
+IDS_DIALOGUE_14068      "Hmmm? Oh, yes, pet. Magnificent."
+IDS_DIALOGUE_14069      "What's wrong?"
+IDS_DIALOGUE_14070      "Just a bit haggard, I'm afraid. We've been sightseeing nonstop since we arrived."
+IDS_DIALOGUE_14071      "That's a pity. I was going to suggest we drive to Aberdeen tomorrow morning.\nThe brochure says you can actually herd sheep yourself."
+IDS_DIALOGUE_14072      "Darling, I don't think I'm up to it."
+IDS_DIALOGUE_14073      "How about Loch Ness? The travel agency gave me the name of a tour guide\nwho guarantees a sighting of the Loch Ness monster or your money back."
+IDS_DIALOGUE_14074      "Really? Well, I suppose we shouldn't pass that up.\nNot that I'm particularly anxious to try monster hunting, mind you. I've had quite enough of ghosts and goblins."
+
