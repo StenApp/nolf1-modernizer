@@ -1,0 +1,18 @@
+[Mission4]
+//	Unexpected Turbulence - Mission 3
+Level0			= "Worlds\m03s01"
+Level1			= "Worlds\thiefmission1"
+Level2			= "Worlds\m03s02
+
+
+[Mission8]
+//	A Tenuous Lead - Mission 5
+Level6			= "Worlds\m05s04
+Level7			= "Worlds\thiefmission2"
+Level8			= "Worlds\m05s05
+
+[Mission22]
+//	Confrontation - Mission 13
+Level1			= "Worlds\m13s01"
+Level2			= "Worlds\thiefmission3"
+Level3			= "Worlds\m13s02"
