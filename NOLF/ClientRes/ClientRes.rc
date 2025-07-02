@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// Englisch (USA) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -603,6 +603,9 @@ END
 
 STRINGTABLE
 BEGIN
+    IDS_INTEL_MONEYBAG      "Moneybag %1!d!"
+    IDS_INTEL_HANDBAG       "Handbag %1!d!"
+    IDS_INTEL_PAPERMONEY    "Papermoney %1!d!"
     IDS_NET_GAME_END        "Level ending conditions"
     IDS_NET_GAME_END_HELP   "Sets the conditions that end the map."
     IDS_NGE_FRAGS           "Frag limit reached"
@@ -650,6 +653,7 @@ BEGIN
     IDS_NETERR_INIT         "ERROR - Unable to initialize the networking system."
     IDS_NETERR_CANTBINDTOPORT "Unable to bind to the requested port."
     IDS_NETERR_NOTSAMEGUID  "ERROR - Unable to join because the game server is a different version or a different game."
+    IDS_THIEFMISSION        "Nine years ago..."
 END
 
 STRINGTABLE
@@ -1216,6 +1220,8 @@ STRINGTABLE
 BEGIN
     IDS_AMMO_45             "Corrector HE"
     IDS_AMMO_46             "9mm cyanide-tipped"
+    IDS_AMMO_55             "Safe Cracker"
+    IDS_AMMO_56             "Pen dart bolt"
     IDS_MOD_1               "Silencer for Shepherd Arms P38 9mm"
     IDS_MOD_2               "Laser sight for Shepherd Arms P38 9mm"
     IDS_MOD_3               "Laser sight for Petri Airweight .38 revolver"
@@ -1726,6 +1732,7 @@ BEGIN
     IDS_MISSION_OBJ_5323    "The baron's ""private"" office must be hidden. You'll have to find it."
     IDS_MISSION_OBJ_5324    "There must be a secret door in his office."
     IDS_MISSION_OBJ_5325    "Continue deeper into the compound and search for additional evidence"
+    IDS_MISSION_OBJ_5326    "Exit the pub"
 END
 
 STRINGTABLE
@@ -1970,6 +1977,8 @@ BEGIN
     IDS_AMMO_DESC_44        "Body remover powder."
     IDS_AMMO_DESC_45        "High explosive ammuntion for the Bacalov Corrector."
     IDS_AMMO_DESC_46        "9mm rounds with tiny poison capsules inserted at the tip of each cartridge. Effective against living targets."
+    IDS_AMMO_DESC_55        "Device to bypass the combination locking mechanism found on most safes."
+    IDS_AMMO_DESC_56        "Pen dart ammunition."
 END
 
 STRINGTABLE
@@ -1977,6 +1986,9 @@ BEGIN
     IDS_WEAPON_DESC_31      "Sprinkle some of this powder on a dead body and watch it dissolve into ether."
     IDS_WEAPON_DESC_32      "Sprinkle some of this powder on a dead body and watch it dissolve into ether."
     IDS_WEAPON_DESC_33      "A H.A.R.M. prototype laser weapon that boasts increased power and improved aesthetic appeal over the standard issue laser gun."
+    IDS_WEAPON_DESC_36      "A low-tech device that bypasses the round combination locking mechanism found on many safes./nThe more complicated the mechanism, the longer it will take to disable."
+    IDS_WEAPON_DESC_37      "A standard thief's lock picking tools ideal for bypassing keyed padlocks.\nThe more complicated the mechanism, the longer it will take to pick.\n\nNote that lock picking tools only work on padlocks with keyholes."
+    IDS_WEAPON_DESC_38      "A common pen dart useful for disabling foes silently. Shoots a variety of ammunition."
 END
 
 STRINGTABLE
@@ -6369,6 +6381,9 @@ END
 STRINGTABLE
 BEGIN
     IDS_WEAPON_33           "Super Atomic Laser Weapon"
+    IDS_WEAPON_36           "Safe Cracker"
+    IDS_WEAPON_37           "Lock Picking Tools"
+    IDS_WEAPON_38           "Pen Dart"
 END
 
 STRINGTABLE
@@ -6961,7 +6976,7 @@ BEGIN
     IDS_INTEL_20097         "An invoice from Das Einsame Valkyrie for 97 cases of beer."
     IDS_INTEL_20098         "Ms. Archer, if you find yourself in dire need of a certain gadget, such as a lighter, that you elected not to bring with you into a mission, you'll most likely find one somewhere in the area.\n\nWerner von Haupt"
     IDS_INTEL_20099         "Invoice for a shipment of goat feed."
-    IDS_INTEL_20100         "<NTELLIGENCE ITEMS FOR M02S03>"
+    IDS_INTEL_20100         "<INTELLIGENCE ITEMS FOR M02S03>"
     IDS_INTEL_20101         "STASI MEMO:\n\nTo: Animal Services\nFrom: Lab 42\n\nWhat have you done to the version four animals??? The explosion ratio is significantly smaller than the version three animals. Please investigate immediately!"
     IDS_INTEL_20102         "Contains an unidentifiable animal part."
     IDS_INTEL_20103         "Jurgen's Task List\n\nFinish animal fatality report for Director Gerhardt\nApply inflammatory ointment to Mannfred Grueber\nOrder scrub brushes\nContact Produce Section regarding spoiled yams"
@@ -6985,7 +7000,7 @@ BEGIN
     IDS_INTEL_20117         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20118         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20119         "<Insert Intelligence Item Text Here>"
-    IDS_INTEL_20120         "<NTELLIGENCE ITEMS FOR M03S02>"
+    IDS_INTEL_20120         "<INTELLIGENCE ITEMS FOR M03S02>"
     IDS_INTEL_20121         "Invoice for 37 cases of smooth cigarettes."
     IDS_INTEL_20122         "Contains information on UNITY Flight U-7 to London."
     IDS_INTEL_20123         "A dossier on UNITY pilot Harold Jenkins."
@@ -7519,11 +7534,30 @@ STRINGTABLE
 BEGIN
     IDS_INTEL_TEXT_8016     "You found the passenger roster."
     IDS_INTEL_TEXT_8017     "You found the list of infected people."
+    IDS_INTEL_TEXT_8018     "Briefcase default text"
+    IDS_INTEL_TEXT_8019     "HandBag default text"
+    IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it"
+    IDS_INTEL_TEXT_8021     "Spare change"
 END
 
 STRINGTABLE
 BEGIN
     IDS_DIALOGUE_14000      "Dood-a-lood!"
+    IDS_DIALOGUE_14001      "All right, Cate, let's not be greedy tonight.\nThree picks and come straight home."
+    IDS_DIALOGUE_14002      "Which do you prefer, the violet or avocado?"
+    IDS_DIALOGUE_14003      "What's wrong with the purse you have now?"
+    IDS_DIALOGUE_14004      "That raggedy old thing? I'm embarrassed to be seen with it in public."
+    IDS_DIALOGUE_14005      "You bought it last month!"
+    IDS_DIALOGUE_14006      "I know, but... well, it doesn't go with my new shoes."
+    IDS_DIALOGUE_14007      "New shoes? Darling, this vacation is costing us an arm and a leg.\nYou keep spending money like this, we'll have to swim home."
+    IDS_DIALOGUE_14008      "Well, you can't expect me to wear shoes that clash with my new dress."
+    IDS_DIALOGUE_14009      "New dress?"
+    IDS_DIALOGUE_14010      "Don't be mad, Sweetie. I just want to look good for you.\nYou don't want people thinking you married a country bumpkin, do you?"
+    IDS_DIALOGUE_14011      "Darling..."
+    IDS_DIALOGUE_14012      "Besides, I couldn't resist. The dress goes perfectly with the wonderful new hat I bought."
+    IDS_DIALOGUE_14013      "(groans)"
+    IDS_DIALOGUE_14014      "Please ring!"
+    IDS_DIALOGUE_14015      "Ring, damn you!"
 END
 
 STRINGTABLE
@@ -7535,6 +7569,9 @@ BEGIN
     IDS_MISSIONFAILURE33    "The baroness had the satisfaction\nof knowing you failed!"
     IDS_MISSIONFAILURE34    "The conductor had a heart attack!"
     IDS_MISSIONFAILURE35    "You missed your ride up the mountain!"
+    IDS_MISSIONFAILURE36    "You're a thief not a thug, you've been arrested for assaulting a police officer."
+    IDS_MISSIONFAILURE37    "You're a thief not a thug, you've been arrested for assaulting a civilian."
+    IDS_MISSIONFAILURE38    "You've been arrested."
 END
 
 STRINGTABLE
@@ -7811,37 +7848,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_AMMO_55             "Safe Cracker"
-    IDS_AMMO_DESC_55        "Device to bypass the combination locking mechanism found on most safes."
-    IDS_AMMO_56             "Pen dart bolt"
-    IDS_AMMO_DESC_56        "Pen dart ammunition."
-    IDS_WEAPON_36           "Safe Cracker" 
-    IDS_WEAPON_DESC_36      "A low-tech device that bypasses the round combination locking mechanism found on many safes./nThe more complicated the mechanism, the longer it will take to disable." 
-    IDS_WEAPON_37           "Lock Picking Tools"
-    IDS_WEAPON_DESC_37      "A standard thief's lock picking tools ideal for bypassing keyed padlocks.\nThe more complicated the mechanism, the longer it will take to pick.\n\nNote that lock picking tools only work on padlocks with keyholes."
-    IDS_WEAPON_38           "Pen Dart"
-    IDS_WEAPON_DESC_38      "A common pen dart useful for disabling foes silently. Shoots a variety of ammunition."
-    IDS_MISSIONFAILURE36    "You're a thief not a thug, you've been arrested for assaulting a police officer."
-    IDS_MISSIONFAILURE37    "You're a thief not a thug, you've been arrested for assaulting a civilian."
-    IDS_MISSIONFAILURE38    "You've been arrested."
-    IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it"
-    IDS_INTEL_TEXT_8021     "Spare change"
-    IDS_MISSION_OBJ_5326    "Exit the pub"
-    IDS_DIALOGUE_14001      "All right, Cate, let's not be greedy tonight.\nThree picks and come straight home."
-    IDS_DIALOGUE_14002      "Which do you prefer, the violet or avocado?"
-    IDS_DIALOGUE_14003      "What's wrong with the purse you have now?"
-    IDS_DIALOGUE_14004      "That raggedy old thing? I'm embarrassed to be seen with it in public."
-    IDS_DIALOGUE_14005      "You bought it last month!"
-    IDS_DIALOGUE_14006      "I know, but... well, it doesn't go with my new shoes."
-    IDS_DIALOGUE_14007      "New shoes? Darling, this vacation is costing us an arm and a leg.\nYou keep spending money like this, we'll have to swim home."
-    IDS_DIALOGUE_14008      "Well, you can't expect me to wear shoes that clash with my new dress."
-    IDS_DIALOGUE_14009      "New dress?"
-    IDS_DIALOGUE_14010      "Don't be mad, Sweetie. I just want to look good for you.\nYou don't want people thinking you married a country bumpkin, do you?"
-    IDS_DIALOGUE_14011      "Darling..."
-    IDS_DIALOGUE_14012      "Besides, I couldn't resist. The dress goes perfectly with the wonderful new hat I bought."
-    IDS_DIALOGUE_14013      "(groans)"
-    IDS_DIALOGUE_14014      "Please ring!"
-    IDS_DIALOGUE_14015      "Ring, damn you!"
     IDS_DIALOGUE_14016      "C'mon, ring-a-ling-alingy?"
     IDS_DIALOGUE_14017      "Why won't she call me back?"
     IDS_DIALOGUE_14018      "Hello?"
@@ -7858,6 +7864,10 @@ BEGIN
     IDS_DIALOGUE_14029      "I can't believe he called me plump!"
     IDS_DIALOGUE_14030      "And he hates my cooking!"
     IDS_DIALOGUE_14031      "Time to head home."
+END
+
+STRINGTABLE
+BEGIN
     IDS_DIALOGUE_14032      "This'll get you into the basement of the pub...excuse me, the 'Brasserie.'\nNormally the place would be empty this time o' night, but they had a wedding party ran late.\nMaybe you should try some other night..."
     IDS_DIALOGUE_14033      "Surely you jest. What else do I need to know?"
     IDS_DIALOGUE_14034      "There's two safes. One of 'em's near the bar on the ground level.\nThe other's in the owner's office upstairs. They're both hidden behind wall panels."
@@ -7874,6 +7884,10 @@ BEGIN
     IDS_DIALOGUE_14045      "Now I just have to get out of here in one piece."
     IDS_DIALOGUE_14046      "You're late. What do you have for me?"
     IDS_DIALOGUE_14047      "One bottle of Glen Rothes, Scotland's finest whiskey."
+END
+
+STRINGTABLE
+BEGIN
     IDS_DIALOGUE_14048      "Give her here."
     IDS_DIALOGUE_14049      "What about the replica?"
     IDS_DIALOGUE_14050      "It wasn't easy. Security's tight 'round the Robin's Egg. I took a big risk."
@@ -7890,6 +7904,10 @@ BEGIN
     IDS_DIALOGUE_14061      "Is the story true?"
     IDS_DIALOGUE_14062      "No one knows for sure, but it's believed the girl still roams these halls making sure everything stays spick and span."
     IDS_DIALOGUE_14063      "Not a very romantic legend."
+END
+
+STRINGTABLE
+BEGIN
     IDS_DIALOGUE_14064      "Be that as it may, I'm told that if the Grey Servant sees you picking up trash or straightening a vase, she'll be moved to aid you."
     IDS_DIALOGUE_14065      "Hmmm, I'll keep that in mind."
     IDS_DIALOGUE_14066      "This place certainly looks haunted."
@@ -7903,8 +7921,7 @@ BEGIN
     IDS_DIALOGUE_14074      "Really? Well, I suppose we shouldn't pass that up.\nNot that I'm particularly anxious to try monster hunting, mind you. I've had quite enough of ghosts and goblins."
 END
 
-
-#endif    // English (United States) resources
+#endif    // Englisch (USA) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

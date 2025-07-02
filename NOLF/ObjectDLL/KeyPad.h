@@ -48,7 +48,7 @@ class KeyPad : public Prop
         LTFLOAT     m_fPickSoundRadius;
 
 		LTBOOL		m_bSpaceCodeBreaker;
-
+		LTBOOL		m_bThiefCodeBreaker;
 		CTimer		m_DecipherTimer;
 
 	private :

@@ -85,6 +85,7 @@
     <OutDir>.\Final_Release\</OutDir>
     <IntDir>.\Final_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>CShell</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -95,6 +96,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>CShell</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Debug|Win32'">
     <OutDir>.\Final_Debug\</OutDir>
@@ -122,7 +124,7 @@
       <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy Final_Release\cshell.dll $(NOLF_BUILD_DIR)</Command>
+      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)FINALRELEASE"</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -224,12 +226,9 @@
       <FloatingPointModel>Fast</FloatingPointModel>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy debug\cshell.dll .\cshell.dll
-cd ..\
-
-
-call "D:\GameDev\no-one-lives-forever-master\NOLF\_after_build_debug.bat"</Command>
-      <Message>Running Post Build Script</Message>
+      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)DEBUG"</Command>
+      <Message>
+      </Message>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>

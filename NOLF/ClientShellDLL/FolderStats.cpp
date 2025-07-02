@@ -227,14 +227,15 @@ void CFolderStats::UpdateData()
 
 	AddBlankLine();
 
-	//inteligence
+	//intelligence
 	int cur = pMSummary->m_nMissionCurNumIntel;
+	int total = pMSummary->m_nMissionTotalIntel;
 	if (cur)
 	{
         pCtrl = AddTextItem(IDS_STAT_INTEL,LTNULL,0, LTTRUE, GetLargeFont());
         pCtrl->Enable(LTFALSE);
 		
-        hTxt=g_pLTClient->FormatString(IDS_STAT_FOUND,cur);
+        hTxt=g_pLTClient->FormatString(IDS_STAT_FOUND,cur, total);
         pCtrl= AddTextItem(hTxt,LTNULL,0, LTTRUE, GetSmallFont());
         pCtrl->Enable(LTFALSE);
 	}

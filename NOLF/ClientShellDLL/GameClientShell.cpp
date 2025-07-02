@@ -6436,35 +6436,58 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 			pStats->ClearMissionDamage();
 		}
 
+
 		MISSION* pMission = g_pMissionMgr->GetMission(m_nCurrentMission);
 		if (pMission)
 		{
-			int missionId = pMission->nNameId;
-			HSTRING hTxt=g_pLTClient->FormatString(missionId);
-			if (pMission->nNumLevels == 1)
+			if (strstr(pWorldFile, "thiefmission") != NULL)
 			{
-				g_pInterfaceMgr->SetLoadLevelString(hTxt);
-			}
-			else
-			{
-				char tmp[128];
-				HSTRING hTxt2=g_pLTClient->FormatString(IDS_SCENENUMBER,m_nCurrentLevel + 1);
-				sprintf(tmp,"%s, %s",g_pLTClient->GetStringData(hTxt),g_pLTClient->GetStringData(hTxt2));
-				HSTRING hWorld =g_pLTClient->CreateString(tmp);
-				g_pInterfaceMgr->SetLoadLevelString(hWorld);
-				g_pLTClient->FreeString(hWorld);
-				g_pLTClient->FreeString(hTxt2);
-			}
-			if (pMission->szPhoto)
-			{
-				g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
-			}
-			else
-			{
-				g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photo\\missions\\default.pcx");
-			}
-			g_pLTClient->FreeString(hTxt);
+				// Combined title: Mission name + Scene
+				HSTRING hTxt1 = g_pLTClient->FormatString(IDS_THIEFMISSION);
+				HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
 
+				char tmp[128];
+				sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
+				HSTRING hWorld = g_pLTClient->CreateString(tmp);
+				g_pInterfaceMgr->SetLoadLevelString(hWorld);
+
+				g_pLTClient->FreeString(hTxt1);
+				g_pLTClient->FreeString(hTxt2);
+				g_pLTClient->FreeString(hWorld);
+
+				// Special pic for thiefmissions
+				g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photos\\missions\\thief.pcx");
+			}
+			else if (pMission->nNumLevels == 1)
+			{
+				HSTRING hTxt = g_pLTClient->FormatString(pMission->nNameId);
+				g_pInterfaceMgr->SetLoadLevelString(hTxt);
+				g_pLTClient->FreeString(hTxt);
+
+				if (pMission->szPhoto && pMission->szPhoto[0])
+					g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
+				else
+					g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photo\\missions\\default.pcx");
+			}
+			else
+			{
+				HSTRING hTxt1 = g_pLTClient->FormatString(pMission->nNameId);
+				HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
+
+				char tmp[128];
+				sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
+				HSTRING hWorld = g_pLTClient->CreateString(tmp);
+				g_pInterfaceMgr->SetLoadLevelString(hWorld);
+
+				g_pLTClient->FreeString(hTxt1);
+				g_pLTClient->FreeString(hTxt2);
+				g_pLTClient->FreeString(hWorld);
+
+				if (pMission->szPhoto && pMission->szPhoto[0])
+					g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
+				else
+					g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photo\\missions\\default.pcx");
+			}
 		}
 
 		pMissionData->SetLevelNum(m_nCurrentLevel);

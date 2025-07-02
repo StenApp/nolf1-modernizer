@@ -96,11 +96,15 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>Object</TargetName>
+    <TargetExt>.lto</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">
     <OutDir>.\Final_Release\</OutDir>
     <IntDir>.\Final_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>Object</TargetName>
+    <TargetExt>.lto</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -221,12 +225,7 @@
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy debug\object.lto .\object.lto
-
-
-cd ..\
-
-call "D:\GameDev\no-one-lives-forever-master\NOLF\_after_build_debug.bat"</Command>
+      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)DEBUG"</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -280,7 +279,7 @@ call "D:\GameDev\no-one-lives-forever-master\NOLF\_after_build_debug.bat"</Comma
       <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy Final_Release\object.lto $(NOLF_BUILD_DIR)</Command>
+      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)FINALRELEASE"</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>

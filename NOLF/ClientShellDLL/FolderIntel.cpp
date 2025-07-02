@@ -12,7 +12,7 @@
 extern CGameClientShell* g_pGameClientShell;
 namespace
 {
-	const int kNumSFXTypes = 14;
+	const int kNumSFXTypes = 17;
 	int nSFXIDs[kNumSFXTypes] =
 	{
 		171,

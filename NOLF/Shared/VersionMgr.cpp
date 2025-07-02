@@ -55,13 +55,13 @@ CVersionMgr::CVersionMgr()
 		unsigned int nBufSize = sizeof(m_szLanguage);
 		regMgr.Get("Language", m_szLanguage, nBufSize, "English");
 
-		if (m_szLanguage[0])
+		/*if (m_szLanguage[0])
 		{
 			if (_stricmp(m_szLanguage, "German") == 0)
 			{
-				m_bLowViolence = true;
+				m_bLowViolence = true; //German version is uncut by commenting these lines
 			}
-		}
+		}*/
 	}
 
 	// Check to see if we've got the GOTY file!

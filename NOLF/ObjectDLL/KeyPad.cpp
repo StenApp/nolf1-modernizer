@@ -34,6 +34,7 @@ BEGIN_CLASS(KeyPad)
     ADD_BOOLPROP_FLAG(CanDamage, LTFALSE, PF_GROUP1)
     ADD_BOOLPROP_FLAG(NeverDestroy, LTTRUE, PF_GROUP1)
     ADD_BOOLPROP_FLAG(SpaceCodeBreaker, LTFALSE, 0)
+	ADD_BOOLPROP_FLAG(ThiefCodeBreaker, LTFALSE, 0)
 	ADD_REALPROP_FLAG(MinPickTime, 5.0f, 0)
 	ADD_REALPROP_FLAG(MaxPickTime, 10.0f, 0)
 	ADD_STRINGPROP(DisabledCmd, "")
@@ -59,7 +60,7 @@ KeyPad::KeyPad() : Prop()
 	m_fMinPickTime			= 0.0f;
 	m_fMaxPickTime			= 0.0f;
 	m_bSpaceCodeBreaker		= LTFALSE;
-
+    m_bThiefCodeBreaker		= LTFALSE;
 	m_pDebrisOverride = "Metal small";
 }
 
@@ -266,6 +267,11 @@ LTBOOL KeyPad::ReadProp(ObjectCreateStruct *pInfo)
 		m_bSpaceCodeBreaker = genProp.m_Bool;
 	}
 
+	if (g_pLTServer->GetPropGeneric("ThiefCodeBreaker", &genProp) == LT_OK)
+	{
+		m_bThiefCodeBreaker = genProp.m_Bool;
+	}
+	
 	return LTTRUE;
 }
 
@@ -314,9 +320,18 @@ void KeyPad::SetupDisabledState()
     g_pLTServer->GetObjectPos(m_hObject, &vPos);
 
 	theStruct.m_Pos = vPos;
+	
+	//TODO  set m_bThiefCodeBreaker on thiefmission 2+3
+	if (m_bThiefCodeBreaker)
+	{	
+	SAFE_STRCPY(theStruct.m_Filename, "guns\models_hh\PS2SafeCracker_HH.abc");
+	SAFE_STRCPY(theStruct.m_SkinName, "Guns\Skins_PV\PS2SafeCracker_PV.dtx");
+	}
+	else
+	{
 	SAFE_STRCPY(theStruct.m_Filename, "Guns\\Models_HH\\Codedec_hh.abc");
 	SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_HH\\Codedec_hh.dtx");
-
+	}
 	theStruct.m_Flags = FLAG_VISIBLE | FLAG_GOTHRUWORLD;
 	theStruct.m_ObjectType  = OT_MODEL;
 
@@ -459,11 +474,14 @@ void KeyPad::SpawnGadget()
 			// Spawn the weapon using the id because the name has a space
 			// in it (which screws up parsing)...
 
-            const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : "Code Breaker";
+			//TODO distinguish between the code breakers
+            //const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : "Code Breaker";
+			const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : (m_bThiefCodeBreaker ? "Thief Safe Cracker" : "Code Breaker");
 
             WEAPON* pWeapon = g_pWeaponMgr->GetWeapon((char*)pGadgetName);
 			if (pWeapon)
 			{
+				g_pLTServer->CPrint("Spawning gadget: %s (ID: %d)", pWeapon->szName, pWeapon->nId);//print used model
 				char szSpawn[100];
 				sprintf(szSpawn, "WeaponItem Gravity 0;MoveToFloor 0;WeaponTypeId %d", pWeapon->nId);
 
@@ -494,6 +512,7 @@ void KeyPad::Save(HMESSAGEWRITE hWrite)
     g_pLTServer->WriteToMessageFloat(hWrite, m_fMaxPickTime);
     g_pLTServer->WriteToMessageFloat(hWrite, m_fPickSoundRadius);
     g_pLTServer->WriteToMessageByte(hWrite, m_bSpaceCodeBreaker);
+	g_pLTServer->WriteToMessageByte(hWrite, m_bThiefCodeBreaker);
     g_pLTServer->WriteToMessageByte(hWrite, !!(m_hPickSound));
 }
 
@@ -519,6 +538,7 @@ void KeyPad::Load(HMESSAGEREAD hRead)
     m_fMaxPickTime          = g_pLTServer->ReadFromMessageFloat(hRead);
     m_fPickSoundRadius      = g_pLTServer->ReadFromMessageFloat(hRead);
 	m_bSpaceCodeBreaker     = (LTBOOL) g_pLTServer->ReadFromMessageByte(hRead);
+	m_bThiefCodeBreaker     = (LTBOOL) g_pLTServer->ReadFromMessageByte(hRead);
 	LTBOOL bPlayingSound    = (LTBOOL) g_pLTServer->ReadFromMessageByte(hRead);
 
 

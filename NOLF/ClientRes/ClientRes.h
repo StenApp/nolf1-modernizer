@@ -945,7 +945,6 @@
 #define IDS_MISSION_24_DESC             2624
 #define IDS_MISSION_25_DESC             2625
 #define IDS_MISSION_26_DESC             2626
-#define IDS_MISSION_26_DESC2            2627
 #define IDS_MISSION_27_DESC             2627
 #define IDS_MISSION_28_DESC             2628
 #define IDS_MISSION_29_DESC             2629
@@ -6509,37 +6508,40 @@
 #define IDS_TITLE_JUKEBOX               30109
 
 //thiefmissions1-3
+#define IDS_THIEFMISSION				959
 #define IDS_INTEL_MONEYBAG				688
-#define IDS_INTEL_HANDBAG				  689
+#define IDS_INTEL_HANDBAG				689
 #define IDS_INTEL_PAPERMONEY			690
+#define IDS_INTEL_TEXT_8018				8018
+#define IDS_INTEL_TEXT_8019				8019
 #define IDS_INTEL_TEXT_8020				8020
 #define IDS_INTEL_TEXT_8021				8021
-#define IDS_AMMO_55						    4146
-#define IDS_AMMO_DESC_55				   4346
-#define IDS_AMMO_56						    4147
-#define IDS_AMMO_DESC_56				  4347
-#define IDS_WEAPON_36					    4033
+#define IDS_AMMO_55						4146
+#define IDS_AMMO_DESC_55				4346
+#define IDS_AMMO_56						4147
+#define IDS_AMMO_DESC_56				4347
+#define IDS_WEAPON_36					4033
 #define IDS_WEAPON_DESC_36				4083
-#define IDS_WEAPON_37					    4034
+#define IDS_WEAPON_37					4034
 #define IDS_WEAPON_DESC_37				4084
-#define IDS_WEAPON_38					    4035
+#define IDS_WEAPON_38					4035
 #define IDS_WEAPON_DESC_38				4085
 #define IDS_MISSIONFAILURE36			6535
 #define IDS_MISSIONFAILURE37			6536
 #define IDS_MISSIONFAILURE38			6537
-#define IDS_MISSION_OBJ_5326			5326
-  
+
 //IDS_MISSION_OBJ_5047 already defined
 //IDS_MISSION_OBJ_5048 already defined
 //IDS_INTEL_20541 already definded
 //IDS_INTEL_20542 already definded
 //IDS_INTEL_20543 already definded
-
 //IDS_MISSION_OBJ_5089 already defined
 //IDS_MISSION_OBJ_5213 already defined
 //IDS_MISSION_OBJ_5214 already defined
 //IDS_MISSION_OBJ_5215 already defined
 //IDS_MISSION_OBJ_5216 already defined
+
+#define IDS_MISSION_OBJ_5326			5326
 
 #define IDS_DIALOGUE_14001				14001
 #define IDS_DIALOGUE_14002				14002
