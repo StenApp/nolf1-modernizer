@@ -6444,7 +6444,13 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 			{
 				// Combined title: Mission name + Scene
 				HSTRING hTxt1 = g_pLTClient->FormatString(IDS_THIEFMISSION);
+
 				HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
+				if (hTxt2 == LTNULL)
+				{
+					// Fallback bei fehlendem Szenentext
+					hTxt2 = g_pLTClient->CreateString("Scene ?");
+				}
 
 				char tmp[128];
 				sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));

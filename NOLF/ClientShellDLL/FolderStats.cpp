@@ -230,6 +230,7 @@ void CFolderStats::UpdateData()
 	//intelligence
 	int cur = pMSummary->m_nMissionCurNumIntel;
 	int total = pMSummary->m_nMissionTotalIntel;
+	//int max = pMSummary->m_nMissionMaxIntel;
 	if (cur)
 	{
         pCtrl = AddTextItem(IDS_STAT_INTEL,LTNULL,0, LTTRUE, GetLargeFont());

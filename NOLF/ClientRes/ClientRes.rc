@@ -1347,7 +1347,7 @@ BEGIN
     IDS_STAT_KILLS          "\tEnemy Kills: %1!d!, Friendly Fire: %2!d!, Civilian Casualties: %3!d!"
     IDS_STAT_RANK           "Rank:"
     IDS_STAT_FAILED         "Failed!"
-    IDS_STAT_FOUND          "\tFound %1!d! items."
+    IDS_STAT_FOUND          "\tFound %1!d! of %2!d! items."
     IDS_SUMMARY_BEST        "Best Rank:"
     IDS_OBJECTIVES_CHANGED  "Mission objectives updated"
     IDS_GLASS_CAMERA        "Camera Mode Active"
@@ -1986,8 +1986,8 @@ BEGIN
     IDS_WEAPON_DESC_31      "Sprinkle some of this powder on a dead body and watch it dissolve into ether."
     IDS_WEAPON_DESC_32      "Sprinkle some of this powder on a dead body and watch it dissolve into ether."
     IDS_WEAPON_DESC_33      "A H.A.R.M. prototype laser weapon that boasts increased power and improved aesthetic appeal over the standard issue laser gun."
-    IDS_WEAPON_DESC_36      "A low-tech device that bypasses the round combination locking mechanism found on many safes./nThe more complicated the mechanism, the longer it will take to disable."
-    IDS_WEAPON_DESC_37      "A standard thief's lock picking tools ideal for bypassing keyed padlocks.\nThe more complicated the mechanism, the longer it will take to pick.\n\nNote that lock picking tools only work on padlocks with keyholes."
+    IDS_WEAPON_DESC_36      "A low-tech device that bypasses the round combination locking mechanism found on many safes.\nThe more complicated the mechanism, the longer it will take to disable."
+    IDS_WEAPON_DESC_37      "A standard thief's lock picking tools ideal for bypassing keyed padlocks.\nThe more complicated the mechanism, the longer it will take to pick.\n\n Note that lock picking tools only work on padlocks with keyholes."
     IDS_WEAPON_DESC_38      "A common pen dart useful for disabling foes silently. Shoots a variety of ammunition."
 END
 
@@ -7534,10 +7534,10 @@ STRINGTABLE
 BEGIN
     IDS_INTEL_TEXT_8016     "You found the passenger roster."
     IDS_INTEL_TEXT_8017     "You found the list of infected people."
-    IDS_INTEL_TEXT_8018     "Briefcase default text"
-    IDS_INTEL_TEXT_8019     "HandBag default text"
-    IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it"
-    IDS_INTEL_TEXT_8021     "Spare change"
+    IDS_INTEL_TEXT_8018     "You found a valuable briefcase."
+    IDS_INTEL_TEXT_8019     "You found a valuable handbag."
+    IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it."
+    IDS_INTEL_TEXT_8021     "Spare change."
 END
 
 STRINGTABLE

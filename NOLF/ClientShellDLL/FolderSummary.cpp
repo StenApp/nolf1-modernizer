@@ -255,8 +255,8 @@ void CFolderSummary::UpdateData()
 
 	int cur = pMSummary->m_nMissionCurNumIntel;
 	int total = pMSummary->m_nMissionTotalIntel;
-	int max = pMSummary->m_nMissionMaxIntel;
-    hTxt=g_pLTClient->FormatString(IDS_SUMMARY_FOUND,cur,total, max);
+	//int max = pMSummary->m_nMissionMaxIntel;
+    hTxt=g_pLTClient->FormatString(IDS_SUMMARY_FOUND,cur,total);
     pCtrl= AddTextItem(hTxt,LTNULL,0, LTTRUE, GetSmallFont());
     pCtrl->Enable(LTFALSE);
 
