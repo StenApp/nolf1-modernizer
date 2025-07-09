@@ -1,0 +1,292 @@
+Fox Interactive präsentiert:
+No One Lives Forever
+Game of the Year Edition
+Entwickelt von
+Monolith Productions Inc.
+>TIME:3.0
+>BIG
+##
+No One Lives Forever
+Game of the Year Edition
+mit Unterstützung von LithTech
+>TIME:2.0
+>BIG
+##
+Fox Interactive:
+>BIG
+>TIME:2.0
+##
+Chris Miller, Produzent
+Aaron Blean, Co-Produzent
+Tim Hall, Co-Produzent
+>TIME:3.0
+##
+Qualitätssicherung Fox:
+Don Sexton, Supervisor QS
+Igor Krinitskiy, Co-Supervisor QS
+Chris Wilson, Leitung QS 
+Tim Harrison, Co-Leitung QS  
+Fox Testteam:
+Francis Choi
+Javier Lagos
+Joe Lamas
+Kerry Marshall
+Aaron Minjares
+>TIME:6.0
+##
+Arabian Nazel
+Young Park
+Luke Thai
+Ellen Williams
+>TIME:6.0
+##
+Besonderer Dank an:
+>BIG
+##
+Marisa Porter, MCA
+Tim Godwin, Line 6  
+Cakewalk 
+Van Riker, 1600 Records
+Triumph Motorcycles 
+Doc Martins 
+Brian Thomas, Fox Library
+Lisa Fredsti, Fox Library
+Kathleen Camplin, Fox Library
+Dave Monroe, Fox Library
+Mitzi Martin
+Avalon
+Panasonic
+Karly Young
+John Dongelmans
+>TIME:6.0
+##
+Kyle "Pezman" Peschel
+Jack Van Leer
+Karen Mangon
+Dave Rech
+Dave Shaw
+Ivo Gersovich
+Luke Letizia
+Sung Yoo
+Eric Asevo
+Robert Hayes, ATI
+Brian Harvey, Nvidia
+3DFX
+GameSpy
+Joe Finetti
+>TIME:6.0
+##
+Monolith Productions:
+(in alphabetischer Reihenfolge)
+>BIG
+##
+James Ackley, Leitung Sounddesign
+Scott Albaugh, 2D-/3D-Grafik
+Dan Berke, Techniker
+>TIME:3.0
+##
+Kevin Francis, Engine-Technik
+Jim Geldmacher, Techniker
+Jon Gramlich, Leitung Qualitätssicherung
+Chris Hewett, Entwicklungsdirektor
+>TIME:4.0
+##
+Craig Hubbard, Leitung Spieldesign
+Eric Kohler, Leitung Spielfigurengrafik
+Steve Lee, 2D-Grafik
+Brian Long, Technik KI und Animation
+>TIME:4.0
+##
+David Longo, Leitung 3D-Grafik
+John Mulkey, Leveldesign
+Bob Munsil, Leveldesign
+>TIME:3.0
+##
+Brian Pamintuan, Sounddesign
+Frank Rooke, Leveldesign
+Sasha Runnels, 2D-Grafik
+>TIME:3.0
+##
+Samantha Ryan, Produzent
+Wes Saulsberry, Künstlerische Leitung
+Kevin Stephens, Technische Leitung
+>TIME:3.0
+##
+Akika Tanaka, 2D-/3D-Grafik
+Cassano Thruston, Sounddesign
+Bill Vandervoort, Leitung Leveldesign
+>TIME:3.0
+##
+Besonderer Dank an die folgenden 
+Personen bei Monolith:
+>BIG
+##
+Matt Allen
+Kevin Bailey
+Rhett Baldwin
+Andrea Barringer
+Mark Brown
+Wayne Burns
+Nadia Eng
+Ben Chamberlain
+Ben Coleman
+Courtney Evans
+Israel Evans
+>TIME:5.0
+##
+Jay Fuller
+Bob Givnin
+Andy Grant
+Jason Hall
+Nathan Hendrickson
+Peter Higley
+Patti Kail
+Darren Korman
+Gary Kussman
+Kevin Lambert
+>TIME:5.0
+##
+Spencer Maiers
+Andy Mattingly
+Eric Minamoto
+Dan Miller
+Jonathan Stein
+Dan Thibadeau
+Jim Totaro
+Brian Waite
+Sandra Watanabe
+Kiyotaka Yaguchi
+>TIME:5.0
+##
+Besonderer Dank an:
+>BIG
+##
+Mike Dussault
+dessen Beiträge wir nicht hoch genug schätzen können
+>TIME:2.0
+##
+Brad Pendleton
+dessen Standhaftigkeit sehr inspirierend auf uns gewirkt hat
+>TIME:2.0
+##
+Tim Pollard
+für seine Nachforschungen über die authentischen Münzen
+>TIME:2.0
+##
+LithTech:
+>BIG
+##
+Rachel Blackman
+Bryan Bouwman
+Jonathan Branam
+Jeff Everett
+Terry Franguiadakis
+Brian Goble
+Toby Gladwell
+Adam Hayek
+Chris Hedberg
+Matthew Scott
+>TIME:6.0
+##
+VIVENDI UNIVERSAL INTERACTIVE PUBLISHING:
+>BIG
+##
+Sarita Churchill
+Koren Buckner
+Angela Emery
+Neal Johnson
+Michelle Garnier-Winkler
+Kathy Carter
+Grace Ching
+Miae Kim
+Michelle Ferrell
+>TIME:6.0
+##
+THIRD LAW INTERACTIVE:
+(in alphabetischer Reihenfolge)
+>BIG
+##
+Larry Herring
+Matt Hooper
+Will Loconto
+Mike Maynard
+Mark Morgan
+David Namaksy
+Steve Rescoe
+Jonathan E. Wright
+>TIME:6.0
+##
+Musik:
+>BIG
+##
+Guy Whitmore, Komponist, Design interaktive Musik
+>TIME:2.0
+##
+Rich Ragsdale, Titelsong
+>TIME:2.0
+##
+Erik Aho, Arrangeur DirectMusic, zusätzliche musikalische Beiträge
+Nathan Grigg, Arrangeur DirectMusic, zusätzliche musikalische Beiträge 
+Tobin Buttram, Arrangeur DirectMusic, zusätzliche musikalische Beiträge 
+Lori Goldston, Cello (Badguy-Thema)
+Gino, Vocals (Marokkanisches Thema)
+>TIME:4.0
+##
+Weitere Musikstücke von Becky Kneubuhl
+Doug Norwine, Flöte
+Joe Finetti, Posaune
+Lee Thornberg, Trompete
+Lisa Kable, Gesang
+Chris Lee, Gitarren
+Mix und Aufnahme von Gabriel Rutman in den Asylum-Studios
+Remix von Gabriel Rutman und Scotty Clausen
+>TIME:4.0
+##
+Stimmen und Motion Capturing-Grafik:
+>BIG
+##
+Jock Blaney, Dmitrij Volkov
+Ken Boynton, Santa mit mehr Stimmen, als man zählen kann!
+Barbara Dirickson, Baroness Dumas
+Scott Burns, Verschiedene
+Mike Madeoy, Tom Goodman
+>TIME:4.0
+##
+Jamil Mullen, Motion Capturing-Modell
+Kit Harris, Cate Archer und Inge Wagner
+Mark Dias, Verschiedene
+John Patrick Lowrie, Bruno Lawrie
+Nigel Neale, Mr. Jones
+>TIME:4.0
+##
+Andrew Heffernan, Motion Capturing-Modell
+Jenna Hawkins, Motion Capturing-Modell
+Roger Curtis, Mr. Smith
+Jeff Steitzer, Baron Dumas
+David Stalker, Magnus Armstrong
+>TIME:4.0
+##
+Verwendet Miles Sound System
+Copyright (c) 1991-2001 RAD Game Tools, Inc.
+Verwendet Binks Video Technology
+Copyright (c) 1994-2001 RAD Game Tools, Inc.
+MPEG Layer-3-Wiedergabe realisiert durch Miles Sound System
+von RAD Game Tools, Inc. MPEG-3 Audio-Kompressionstechnologie
+unter Lizenz von Fraunhofer IIS und THOMPSON Multimedia.
+Gesampelte Instrumente von Sonic Implants: www.sonicimplants.com
+>TIME:4.0
+##
+(c) 2000-2001 Monolith Productions, Inc. 
+LithTech (TM) Game Engine (c) 1998-2001 Monolith Productions, Inc. 
+Alle Rechte vorbehalten. 
+Fox, Fox Interactive, No One Lives Forever, The Operative 
+und die zugehörigen Logos sind Marken beziehungsweise 
+eingetragene Marken der Twentieth Century Fox Film Corporation. 
+LithTech ist eine Marke von Monolith Productions, Inc. 
+Windows ist eine Marke beziehungsweise eingetragene Marke der 
+Microsoft Corporation in den USA und/oder anderen Ländern. 
+Das Ratings-Icon ist eine Marke der Interactive 
+Digital Software Association.
+>TIME:4.0
+##
+>END

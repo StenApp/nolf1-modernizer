@@ -22,9 +22,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mfcs_misc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mfcs_point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -34,13 +31,16 @@
     <ClInclude Include="mfcs_string.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mfcs_types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mfcstub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mfcs_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mfcs_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

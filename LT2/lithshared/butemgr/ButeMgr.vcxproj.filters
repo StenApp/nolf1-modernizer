@@ -11,34 +11,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ARange.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AVector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ButeMgr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ARange.cpp" />
+    <ClCompile Include="AVector.cpp" />
+    <ClCompile Include="ButeMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ARange.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AVector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ButeMgr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="ButeMgr.sca" />
+    <ClInclude Include="ARange.h" />
+    <ClInclude Include="AVector.h" />
+    <ClInclude Include="ButeMgr.h" />
   </ItemGroup>
 </Project>

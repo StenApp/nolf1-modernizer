@@ -1,0 +1,300 @@
+Fox Interactive pr<sente :
+No One Lives Forever
+D<velopp< par
+Monolith Productions Inc.
+>TIME:3.0
+>BIG
+##
+No One Lives Forever
+utilise le moteur LithTech
+>TIME:2.0
+>BIG
+##
+Fox Interactive :
+>BIG
+>TIME:2.0
+##
+Producteur : Chris Miller
+Producteur associ< : Aaron Blean
+>TIME:3.0
+##
+Service contr^le qualit< Fox:
+Supervision CQ : Don Sexton
+Responsable CQ : Kaycee Vardaman
+Responsable CQ : Tim Harrison
+Responsable CQ : Chris Wilson
+Testeurs de chez Fox:
+Arabian Nazel
+Ken Anderson
+Sweet Billy
+Tony Black
+Francis Choi
+Kristian Davila
+>TIME:6.0
+##
+Matt Dell
+Glenn Dphrepaulezz
+David Farkas
+Kevin Huynh
+Igor Krinitskiy
+Javier Lagos
+Frantz Latten
+Duc Lai
+Cris Lee
+Jeremy Luyties
+Aaron Minjares
+Red Magpantay
+Kerry Marshall
+Young Park
+>TIME:6.0
+##
+Gabriel Slater
+Jeff Spierer
+David Taylor
+Luke Thai
+Tim Tran
+Ellen Williams
+Chris Wilson
+Anant Jiemjitpolchai
+Nathan Sutter
+William Pamies
+Jeff Tatman
+Daan Wisehart
+>TIME:6.0
+##
+Nous tenons = remercier :
+>BIG
+##
+Marisa Porter (MCA)
+Tim Godwin (Line 6) 
+Cakewalk 
+Van Riker (1600 Records)
+Triumph Motorcycles 
+Doc Martins 
+Brian Thomas (Ressources Fox)
+Lisa Fredsti (Ressources Fox)
+Kathleen Camplin (Ressources Fox)
+Dave Monroe (Ressources Fox)
+Mitzi Martin
+Avalon
+Panasonic
+Karly Young
+John Dongelmans
+>TIME:6.0
+##
+Kyle "Pezman" Peschel
+Jack Van Leer
+Karen Mangon
+Angela Edwards
+Dave Rech
+Dave Shaw
+Danny Ruiz
+Ivo Gersovich
+Luke Letizia
+Sung Yoo
+Eric Asevo
+Robert Hayes (ATI)
+Brian Harvey (Nvidia)
+3DFX
+GameSpy
+Joe Finetti
+>TIME:6.0
+##
+Monolith Productions :
+(Par ordre alphab<tique)
+>BIG
+##
+Responsable de la conception du son : James Ackley
+Infographie 2D/3D : Scott Albaugh
+Ing<ni<rie : Dan Berke
+>TIME:3.0
+##
+Ing<ni<rie moteur : Kevin Francis
+Ing<ni<rie : Jim Geldmacher
+Responsable CQ : Jon Gramlich
+Direction du d<veloppement : Chris Hewett
+>TIME:4.0
+##
+Responsable de la conception du jeu : Craig Hubbard
+Direction artistique des personnages : Eric Kohler
+Infographie 2D : Steve Lee
+Ing<ni<rie animation et IA : Brian Long
+>TIME:4.0
+##
+Responsable infographie 3D : David Longo
+Conception des niveaux : John Mulkey
+Conception des niveaux : Bob Munsil
+>TIME:3.0
+##
+Conception du son : Brian Pamintuan
+Conception des niveaux : Frank Rooke
+Infographie 2D : Sasha Runnels
+>TIME:3.0
+##
+Production : Samantha Ryan
+Responsable infographie : Wes Saulsberry
+Responsable ing<ni<rie : Kevin Stephens
+>TIME:3.0
+##
+Infographie 2D/3D : Akika Tanaka
+Conception du son : Cassano Thruston
+Responsable de la conception des niveaux : Bill Vandervoort
+>TIME:3.0
+##
+Nous remercions particuli>rement les
+membres suivants du personnel de Monolith :
+>BIG
+##
+Matt Allen
+Kevin Bailey
+Rhett Baldwin
+Andrea Barringer
+Mark Brown
+Wayne Burns
+Nadia Eng
+Ben Chamberlain
+Ben Coleman
+Courtney Evans
+Israel Evans
+>TIME:5.0
+##
+Jay Fuller
+Bob Givnin
+Andy Grant
+Jason Hall
+Nathan Hendrickson
+Peter Higley
+Patti Kail
+Darren Korman
+Gary Kussman
+Kevin Lambert
+>TIME:5.0
+##
+Spencer Maiers
+Andy Mattingly
+Eric Minamoto
+Dan Miller
+Jonathan Stein
+Dan Thibadeau
+Jim Totaro
+Brian Waite
+Sandra Watanabe
+Kiyotaka Yaguchi
+>TIME:5.0
+##
+Nous remercions aussi :
+>BIG
+##
+Mike Dussault
+dont la contribution est inestimable.
+>TIME:2.0
+##
+Brad Pendleton
+dont la fermet< a <t< une source d`inspiration pour nous tous...
+>TIME:2.0
+##
+Tim Pollard
+pour ses recherches sur des pi>ces authentiques.
+>TIME:2.0
+##
+LithTech :
+>BIG
+##
+Rachel Blackman
+Bryan Bouwman
+Jonathan Branam
+Jeff Everett
+Terry Franguiadakis
+Brian Goble
+Toby Gladwell
+Adam Hayek
+Chris Hedberg
+Matthew Scott
+>TIME:6.0
+##
+Musique :
+>BIG
+##
+Conception et composition de la musique interactive : Guy Whitmore
+>TIME:2.0
+##
+Bande son du jeu : Rich Ragsdale
+>TIME:2.0
+##
+Arrangements DirectMusic, composition de la musique compl<mentaire : Erik Aho
+Arrangements DirectMusic, composition de la musique compl<mentaire : Nathan Grigg
+Arrangements DirectMusic, composition de la musique compl<mentaire : Tobin Buttram
+Violoncelle (th>me Badguy) : Lori Goldston
+Chants (th>me marocain) : Gino
+>TIME:4.0
+##
+Th>mes musicaux compl<mentaires : Becky Kneubuhl
+Fl$te : Doug Norwine
+Trombone : Joe Finetti
+Trompette : Lee Thornberg
+Chants : Lisa Kable
+Guitares : Chris Lee
+Enregistrements et mixages : Gabriel Rutman (au studio Asylum)
+Remixage : Gabriel Rutman et Scotty Clausen
+>TIME:4.0
+##
+"Void"
+Composition et interpr<tation :  Red Delicious 
+(Steve Baca, Sara Wallace, Rob King)
+Edition :  Stompin' Music (BMI)
+(c) 2000 Red Delicious
+>TIME:3.0
+##
+"El Dorado"
+Composition et interpr<tation : Archie Thompson
+Edition : ArchType Music (BMI)
+(c) 2000 Archie Thompson
+>TIME:3.0
+##
+Voix et capture de mouvements :
+>BIG
+##
+Jock Blaney (Dmitrij Volkov)
+Ken Boynto (p>re Noel et beaucoup d`autres voix !)
+Barbara Dirickson (Baronne Dumas)
+Scott Burns (voix diverses)
+Mike Madeoy (Tom Goodman)
+>TIME:4.0
+##
+Technicien capture de mouvements : Jamil Mullen
+Kit Harris (Cate Archer et Inge Wagner)
+Mark Dias (voix diverses)
+John Patrick Lowrie (Bruno Lawrie)
+Nigel Neale (Mr. Jones)
+>TIME:4.0
+##
+Technicien capture de mouvements : Andrew Heffernan
+Technicien capture de mouvements : Jenna Hawkins
+Roger Curtis (Mr. Smith)
+Jeff Steitzer (Baron Dumas)
+>TIME:4.0
+##
+Ce produit utilise les normes audio Miles Sound System.
+Copyright (c) 1991-2000 de RAD Game Tools, Inc.
+Ce produit utilise les normes vid<o Binks Video Technology.
+Copyright (c) 1994-2000 de RAD Game Tools, Inc.
+Lecture MPEG Layer-3 fourni avec Miles Sound System
+de RAD Game Tools, Inc. Compression audio MPEG-3.
+Technologie utilis<e sous licence de Fraunhofer IIS et THOMPSON Multimedia.
+Instruments de Sonic Implants: www.sonicimplants.com.
+>TIME:4.0
+##
+© 2000 Monolith Productions, Inc.
+Moteur de jeu LithTech (TM) (c) 1998-1999 Monolith Productions, Inc.
+Tous droits r<serv<s.
+Fox, Fox Interactive, No One Lives Forever, The Operative
+et leur logos associ<s sont des marques d<pos<es ou
+des marques commerciales de Twentieth Century Fox Film Corporation.
+LithTech est une marque commerciale de Monolith Productions, Inc.
+Windows est une marque d<pos<e ou commerciale de Microsoft
+Corporation aux Etats-Unis et/ou dans d`autres pays.
+L`ic^ne d`<valuation est une marque commerciale d`Interactive
+Digital Software Association.
+>TIME:4.0
+##
+>END

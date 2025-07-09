@@ -1,0 +1,93 @@
+Fox Interactive präsentiert
+>TIME:5.0
+##
+Ein Spiel von Monolith Productions
+>TIME:5.0
+##
+Mit 
+Top-Agentin Cate Archer
+>TIME:5.0
+##
+in
+>TIME:0.5
+##
+No One Lives Forever
+>TIME:5.0
+>BIG
+##
+Mit Kit Harris als Stimme von Cate Archer
+>TIME:4.0
+##
+Jock Blaney
+Dmitrij Volkov
+>POS:UR
+>TIME:3.0
+##
+Ken Boynton
+Santa
+>POS:LL
+>TIME:3.0
+##
+Scott Burns
+H.A.R.M.-Angehöriger
+>POS:UL
+>TIME:3.0
+##
+Roger Curtis
+Mr. Smith
+>POS:LR
+>TIME:3.0
+##
+Mark Dias
+H.A.R.M.-Angehöriger
+>POS:UR
+>TIME:3.0
+##
+Barbara Dirickson
+Baroness Dumas
+>POS:LL
+>TIME:3.0
+##
+John Patrick Lowrie
+Bruno Lawrie
+>POS:UL
+>TIME:3.0
+##
+Mike Madeoy
+Tom Goodman
+>POS:LR
+>TIME:3.0
+##
+Nigel Neale
+Mr. Jones
+>POS:UR
+>TIME:3.0
+##
+David Stalker
+Magnus Armstrong
+>POS:LL
+>TIME:3.0
+##
+Jeff Steitzer
+Baron Dumas
+>POS:UR
+>TIME:3.0
+##
+CHOREOGRAPHIE:
+Jenna Hawkins
+Andrew Heffernan
+Jamil Mullen
+>TIME:3.0
+##
+Musikkomposition und -arrangement
+Guy Whitmore
+>TIME:3.0
+##
+Titelsong
+Rich Ragsdale
+>TIME:3.0
+##
+Gefilmt in LithScope
+>TIME:2.0
+##
+>END

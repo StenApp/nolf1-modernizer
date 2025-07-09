@@ -6453,7 +6453,7 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 				}
 
 				char tmp[128];
-				sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
+				sprintf(tmp, "%s\n%s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
 				HSTRING hWorld = g_pLTClient->CreateString(tmp);
 				g_pInterfaceMgr->SetLoadLevelString(hWorld);
 

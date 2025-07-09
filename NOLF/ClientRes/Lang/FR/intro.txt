@@ -1,0 +1,93 @@
+Fox Interactive pr<sente
+>TIME:5.0
+##
+Un jeu de Monolith Productions
+>TIME:5.0
+##
+Avec
+Cate Archer dans le r^le de The Operative
+>TIME:5.0
+##
+dans
+>TIME:0.5
+##
+No One Lives Forever
+>TIME:5.0
+>BIG
+##
+Avec Kit Harris pr+tant sa voix = Cate Archer
+>TIME:4.0
+##
+Jock Blaney
+Dmitrij Volkov
+>POS:UR
+>TIME:3.0
+##
+Ken Boynton
+P>re Noel
+>POS:LL
+>TIME:3.0
+##
+Scott Burns
+Gangsters
+>POS:UL
+>TIME:3.0
+##
+Roger Curtis
+Mr. Smith
+>POS:LR
+>TIME:3.0
+##
+Mark Dias
+Gangsters
+>POS:UR
+>TIME:3.0
+##
+Barbara Dirickson
+Baronne Dumas
+>POS:LL
+>TIME:3.0
+##
+John Patrick Lowrie
+Bruno Lawrie
+>POS:UL
+>TIME:3.0
+##
+Mike Madeoy
+Tom Goodman
+>POS:LR
+>TIME:3.0
+##
+Nigel Neale
+Mr. Jones
+>POS:UR
+>TIME:3.0
+##
+David Stalker
+Magnus Armstrong
+>POS:LL
+>TIME:3.0
+##
+Jeff Steitzer
+Baron Dumas
+>POS:UR
+>TIME:3.0
+##
+CHOREGRAPHIE:
+Jenna Hawkins
+Andrew Heffernan
+Jamil Mullen
+>TIME:3.0
+##
+Composition et arrangements de la musique
+Guy Whitmore
+>TIME:3.0
+##
+Bande originale
+Rich Ragsdale
+>TIME:3.0
+##
+Film< en LithScope
+>TIME:2.0
+##
+>END

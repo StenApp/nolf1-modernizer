@@ -15,11 +15,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BlowFish.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="CryptMgr.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Blowfish.h" />
   </ItemGroup>
 </Project>

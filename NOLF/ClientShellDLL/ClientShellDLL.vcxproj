@@ -29,6 +29,7 @@
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <Import Project="..\NOLF.PostBuildCopy.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
@@ -85,7 +86,7 @@
     <OutDir>.\Final_Release\</OutDir>
     <IntDir>.\Final_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>CShell</TargetName>
+    <TargetName>cshell</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -96,7 +97,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>CShell</TargetName>
+    <TargetName>cshell</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Debug|Win32'">
     <OutDir>.\Final_Debug\</OutDir>
@@ -123,9 +124,6 @@
       <LanguageStandard>stdcpp14</LanguageStandard>
       <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
-    <PostBuildEvent>
-      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)FINALRELEASE"</Command>
-    </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -147,8 +145,8 @@
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
       <IgnoreSpecificDefaultLibraries>LIBCMTD;\proj\libs\release\StdLith.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <OutputFile>Final_Release\CShell.dll</OutputFile>
-      <ImportLibrary>.\Final_Release\CShell.lib</ImportLibrary>
+      <OutputFile>Final_Release\cshell.dll</OutputFile>
+      <ImportLibrary>.\Final_Release\cshell.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyClientMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;ltguimgr_LT2.lib;LithFontMgr_LT2.lib;SDL2.lib;SDL2main.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalLibraryDirectories>$(SolutionDir)..\lt2\lithshared\built\Release\ButeMgr;$(SolutionDir)..\lt2\lithshared\built\Release\CryptMgr;$(SolutionDir)..\lt2\lithshared\built\Release\MFCStub;$(SolutionDir)..\lt2\lithshared\libs\Release;$(SolutionDir)..\LIBS\SDL2-2.0.10\lib\x86;$(SolutionDir)..\LIBS\detours\lib.X86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -172,9 +170,6 @@
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
-    <PostBuildEvent>
-      <Command>copy release\cshell.dll $(NOLF_BUILD_DIR)</Command>
-    </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -196,8 +191,8 @@
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
       <IgnoreSpecificDefaultLibraries>LIBCMTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <OutputFile>release\CShell.dll</OutputFile>
-      <ImportLibrary>.\Release\CShell.lib</ImportLibrary>
+      <OutputFile>release\cshell.dll</OutputFile>
+      <ImportLibrary>.\Release\cshell.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -225,11 +220,6 @@
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
     </ClCompile>
-    <PostBuildEvent>
-      <Command>copy /y "$(TargetDir)$(TargetFileName)" "$(SolutionDir)DEBUG"</Command>
-      <Message>
-      </Message>
-    </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -251,8 +241,8 @@
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>debug\CShell.dll</OutputFile>
-      <ImportLibrary>.\Debug\CShell.lib</ImportLibrary>
+      <OutputFile>debug\cshell.dll</OutputFile>
+      <ImportLibrary>.\Debug\cshell.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyClientMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;ltguimgr_LT2.lib;LithFontMgr_LT2.lib;SDL2.lib;SDL2main.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <IgnoreSpecificDefaultLibraries>libcimtd.lib;MSVCRTD.lib</IgnoreSpecificDefaultLibraries>
@@ -278,9 +268,6 @@
       <ObjectFileName>.\Final_Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Final_Debug\</ProgramDataBaseFileName>
     </ClCompile>
-    <PostBuildEvent>
-      <Command>copy Final_Debug\cshell.dll $(NOLF_BUILD_DIR)</Command>
-    </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -302,8 +289,8 @@
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>Final_Debug\CShell.dll</OutputFile>
-      <ImportLibrary>.\Final_Debug\CShell.lib</ImportLibrary>
+      <OutputFile>Final_Debug\cshell.dll</OutputFile>
+      <ImportLibrary>.\Final_Debug\cshell.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
