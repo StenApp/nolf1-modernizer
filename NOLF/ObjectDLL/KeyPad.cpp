@@ -324,8 +324,8 @@ void KeyPad::SetupDisabledState()
 	//TODO  set m_bThiefCodeBreaker on thiefmission 2+3
 	if (m_bThiefCodeBreaker)
 	{	
-	SAFE_STRCPY(theStruct.m_Filename, "guns\models_hh\PS2SafeCracker_HH.abc");
-	SAFE_STRCPY(theStruct.m_SkinName, "Guns\Skins_PV\PS2SafeCracker_PV.dtx");
+	SAFE_STRCPY(theStruct.m_Filename, "guns\\models_hh\\PS2SafeCracker_HH.abc");
+	SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_PV\\PS2SafeCracker_PV.dtx");
 	}
 	else
 	{
