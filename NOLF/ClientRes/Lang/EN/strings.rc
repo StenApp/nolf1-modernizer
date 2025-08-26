@@ -497,8 +497,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_INTEL_20544         "<Insert Intelligence Item Text Here>"
-    IDS_INTEL_20545         "<Insert Intelligence Item Text Here>"
+    IDS_INTEL_20544         "Two Pounds"
+    IDS_INTEL_20545         "Three Pounds"
     IDS_INTEL_20546         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20547         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20548         "<Insert Intelligence Item Text Here>"
