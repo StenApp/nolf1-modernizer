@@ -2,8 +2,7 @@
 
 [![Build Status](https://dev.azure.com/heytherecoffee/NOLF-Modernizer/_apis/build/status/haekb.nolf1-modernizer?branchName=master)](https://dev.azure.com/heytherecoffee/NOLF-Modernizer/_build/latest?definitionId=3&branchName=master)
 
-The goal of NOLF Modernizer is to help fix some long standing bugs, and update some more outdated features of the game.
-
+This repo uses the Modernizer code to implement the PS2 thiefmissions
 ## Features
 
  - Working multiplayer out of the box
