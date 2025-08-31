@@ -29,9 +29,7 @@ namespace
 		196,
 		197,
 		198,
-		199,
-		200,
-		201,
+		255,
 	};
 	int nSFXNameIDs[kNumSFXTypes] =
 	{
@@ -49,9 +47,7 @@ namespace
 		IDS_INTEL_MANIFEST,
 		IDS_INTEL_LOG,
 		IDS_INTEL_ROSTER,
-		IDS_INTEL_MONEYBAG,
 		IDS_INTEL_HANDBAG,
-		IDS_INTEL_PAPERMONEY,
 	};
 	int nSFXCounts[kNumSFXTypes];
 }
@@ -151,6 +147,7 @@ void CFolderIntel::BuildIntelList()
 		g_pGameClientShell->GetIntelItemMgr()->GetItem(m_nMissionNum,i,pItem);
 		int nNameID = 0;
 		int nCount = 0;
+		int nID = 0;
 		if (pItem->nID)
 		{
 			for (int n =0;!nNameID && n < kNumSFXTypes;n++)
@@ -163,6 +160,7 @@ void CFolderIntel::BuildIntelList()
 					
 				}
 			}
+			g_pLTClient->CPrint("IntelItem #%d → Type: %d, ID: %d, NameID: %d, Count: %d", i, pItem->nType, nID, nNameID, nCount);
 		}
 		if (nNameID)
 		{

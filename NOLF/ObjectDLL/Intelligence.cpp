@@ -427,7 +427,8 @@ void Intelligence::HandleGadgetMsg(HOBJECT hSender, ConParse & parse)
 // ----------------------------------------------------------------------- //
 
 void Intelligence::DoActivate(HOBJECT hSender)
-{
+{	
+	g_pLTServer->CPrint("Intelligence item activated - ID: %d", m_nIntelId);
 	// BL 10/30/00 - fix multiple photographs of items in multiplayer
 	{
 		if ( g_pGameServerShell->GetGameType() != SINGLE )
