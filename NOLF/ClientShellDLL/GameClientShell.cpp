@@ -6425,33 +6425,34 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 	{
 		SetCurrentMission(nMissionId);
 		SetCurrentLevel(nLevel);
-        m_bIsCustomLevel    = LTFALSE;
+		m_bIsCustomLevel = LTFALSE;
 
 		// Set the level in the mission data...
 		if (nMissionId != pMissionData->GetMissionNum())
 		{
 			pMissionData->NewMission(nMissionId);
-
 			CPlayerStats* pStats = m_InterfaceMgr.GetPlayerStats();
 			pStats->ClearMissionDamage();
 		}
 
-
 		MISSION* pMission = g_pMissionMgr->GetMission(m_nCurrentMission);
 		if (pMission)
 		{
-			if (strstr(pWorldFile, "thiefmission") != NULL)
+			// Oder portable Version:
+			char lowerWorldFile[256];
+			strcpy(lowerWorldFile, pWorldFile);
+			_strlwr(lowerWorldFile); // Windows
+			// oder strtolower() auf anderen Systemen
+			if (strstr(lowerWorldFile, "thiefmission") != NULL)
 			{
 				// Combined title: Mission name + Scene
 				HSTRING hTxt1 = g_pLTClient->FormatString(IDS_THIEFMISSION);
-
 				HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
 				if (hTxt2 == LTNULL)
 				{
 					// Fallback bei fehlendem Szenentext
 					hTxt2 = g_pLTClient->CreateString("Scene ?");
 				}
-
 				char tmp[128];
 				sprintf(tmp, "%s\n%s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
 				HSTRING hWorld = g_pLTClient->CreateString(tmp);
@@ -6464,35 +6465,38 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 				// Special pic for thiefmissions
 				g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photos\\missions\\thief.pcx");
 			}
-			else if (pMission->nNumLevels == 1)
+			else // <- WICHTIGER else-Zweig hinzugefügt
 			{
-				HSTRING hTxt = g_pLTClient->FormatString(pMission->nNameId);
-				g_pInterfaceMgr->SetLoadLevelString(hTxt);
-				g_pLTClient->FreeString(hTxt);
+				if (pMission->nNumLevels == 1)
+				{
+					HSTRING hTxt = g_pLTClient->FormatString(pMission->nNameId);
+					g_pInterfaceMgr->SetLoadLevelString(hTxt);
+					g_pLTClient->FreeString(hTxt);
 
-				if (pMission->szPhoto && pMission->szPhoto[0])
-					g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
+					if (pMission->szPhoto && pMission->szPhoto[0])
+						g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
+					else
+						g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photos\\missions\\default.pcx");
+				}
 				else
-					g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photo\\missions\\default.pcx");
-			}
-			else
-			{
-				HSTRING hTxt1 = g_pLTClient->FormatString(pMission->nNameId);
-				HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
+				{
+					HSTRING hTxt1 = g_pLTClient->FormatString(pMission->nNameId);
+					HSTRING hTxt2 = g_pLTClient->FormatString(IDS_SCENENUMBER, m_nCurrentLevel + 1);
 
-				char tmp[128];
-				sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
-				HSTRING hWorld = g_pLTClient->CreateString(tmp);
-				g_pInterfaceMgr->SetLoadLevelString(hWorld);
+					char tmp[128];
+					sprintf(tmp, "%s, %s", g_pLTClient->GetStringData(hTxt1), g_pLTClient->GetStringData(hTxt2));
+					HSTRING hWorld = g_pLTClient->CreateString(tmp);
+					g_pInterfaceMgr->SetLoadLevelString(hWorld);
 
-				g_pLTClient->FreeString(hTxt1);
-				g_pLTClient->FreeString(hTxt2);
-				g_pLTClient->FreeString(hWorld);
+					g_pLTClient->FreeString(hTxt1);
+					g_pLTClient->FreeString(hTxt2);
+					g_pLTClient->FreeString(hWorld);
 
-				if (pMission->szPhoto && pMission->szPhoto[0])
-					g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
-				else
-					g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photo\\missions\\default.pcx");
+					if (pMission->szPhoto && pMission->szPhoto[0])
+						g_pInterfaceMgr->SetLoadLevelPhoto(pMission->szPhoto);
+					else
+						g_pInterfaceMgr->SetLoadLevelPhoto("interface\\photos\\missions\\default.pcx");
+				}
 			}
 		}
 
@@ -6500,30 +6504,28 @@ LTBOOL CGameClientShell::DoLoadWorld(char* pWorldFile, char* pCurWorldSaveFile,
 	}
 	else
 	{
-        m_bIsCustomLevel = LTTRUE;
+		m_bIsCustomLevel = LTTRUE;
 
 		// No mission data in custom levels...
-
 		pMissionData->Clear();
-		char *pWorld = strrchr(pWorldFile,'\\');
-        if(!pWorld)
-        {
-            pWorld = strrchr(pWorldFile, '/');
-        }
-        if(pWorld)
-        {
-            pWorld++;
-            HSTRING hWorld = g_pLTClient->CreateString(pWorld);
-            g_pInterfaceMgr->SetLoadLevelString(hWorld);
-            g_pLTClient->FreeString(hWorld);
-        }
+		char* pWorld = strrchr(pWorldFile, '\\');
+		if (!pWorld)
+		{
+			pWorld = strrchr(pWorldFile, '/');
+		}
+		if (pWorld)
+		{
+			pWorld++;
+			HSTRING hWorld = g_pLTClient->CreateString(pWorld);
+			g_pInterfaceMgr->SetLoadLevelString(hWorld);
+			g_pLTClient->FreeString(hWorld);
+		}
 
 		char szPhoto[512];
-		SAFE_STRCPY(szPhoto,pWorldFile);
-		strtok(szPhoto,".");
-		strcat(szPhoto,".pcx");
+		SAFE_STRCPY(szPhoto, pWorldFile);
+		strtok(szPhoto, ".");
+		strcat(szPhoto, ".pcx");
 		g_pInterfaceMgr->SetLoadLevelPhoto(szPhoto);
-
 	}
 
 	// Change to the loading level state...

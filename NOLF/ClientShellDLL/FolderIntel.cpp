@@ -29,7 +29,7 @@ namespace
 		196,
 		197,
 		198,
-		255,
+		254,
 	};
 	int nSFXNameIDs[kNumSFXTypes] =
 	{
