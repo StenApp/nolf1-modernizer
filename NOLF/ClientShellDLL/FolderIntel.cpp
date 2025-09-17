@@ -29,6 +29,8 @@ namespace
 		196,
 		197,
 		198,
+		252,
+		253,
 		254,
 	};
 	int nSFXNameIDs[kNumSFXTypes] =
@@ -48,6 +50,9 @@ namespace
 		IDS_INTEL_LOG,
 		IDS_INTEL_ROSTER,
 		IDS_INTEL_HANDBAG,
+		IDS_INTEL_MONEYBAG,
+		IDS_INTEL_PAPERMONEY,
+
 	};
 	int nSFXCounts[kNumSFXTypes];
 }

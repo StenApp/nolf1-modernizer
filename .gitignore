@@ -50,3 +50,5 @@ NOLF/ClientRes/Release-FR/ClientRes.vcxproj.FileListAbsolute.txt
 NOLF/ClientRes/Release-FR/cres.dll.recipe
 NOLF/ClientRes/Release-FR/cres.ilk
 NOLF/ClientRes/Release-FR/main.obj
+NOLF/ObjectDLL/AnimationLex.cpp
+NOLF/ObjectDLL/AnimationParse.cpp
