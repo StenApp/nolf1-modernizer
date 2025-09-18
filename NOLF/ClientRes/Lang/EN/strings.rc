@@ -497,10 +497,10 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_INTEL_20544         "Two Pounds"
-    IDS_INTEL_20545         "Three Pounds"
+    IDS_INTEL_20544         "Two Pounds."
+    IDS_INTEL_20545         "Three Pounds."
     IDS_INTEL_20546         "Another moneybag with even more money in it."
-    IDS_INTEL_20547         "<Insert Intelligence Item Text Here>"
+    IDS_INTEL_20547         "Employees' wages."
     IDS_INTEL_20548         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20549         "<Insert Intelligence Item Text Here>"
     IDS_INTEL_20550         "<Insert Intelligence Item Text Here>"
@@ -7783,12 +7783,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_DIALOGUE_14032      "This'll get you into the basement of the pub...excuse me, the 'Brasserie.'\nNormally the place would be empty this time o' night, but they had a wedding party ran late.\nMaybe you should try some other night..."
+    IDS_DIALOGUE_14032      "This'll get you into the basement of the pub...excuse me, the 'Brasserie.' Normally the place would be empty this time o' night, but they had a wedding party ran late. Maybe you should try some other night..."
     IDS_DIALOGUE_14033      "Surely you jest. What else do I need to know?"
-    IDS_DIALOGUE_14034      "There's two safes. One of 'em's near the bar on the ground level.\nThe other's in the owner's office upstairs. They're both hidden behind wall panels."
+    IDS_DIALOGUE_14034      "There's two safes. One of 'em's near the bar on the ground level. The other's in the owner's office upstairs. They're both hidden behind wall panels."
     IDS_DIALOGUE_14035      "If you don't mind me asking, how are you planning on cracking those safes?"
     IDS_DIALOGUE_14036      "That's a trade secret, laddie."
-    IDS_DIALOGUE_14037      "Right-o. Be careful, then. There's a lot of coppers out tonight.\nI'm not sure what's the best way out, actually."
+    IDS_DIALOGUE_14037      "Right-o. Be careful, then. There's a lot of coppers out tonight. I'm not sure what's the best way out, actually."
     IDS_DIALOGUE_14038      "The front door should do nicely."
     IDS_DIALOGUE_14039      "You've got guts. I hope you've got some brains too."
     IDS_DIALOGUE_14040      "I'll be upstairs. Your and Rory's wages are in the till."
@@ -7812,10 +7812,10 @@ BEGIN
     IDS_DIALOGUE_14054      "I can barely tell the difference myself."
     IDS_DIALOGUE_14055      "How do I get in?"
     IDS_DIALOGUE_14056      "Are you still there?"
-    IDS_DIALOGUE_14057      "Just inspecting the merchandise. The way in is through the second window from the left,\nabove the north retaining wall. I've left the shutters unlocked. After that, it's up to you."
+    IDS_DIALOGUE_14057      "Just inspecting the merchandise. The way in is through the second window from the left, above the north retaining wall. I've left the shutters unlocked. After that, it's up to you."
     IDS_DIALOGUE_14058      "One more thing. I've heard stories. They say this place is haunted."
     IDS_DIALOGUE_14059      "You speak of the Grey Servant."
-    IDS_DIALOGUE_14060      "The story goes that Sir Alfred Cramble, the Lord of this manor,\nhad been carrying on with a pretty young maid of French descent.\n Lady Cramble, who they say wasn't right in the head to begin with,\ntook it upon herself to end the affair... with an axe.\nOne afternoon, as the poor girl was cleaning the great hall,\nLady Cramble creeps up behind her and whack, off with her head."
+    IDS_DIALOGUE_14060      "The story goes that Sir Alfred Cramble, the Lord of this manor, had been carrying on with a pretty young maid of French descent. Lady Cramble, who they say wasn't right in the head to begin with, took it upon herself to end the affair... with an axe. One afternoon, as the poor girl was cleaning the great hall, Lady Cramble creeps up behind her and whack, off with her head."
     IDS_DIALOGUE_14061      "Is the story true?"
     IDS_DIALOGUE_14062      "No one knows for sure, but it's believed the girl still roams these halls making sure everything stays spick and span."
     IDS_DIALOGUE_14063      "Not a very romantic legend."
@@ -7830,9 +7830,9 @@ BEGIN
     IDS_DIALOGUE_14068      "Hmmm? Oh, yes, pet. Magnificent."
     IDS_DIALOGUE_14069      "What's wrong?"
     IDS_DIALOGUE_14070      "Just a bit haggard, I'm afraid. We've been sightseeing nonstop since we arrived."
-    IDS_DIALOGUE_14071      "That's a pity. I was going to suggest we drive to Aberdeen tomorrow morning.\nThe brochure says you can actually herd sheep yourself."
+    IDS_DIALOGUE_14071      "That's a pity. I was going to suggest we drive to Aberdeen tomorrow morning. The brochure says you can actually herd sheep yourself."
     IDS_DIALOGUE_14072      "Darling, I don't think I'm up to it."
-    IDS_DIALOGUE_14073      "How about Loch Ness? The travel agency gave me the name of a tour guide\nwho guarantees a sighting of the Loch Ness monster or your money back."
-    IDS_DIALOGUE_14074      "Really? Well, I suppose we shouldn't pass that up.\nNot that I'm particularly anxious to try monster hunting, mind you. I've had quite enough of ghosts and goblins."
+    IDS_DIALOGUE_14073      "How about Loch Ness? The travel agency gave me the name of a tour guide who guarantees a sighting of the Loch Ness monster or your money back."
+    IDS_DIALOGUE_14074      "Really? Well, I suppose we shouldn't pass that up. Not that I'm particularly anxious to try monster hunting, mind you. I've had quite enough of ghosts and goblins."
 END
 
