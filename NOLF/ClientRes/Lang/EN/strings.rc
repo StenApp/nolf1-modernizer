@@ -522,6 +522,7 @@ BEGIN
     IDS_INTEL_HANDBAG       "Handbag %1!d!"
     IDS_INTEL_PAPERMONEY    "Papermoney %1!d!"
 	IDS_INTEL_EMPLOYEESWAGES"Employees' wages %1!d!"
+	IDS_INTEL_DIAMOND		"Diamond %1!d!"
     IDS_NET_GAME_END        "Level ending conditions"
     IDS_NET_GAME_END_HELP   "Sets the conditions that end the map."
     IDS_NGE_FRAGS           "Frag limit reached"
@@ -7455,6 +7456,7 @@ BEGIN
     IDS_INTEL_TEXT_8020     "Moneybag with lots of money in it."
     IDS_INTEL_TEXT_8021     "Spare change."
 	IDS_INTEL_TEXT_8022     "Employees' wages."
+	IDS_INTEL_TEXT_8023		"The precious Robin's Egg diamond."		
 END
 
 STRINGTABLE

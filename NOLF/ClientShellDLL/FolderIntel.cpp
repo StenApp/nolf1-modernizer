@@ -12,7 +12,7 @@
 extern CGameClientShell* g_pGameClientShell;
 namespace
 {
-	const int kNumSFXTypes = 18;
+	const int kNumSFXTypes = 19;
 	int nSFXIDs[kNumSFXTypes] =
 	{
 		171,
@@ -29,6 +29,7 @@ namespace
 		196,
 		197,
 		198,
+		250,
 		251,
 		252,
 		253,
@@ -50,6 +51,7 @@ namespace
 		IDS_INTEL_MANIFEST,
 		IDS_INTEL_LOG,
 		IDS_INTEL_ROSTER,
+		IDS_INTEL_DIAMOND,
 		IDS_INTEL_EMPLOYEESWAGES,
 		IDS_INTEL_HANDBAG,
 		IDS_INTEL_MONEYBAG,
