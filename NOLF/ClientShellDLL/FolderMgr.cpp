@@ -367,7 +367,11 @@ void CFolderMgr::AddFolder(eFolderID folderID)
 	case FOLDER_ID_MAIN_WINTER:
 		pFolder = debug_new(CFolderMain);
 		break;
-
+		
+	case FOLDER_ID_MAIN_THIEF:
+		pFolder = debug_new(CFolderMain);
+		break;
+		
 	case FOLDER_ID_SINGLE:
 		pFolder = debug_new(CFolderSingle);
 		break;
