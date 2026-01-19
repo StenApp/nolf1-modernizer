@@ -290,6 +290,7 @@ char s_aFolderTag[FOLDER_ID_UNASSIGNED+1][32] =
 	"LoadScreenMulti",		//FOLDER_ID_LOADSCREEN_MULTI,
 	"FolderMainCasual",
 	"FolderMainWinter",
+	"FolderMainThief",
 	"FolderHUD",			//FOLDER_ID_HUD
 	"FolderJukebox",			//FOLDER_ID_JUKEBOX
 
