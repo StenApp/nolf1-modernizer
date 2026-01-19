@@ -2090,6 +2090,14 @@ Pos					= <35.0,-30.0,80.0>
 Scale				= 1.3
 Rotation			= 0.0
 
+[Character3]
+Name				= "CateThief"
+Model				= "IntHero"
+Style				= "Thief"
+Pos					= <35.0,-30.0,80.0>
+Scale				= 1.3
+Rotation			= 0.0
+
 /************************************************************************
 **
 **  Credits Layout
