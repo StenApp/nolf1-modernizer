@@ -3931,7 +3931,6 @@ void CInterfaceMgr::Load(HMESSAGEREAD hRead)
 //	PURPOSE:	Returns the main folder
 //
 // --------------------------------------------------------------------------- //
-
 eFolderID CInterfaceMgr::GetMainFolder()
 {
 	// If we have one cached, let's use that.
@@ -3950,12 +3949,25 @@ eFolderID CInterfaceMgr::GetMainFolder()
 	struct tm * timeinfo;
 	char monthBuffer[8];
 	char dayBuffer[8];
+	char hourBuffer[8];
 	int  monthNumber = -1;
 	int  dayNumber = -1;
+	int  hourNumber = -1;
 
 	// Grab current time
 	time (&rawtime);
 	timeinfo = localtime (&rawtime);
+
+	// Check for Thief hours (0:00 - 6:00) 
+	strftime(hourBuffer, sizeof(hourBuffer), "%H", timeinfo);
+	hourNumber = atoi(hourBuffer);
+
+	if ( hourNumber >= 0 && hourNumber < 6 )
+	{
+		g_pLTClient->CPrint("The Fox is around");
+		m_eMainFolderID = FOLDER_ID_MAIN_THIEF;
+		return m_eMainFolderID;
+	}
 
 	// Adjusted to Dec 15 - Dec 31st
 	strftime(dayBuffer, sizeof(dayBuffer), "%d", timeinfo);
