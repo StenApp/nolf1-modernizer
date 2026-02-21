@@ -1,6 +1,5 @@
 # No One Lives Forever Modernizer
 
-[![Build Status](https://dev.azure.com/heytherecoffee/NOLF-Modernizer/_apis/build/status/haekb.nolf1-modernizer?branchName=master)](https://dev.azure.com/heytherecoffee/NOLF-Modernizer/_build/latest?definitionId=3&branchName=master)
 
 This repo uses the Modernizer code to implement the PS2 thiefmissions
 ## Features
