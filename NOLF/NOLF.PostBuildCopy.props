@@ -2,19 +2,19 @@
 
   <!-- Zielverzeichnisse je nach Konfiguration -->
   <PropertyGroup Condition="'$(Configuration)'=='Release-DE'">
-    <TargetCopyDir>$(SolutionDir)..\FINAL_DE\</TargetCopyDir>
+    <TargetCopyDir>$(SolutionDir)..\COMPILED_DE\</TargetCopyDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release-EN'">
-    <TargetCopyDir>$(SolutionDir)..\FINAL_EN\</TargetCopyDir>
+    <TargetCopyDir>$(SolutionDir)..\COMPILED_EN\</TargetCopyDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release-FR'">
-    <TargetCopyDir>$(SolutionDir)..\FINAL_FR\</TargetCopyDir>
+    <TargetCopyDir>$(SolutionDir)..\COMPILED_FR\</TargetCopyDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='Final Release'">
-    <TargetCopyDir>$(SolutionDir)..\FINAL\</TargetCopyDir>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <TargetCopyDir>$(SolutionDir)..\COMPILED\</TargetCopyDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <TargetCopyDir>$(SolutionDir)..\DEBUG\</TargetCopyDir>
+    <TargetCopyDir>$(SolutionDir)..\COMPILED_DEBUG\</TargetCopyDir>
   </PropertyGroup>
 
   <!-- Kopiert fertiges Artefakt ins Zielverzeichnis -->
