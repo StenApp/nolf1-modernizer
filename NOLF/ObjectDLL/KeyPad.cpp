@@ -321,17 +321,18 @@ void KeyPad::SetupDisabledState()
 
 	theStruct.m_Pos = vPos;
 	
-	//TODO  set m_bThiefCodeBreaker on thiefmission 2+3
+	//TODO  set m_bThiefCodeBreaker on thiefmission 2+3 in LTA file
 	if (m_bThiefCodeBreaker)
 	{	
-	SAFE_STRCPY(theStruct.m_Filename, "guns\\models_hh\\PS2SafeCracker_HH.abc");
-	SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_PV\\PS2SafeCracker_PV.dtx");
+		SAFE_STRCPY(theStruct.m_Filename, "guns\\models_hh\\PS2SafeCracker_HH.abc");
+		SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_PV\\PS2SafeCracker_PV.dtx");
 	}
 	else
 	{
-	SAFE_STRCPY(theStruct.m_Filename, "Guns\\Models_HH\\Codedec_hh.abc");
-	SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_HH\\Codedec_hh.dtx");
+		SAFE_STRCPY(theStruct.m_Filename, "Guns\\Models_HH\\Codedec_hh.abc");
+		SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_HH\\Codedec_hh.dtx");
 	}
+	
 	theStruct.m_Flags = FLAG_VISIBLE | FLAG_GOTHRUWORLD;
 	theStruct.m_ObjectType  = OT_MODEL;
 
