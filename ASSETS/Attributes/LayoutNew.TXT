@@ -323,9 +323,9 @@ ScaleName10			= "InterfaceFlowerMod1"
 
 [FolderMainThief]
 TitlePos			= (-100,-100)
-SinglePlayerPos		= (54,148)
+SinglePlayerPos			= (54,148)
 ResumePos			= (54,180)
-MultiPlayerPos		= (54,212)
+MultiPlayerPos			= (54,212)
 OptionsPos			= (54,244)
 QuitPos				= (54,276)
 VersionPos			= (620,468)

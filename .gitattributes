@@ -1,0 +1,7 @@
+* text=auto
+*.cpp -text
+*.h -text
+*.rc -text
+*.dsp -text
+*.vcxproj -text
+*.sln -text

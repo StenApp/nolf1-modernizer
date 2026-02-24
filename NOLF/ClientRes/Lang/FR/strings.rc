@@ -1,4 +1,11 @@
+// WARNING: Do NOT open or edit this file with the Visual Studio
+// Resource Editor! Edit as plain text only.
+//
+// NOLF1 GOTY - FR strings
+
 LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
 
 STRINGTABLE
 BEGIN

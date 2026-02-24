@@ -1,4 +1,11 @@
+// ============================================================
+// WARNING: Do NOT open or edit this file with the Visual Studio
+// Resource Editor! Edit as plain text only.
+// Recommed editors: Notepad++, VS Code, or any text editor.
+// ============================================================
+
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
 
 STRINGTABLE
 BEGIN

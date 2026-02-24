@@ -26,7 +26,7 @@
 #define IDS_NEWGAME                     21
 #define IDS_LOADGAME                    22
 #define IDS_SAVEGAME                    23
-#define IDS_WARP                        24
+#define IDS_WARP                        24 //Extras Modernizer
 #define IDS_SCREEN                      25
 #define IDS_SOUND                       26
 #define IDS_KEYBOARD                    27
@@ -158,7 +158,7 @@
 #define IDS_HELP_NEW                    134
 #define IDS_HELP_LOAD                   135
 #define IDS_HELP_SAVE                   136
-#define IDS_HELP_CUSTOM                 137
+#define IDS_HELP_CUSTOM                 137 //Extras Modernizer
 #define IDS_HELP_FAVORITES              138
 #define IDS_HELP_BACK                   139
 #define IDS_HELP_DIFFICULTY             140
@@ -198,7 +198,7 @@
 #define IDS_HELP_SOUNDQUAL              174
 #define IDS_HELP_MUSIC                  175
 #define IDS_HELP_MUSICVOL               176
-#define IDS_HELP_CUSTOMLEVEL            177
+#define IDS_HELP_CUSTOMLEVEL            177 //Extras Modernizer
 #define IDS_HELP_USEJOYSTICK            178
 #define IDS_HELP_INVERTAXIS             179
 #define IDS_HELP_DEADZONE               180
@@ -6382,6 +6382,7 @@
 #define IDS_HELP_BANDWIDTH_CYCLE        20565
 #define IDS_HELP_BANDWIDTH_EDIT         20566
 #define IDS_BANDWIDTH_EDIT              20567
+//Modernizer IDS
 #define IDS_SHOW_FRAMERATE              20568
 #define IDS_LOCK_FRAMERATE              20569
 #define IDS_OLD_MOUSELOOK               20570
@@ -6405,6 +6406,7 @@
 #define IDS_HELP_UI_SCALE               20586
 #define IDS_JUKEBOX                     20587
 #define IDS_HELP_JUKEBOX                20588
+//GOTY IDS
 #define IDS_MISSION_GOTY                30000
 #define IDS_MISSION_GOTY_DESC           30001
 #define IDS_MISSION_GOTY_BRIEF          30002
@@ -6481,6 +6483,7 @@
 #define IDS_UI_30082                    30082
 #define IDS_UI_30083                    30083
 #define IDS_UI_30084                    30084
+//Modernizer IDS
 #define IDS_USE_GOTY_MENU               30085
 #define IDS_HELP_USE_GOTY_MENU          30086
 #define IDS_NORMAL_MENU                 30087
@@ -6508,18 +6511,26 @@
 #define IDS_TITLE_JUKEBOX               30109
 
 //thiefmissions1-3
-#define IDS_THIEFMISSION				959
-#define IDS_INTEL_MONEYBAG				688
-#define IDS_INTEL_HANDBAG				689
-#define IDS_INTEL_PAPERMONEY			690
-#define IDS_INTEL_EMPLOYEESWAGES		691
-#define IDS_INTEL_DIAMOND				692
-#define IDS_INTEL_TEXT_8018				8018
-#define IDS_INTEL_TEXT_8019				8019
-#define IDS_INTEL_TEXT_8020				8020
-#define IDS_INTEL_TEXT_8021				8021
-#define IDS_INTEL_TEXT_8022				8022
-#define IDS_INTEL_TEXT_8023				8023
+#define IDS_THIEFMISSION				959 //239 PS2
+#define IDS_INTEL_MONEYBAG				688 //667 PS2
+#define IDS_INTEL_HANDBAG				689 //668 PS2
+#define IDS_INTEL_PAPERMONEY			690 //669 PS2
+#define IDS_INTEL_EMPLOYEESWAGES		691 //NEW
+#define IDS_INTEL_DIAMOND				692	//NEW
+#define IDS_INTEL_TEXT_8018				8018 //NEW
+#define IDS_INTEL_TEXT_8019				8019 //NEW
+#define IDS_INTEL_TEXT_8020				8020 // 20546 PS2
+#define IDS_INTEL_TEXT_8021				8021 // 20547 PS2
+#define IDS_INTEL_TEXT_8022				8022 //NEW
+#define IDS_INTEL_TEXT_8023				8023 //NEW
+//IDS_INTEL_20541 already definded
+//IDS_INTEL_20542 already definded
+//IDS_INTEL_20543 already definded
+//IDS_INTEL_20544 already definded
+//IDS_INTEL_20545 already definded
+//IDS_INTEL_20546 already definded //NEW
+//IDS_INTEL_20547 already definded //NEW
+
 #define IDS_AMMO_55						4146
 #define IDS_AMMO_DESC_55				4346
 #define IDS_AMMO_56						4147
@@ -6534,11 +6545,9 @@
 #define IDS_MISSIONFAILURE37			6536
 #define IDS_MISSIONFAILURE38			6537
 
+
 //IDS_MISSION_OBJ_5047 already defined
 //IDS_MISSION_OBJ_5048 already defined
-//IDS_INTEL_20541 already definded
-//IDS_INTEL_20542 already definded
-//IDS_INTEL_20543 already definded
 //IDS_MISSION_OBJ_5089 already defined
 //IDS_MISSION_OBJ_5213 already defined
 //IDS_MISSION_OBJ_5214 already defined
