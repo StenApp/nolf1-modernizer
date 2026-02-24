@@ -2245,6 +2245,66 @@ ScaleName0		= "SmallFlickerspark1"
 ScaleName1		= "Blueflash"
 
 
+/*
+** ImpactFX28 - Nib_Spear Impact for ther Playstation 2 Pen dart
+*/
+
+[ImpactFX54]
+
+Name			= "Nib_Spear"
+CreateMark		= 0
+ImpactOnSky		= 0
+IgnoreFlesh		= 0
+IgnoreLiquid		= 0
+DoSurfaceFX		= 1
+ScreenTint		= 0
+BlastMark		= 0
+Sound			= "surface"				// Use surface texture flags
+SoundRadius		= 1000
+AISoundRadius		= 128
+AIIgnoreSurface		= 0
+Mark			= ""
+MarkScale		= 0.150000
+TintColor		= <0.000000, 0.000000, 0.000000>
+TintRampUp		= 0
+TintRampDown		= 0
+TintMaxTime		= 0
+BlastColor		= <0.000000, 0.000000, 0.000000>
+BlastTimeMin		= 0
+BlastTimeMax		= 0
+BlastFadeMin		= 0
+BlastFadeMax		= 0
+
+/*
+** ImpactFX55 - Under Water Nib Impact
+*/
+
+[ImpactFX55]
+
+Name			= "Nib_UWSpear"
+CreateMark		= 0
+ImpactOnSky		= 0
+IgnoreFlesh		= 0
+IgnoreLiquid		= 0
+DoSurfaceFX		= 1
+ScreenTint		= 0
+BlastMark		= 0
+Sound			= "surface"				// Use surface texture flags
+SoundRadius		= 1000
+AISoundRadius		= 128
+AIIgnoreSurface		= 0
+Mark			= ""
+MarkScale		= 0.150000
+TintColor		= <0.000000, 0.000000, 0.000000>
+TintRampUp		= 0
+TintRampDown		= 0
+TintMaxTime		= 0
+BlastColor		= <0.000000, 0.000000, 0.000000>
+BlastTimeMin		= 0
+BlastTimeMax		= 0
+BlastFadeMin		= 0
+BlastFadeMax		= 0
+
 /************************************************************************
 **
 ** FIREFX
@@ -2844,6 +2904,33 @@ Velocity        = 3000
 AltVelocity		= 3000
 
 
+/*
+** ProjectileFX11 - Nib_Bolt projectile for the ps2 Pendart
+*/
+
+[ProjectileFX11]
+
+Name			= "Nib_Bolt"
+SmokeTrail		= 0
+SmokeTrailType		= 0
+Flare			= 0
+Light			= 0
+FlySound		= 1
+Class			= "CSpear"
+ClassData		= ""
+Model			= "Guns\Projectiles\Models\Nib.abc"
+ModelScale		= <2.000000, 2.000000, 2.000000>
+Skin			= "Guns\Projectiles\Skins\Nib.dtx"
+Sound			= "Guns\Projectiles\Snd\Bolt.wav"
+SoundRadius		= 600
+FlareSprite		= ""
+FlareScale		= 0
+LightColor		= <0.000000, 0.000000, 0.000000>
+LightRadius		= 0
+Gravity			= 0
+Lifetime		= 20.0
+Velocity		= 3000
+AltVelocity		= 3000
 
 
 /************************************************************************
