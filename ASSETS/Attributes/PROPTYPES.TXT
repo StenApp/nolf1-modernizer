@@ -1,0 +1,8748 @@
+/************************************************************************
+**
+**		No One Lives Forever Prop Types Attributes file
+**
+** This file contains the following Prop Type related definitions:
+**
+**  PropType
+**
+**
+** NOTES:  
+**
+**  1) All definition properties (i.e., [PropType0]) ARE case sensitive.
+**	   If you are adding a new definition, it is best to start with a 
+**     copy of an existing (working) definition.
+**  2) The Float type is the same as Real (i.e., 1.0 or 1.5)
+**  3) The valid range of all RGB color properties is between
+**     0 and 255 (e.g., (0, 255, 0) would be green).
+**
+*/
+
+
+/************************************************************************
+**
+** P R O P  T Y P E
+**
+** The PropType definitions define all of the attributes associated with
+** a particular prop type.  Defining props in this way allows us to
+** easily make global changes to all the props.
+**
+**
+** All prop type definitions should contain the following properties:
+**
+**  Type (String)
+**
+**      The user friendly name of the debris type (what shows up in DEdit). 
+**
+**  DebrisType (String)
+**
+**		What type of debris should this prop create when it is destroyed
+**		(NOTE:  This should map directly to the name of a DEBRIS object in the
+**		Attributes\Debris.txt file).
+**
+**	Filename (String)
+**
+**		Name of the model file
+**
+**	Skin (String)
+**
+**		Name of the skin file.
+**
+**	Scale (Vector)
+**
+**		How the prop should be scaled.
+**
+**	ObjectColor (Vector)
+**
+**		The prop's color.
+**
+**	Alpha (Float)
+**
+**		The prop's alpha value.
+**
+**  HitPoints (Integer)
+**
+**		How many hit points the prop has (set to -1 for CanDamage = FALSE)
+**
+**	Visible (Boolean)
+**
+**		Should the prop be visible (1=true, 0=false)
+**
+**	Solid (Boolean)
+**
+**		Should the prop be solid (1=true, 0=false)
+**
+**	Gravity (Boolean)
+**
+**		Should the prop have gravity (1=true, 0=false)
+**
+**	Shadow (Boolean)
+**
+**		Should the prop cast a shadow (1=true, 0=false)
+**
+**	MoveToFloor (Boolean)
+**
+**		Should the prop be moved to the floor (1=true, 0=false)
+**
+**	DetailTexture (Boolean)
+**
+**		Should the prop use detail textures (1=true, 0=false)
+**
+**	Chrome (Boolean)
+**
+**		Should the prop use chrome (environment mapping) (1=true, 0=false)
+**
+**	Chromakey (Boolean)
+**
+**		Should the prop use chromakey (1=true, 0=false)
+**
+**	Additive (Boolean)
+**
+**		Should the prop use additive blending (1=true, 0=false)
+**
+**	Multiply (Boolean)
+**
+**		Should the prop use multiplicative blending (1=true, 0=false)
+**
+**	RayHit (Boolean)
+**
+**		Should the prop use ray hit physics (1=true, 0=false)
+**
+**  TouchSound (String)
+**
+**		The name of a sound to be played when the prop is touched.
+**
+**  TouchSoundRadius (Integer)
+**
+**		The radius for the touch sound
+**
+**	** Game of the Year Additions **
+**
+**	ModelKeys (Boolean)
+**
+**		Use model key callbacks.
+*/
+
+/*
+**  PropType0 - Air Balloon 1
+*/
+
+[PropType0]
+	
+Type				= "Air Ballon 1"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\AirBalloon_01.abc"
+Skin				= "Props\Skins\AirBalloon_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType1 - Air Balloon 1b
+*/
+
+[PropType1]
+	
+Type				= "Air Ballon 2"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\AirBalloon_01.abc"
+Skin				= "Props\Skins\AirBalloon_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType2 - Air Balloon 1c
+*/
+
+[PropType2]
+	
+Type				= "Air Ballon 3"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\AirBalloon_01.abc"
+Skin				= "Props\Skins\AirBalloon_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType3 - Antenna 1a
+*/
+
+[PropType3]
+	
+Type				= "Antenna Tall"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Antenna_01.abc"
+Skin				= "Props\Skins\Antenna.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType4 - Antenna 1b
+*/
+
+[PropType4]
+	
+Type				= "Antenna Small"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Antenna_01b.abc"
+Skin				= "Props\Skins\Antenna.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType5 - Antenna 1c
+*/
+
+[PropType5]
+	
+Type				= "Antenna Medium"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Antenna_01c.abc"
+Skin				= "Props\Skins\Antenna.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType6 - Antlers
+*/
+
+[PropType6]
+	
+Type				= "antlers"
+DebrisType			= "Charred Chunks"
+Filename			= "Props\Models\antlers.abc"
+Skin				= "Props\Skins\antlers.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType7 - Ashtray 1
+*/
+
+[PropType7]
+	
+Type				= "Ashtray Clean"
+DebrisType			= "ashtray"
+Filename			= "Props\Models\Ashtray_01.abc"
+Skin				= "Props\Skins\Ashtray_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType8 - Ashtray 2
+*/
+
+[PropType8]
+	
+Type				= "Ashtray Dirty 1"
+DebrisType			= "ashtray"
+Filename			= "Props\Models\Ashtray_01.abc"
+Skin				= "Props\Skins\Ashtray_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType9 - Ashtray 3
+*/
+
+[PropType9]
+	
+Type				= "Ashtray Dirty 2"
+DebrisType			= "ashtray"
+Filename			= "Props\Models\Ashtray_01.abc"
+Skin				= "Props\Skins\Ashtray_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType10 - badplane
+*/
+
+[PropType10]
+	
+Type				= "Bad Plane"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\badplane.abc"
+Skin				= "Props\Skins\badplane.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType11 - Beaker
+*/
+
+[PropType11]
+	
+Type				= "Beaker Big"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Beaker.abc"
+Skin				= "Props\Skins\Beaker.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType12 - Bird 1
+*/
+
+[PropType12]
+	
+Type				= "Seagul Flying"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Bird_01.abc"
+Skin				= "Props\Skins\Bird_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\seagull.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType13 - Bird 2
+*/
+
+[PropType13]
+	
+Type				= "Pelican Standing"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Bird_02.abc"
+Skin				= "Props\Skins\Bird_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType14 - Birds
+*/
+
+[PropType14]
+	
+Type				= "Birds in V"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\birds.abc"
+Skin				= "Props\Skins\.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType15 - Boots 1a
+*/
+
+[PropType15]
+	
+Type				= "Boots Right Lean"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Boots_01.abc"
+Skin				= "Props\Skins\Boots_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType16 - Boots 1b
+*/
+
+[PropType16]
+	
+Type				= "Boots Messy"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Boots_01b.abc"
+Skin				= "Props\Skins\Boots_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType17 - Soap Bottle
+*/
+
+[PropType17]
+	
+Type				= "Bottle Soap"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\SoapBottle.abc"
+Skin				= "Props\Skins\SoapBottle.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType18 - Lotion Bottle
+*/
+
+[PropType18]
+	
+Type				= "Bottle Lotion"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\SoapBottle.abc"
+Skin				= "Props\Skins\HandLothion.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType19 - Boots 1c
+*/
+
+[PropType19]
+	
+Type				= "Boots Left Lean"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Boots_01c.abc"
+Skin				= "Props\Skins\Boots_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType20 - Broom Push
+*/
+
+[PropType20]
+	
+Type				= "Broom Push"
+DebrisType			= "Wood"
+Filename			= "Props\Models\broom_shop.abc"
+Skin				= "Props\Skins\broom_shop.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType21 - Tomato Can
+*/
+
+[PropType21]
+	
+Type				= "Tomato Can"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Can_01.abc"
+Skin				= "Props\Skins\CanTomato.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType22 - Candleholder 1
+*/
+
+[PropType22]
+	
+Type				= "Candle Red"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Candleholder.abc"
+Skin				= "Props\Skins\Candleholder.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType23 - Candleholder 2
+*/
+
+[PropType23]
+	
+Type				= "Candle Yellow"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Candleholder_02.abc"
+Skin				= "Props\Skins\Candleholder_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType24 - Car 1a
+*/
+
+[PropType24]
+	
+Type				= "Car Black"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_01.abc"
+Skin				= "Props\Skins\Car_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType25 - Car 1b
+*/
+
+[PropType25]
+	
+Type				= "Car Brown"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_01.abc"
+Skin				= "Props\Skins\Car_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType26 - Car 1c
+*/
+
+[PropType26]
+	
+
+Type				= "Car Blue"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_01.abc"
+Skin				= "Props\Skins\Car_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType27 - Car 2
+*/
+
+[PropType27]
+	
+Type				= "Car White"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_02.abc"
+Skin				= "Props\Skins\Car_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType28 - Carrot 1
+*/
+
+[PropType28]
+	
+Type				= "Carrot Single"
+DebrisType			= "Generic_orange"
+Filename			= "Props\Models\Carrot_01.abc"
+Skin				= "Props\Skins\Carrot.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType29 - Carrot 2
+*/
+
+[PropType29]
+	
+Type				= "Carrots Two"
+DebrisType			= "Generic_Orange"
+Filename			= "Props\Models\Carrot_02.abc"
+Skin				= "Props\Skins\Carrot.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType30 - Cattail
+*/
+
+[PropType30]
+	
+Type				= "Cattail"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Cattail.abc"
+Skin				= "Props\Skins\Cattail.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType31 - Wood Chair
+*/
+
+[PropType31]
+	
+Type				= "Chair Wood"
+DebrisType			= "Wood"
+Filename			= "Props\Models\chair_wd1.abc"
+Skin				= "Props\Skins\chair_wd1.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType32 - Chair
+*/
+
+[PropType32]
+	
+Type				= "Chair Metal"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\chair_wd1.abc"
+Skin				= "Props\Skins\Chair_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 150
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType33 - Change 1
+*/
+
+[PropType33]
+	
+Type				= "Money Paper Med1"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_01.abc"
+Skin				= "Props\Skins\Change_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType34 - Change 2
+*/
+
+[PropType34]
+	
+Type				= "Money Paper Big1"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_02.abc"
+Skin				= "Props\Skins\Change_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType35 - Change 2
+*/
+
+[PropType35]
+	
+Type				= "Money Paper Small1"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_03.abc"
+Skin				= "Props\Skins\Change_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType36 - Cheese 1
+*/
+
+[PropType36]
+	
+Type				= "Cheese Wheel"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Cheese_01.abc"
+Skin				= "Props\Skins\Cheese_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType37 - Cheese 2
+*/
+
+[PropType37]
+	
+Type				= "Cheese Wedge"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Cheese_01b.abc"
+Skin				= "Props\Skins\Cheese_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType38 - Cheese 3
+*/
+
+[PropType38]
+	
+Type				= "Cheese Sliced Out"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Cheese_01c.abc"
+Skin				= "Props\Skins\Cheese_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType39 - Cigarette
+*/
+
+[PropType39]
+	
+Type				= "Cigarette Pack"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Cigarette.abc"
+Skin				= "Props\Skins\Cigarette.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 5
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType40 - Cigarette Butt 1
+*/
+
+[PropType40]
+	
+Type				= "Cig Butt 1"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\CigButt_01.abc"
+Skin				= "Props\Skins\CigButt.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType41 - Cigarette Butt 2
+*/
+
+[PropType41]
+	
+Type				= "Cig Butt 2"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\CigButt_02.abc"
+Skin				= "Props\Skins\CigButt.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType42 - CLeaver
+*/
+
+[PropType42]
+	
+Type				= "Cleaver Meat"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Leaver.abc"
+Skin				= "Props\Skins\Leaver.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType43 - Clipboard
+*/
+
+[PropType43]
+	
+Type				= "Clipboard"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\clipboard.abc"
+Skin				= "Props\Skins\clipboard.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType44 - Cosmonaut Suit
+*/
+
+[PropType44]
+	
+Type				= "Cosmonaut Suit"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Cosmonaut_suit.abc"
+Skin				= "Chars\Skins\Cosmonaut_action.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType45 - Dinner Tray
+*/
+
+[PropType45]
+	
+Type				= "Dinner Tray Food On"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\DinnerTray.abc"
+Skin				= "Props\Skins\DinnerTray.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType46 - Dixie Cup DBlue
+*/
+
+[PropType46]
+	
+Type				= "Dixie Cup DBlue"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_01.abc"
+Skin				= "Props\Skins\DixieCup_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType47 - Dixie Cup Pink
+*/
+
+[PropType47]
+	
+Type				= "Dixie Cup Pink"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_01.abc"
+Skin				= "Props\Skins\DixieCup_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType48 - Dixie Cup Blue
+*/
+
+[PropType48]
+	
+Type				= "Dixie Cup Blue"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_01.abc"
+Skin				= "Props\Skins\DixieCup_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType49 - Dixie Stack DBlue
+*/
+
+[PropType49]
+	
+Type				= "Dixie Stack DBlue"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_02.abc"
+Skin				= "Props\Skins\DixieCup_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType50 - Dixie Stack Pink
+*/
+
+[PropType50]
+	
+Type				= "Dixie Stack Pink"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_02.abc"
+Skin				= "Props\Skins\DixieCup_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType51 - Dixie Stack Blue
+*/
+
+[PropType51]
+	
+Type				= "Dixie Stack Blue"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\DixieCup_02.abc"
+Skin				= "Props\Skins\DixieCup_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType52 - Door Lever Gold Fancy Left
+*/
+
+[PropType52]
+	
+Type				= "DoorLever L GoldFancy"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_01L.abc"
+Skin				= "Props\Skins\Doorknob_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType53 - Door Lever Silver Fancy Left
+*/
+
+[PropType53]
+	
+Type				= "DoorLever L SilverFancy"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_01L.abc"
+Skin				= "Props\Skins\Doorknob_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType54 - Door Lever Silver Fancy Right
+*/
+
+[PropType54]
+	
+Type				= "DoorLever R SilverFancy"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_01R.abc"
+Skin				= "Props\Skins\Doorknob_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType55 - Door Lever Gold Fancy Right
+*/
+
+[PropType55]
+	
+Type				= "DoorLever R GoldFancy"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_01R.abc"
+Skin				= "Props\Skins\Doorknob_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType56 - Door Lever Gold Left
+*/
+
+[PropType56]
+	
+Type				= "DoorLever L Gold"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02L.abc"
+Skin				= "Props\Skins\Doorknob_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType57 - Door Lever Gold Right
+*/
+
+[PropType57]
+	
+Type				= "DoorLever R Gold"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02R.abc"
+Skin				= "Props\Skins\Doorknob_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType58 - Door Lever Silver Left
+*/
+
+[PropType58]
+	
+Type				= "DoorLever L Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02L.abc"
+Skin				= "Props\Skins\Doorknob_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType59 - Door Lever Silver Right
+*/
+
+[PropType59]
+	
+Type				= "DoorLever R Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02R.abc"
+Skin				= "Props\Skins\Doorknob_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType60 - Door Lever Bronze Left
+*/
+
+[PropType60]
+	
+Type				= "DoorLever L Bronze"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02L.abc"
+Skin				= "Props\Skins\Doorknob_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType61 - Door Lever Bronze Right
+*/
+
+[PropType61]
+	
+Type				= "DoorLever R Bronze"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02R.abc"
+Skin				= "Props\Skins\Doorknob_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType62 - Door Lever Silver Left
+*/
+
+[PropType62]
+	
+Type				= "DoorLever L Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02L.abc"
+Skin				= "Props\Skins\Doorknob_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType63 - Door Lever Silver Right
+*/
+
+[PropType63]
+	
+Type				= "DoorLever R Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_02R.abc"
+Skin				= "Props\Skins\Doorknob_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType64 - Door Knob Gold Left
+*/
+
+[PropType64]
+	
+Type				= "DoorKnob L Gold"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03L.abc"
+Skin				= "Props\Skins\Doorknob_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType65 - Door Knob Gold Right
+*/
+
+[PropType65]
+	
+Type				= "DoorKnob R Gold"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03R.abc"
+Skin				= "Props\Skins\Doorknob_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType66 - Door Knob Bronze Left
+*/
+
+
+[PropType66]
+	
+Type				= "DoorKnob L Bronze"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03L.abc"
+Skin				= "Props\Skins\Doorknob_03b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType67 - Door Knob Bronze Right
+*/
+
+[PropType67]
+	
+Type				= "DoorKnob R Bronze"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03R.abc"
+Skin				= "Props\Skins\Doorknob_03b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType68 - Door Knob Silver Left
+*/
+
+[PropType68]
+	
+Type				= "DoorKnob L Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03L.abc"
+Skin				= "Props\Skins\Doorknob_03c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType69 - Door Knob Silver Right
+*/
+
+[PropType69]
+	
+Type				= "DoorKnob R Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Doorknob_03R.abc"
+Skin				= "Props\Skins\Doorknob_03c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType70 - Driftwood
+*/
+
+[PropType70]
+	
+Type				= "Driftwood"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Driftwood_01.abc"
+Skin				= "Props\Skins\Driftwood_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType71 - Drink 1
+*/
+
+[PropType71]
+	
+Type				= "Whiskey Glass "
+DebrisType			= "Glass Small"
+Filename			= "Props\Models\Drink_01.abc"
+Skin				= "Props\Skins\Drink_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType72 - Drink 2
+*/
+
+[PropType72]
+	
+Type				= "Martini"
+DebrisType			= "Glass Small"
+Filename			= "Props\Models\Drink_02.abc"
+Skin				= "Props\Skins\Drink_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType73 - Firehose
+*/
+
+[PropType73]
+	
+Type				= "Firehose"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Firehose.abc"
+Skin				= "Props\Skins\Firehose.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType74 - Fish 1
+*/
+
+[PropType74]
+	
+Type				= "Fish Blue"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Fish_01.abc"
+Skin				= "Props\Skins\Fish_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType75 - Fish 2
+*/
+
+[PropType75]
+	
+Type				= "Fish Yellow"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Fish_02.abc"
+Skin				= "Props\Skins\Fish_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType76 - Fish 3
+*/
+
+[PropType76]
+	
+Type				= "Fish Red"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Fish_03.abc"
+Skin				= "Props\Skins\Fish_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType77 - Fish 5
+*/
+
+[PropType77]
+	
+Type				= "Fish Green Big"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Fish_05.abc"
+Skin				= "Props\Skins\Fish_05.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType78 - Flour
+*/
+
+[PropType78]
+	
+Type				= "Flour"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Flour.abc"
+Skin				= "Props\Skins\Flour.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType79 - flower 1a
+*/
+
+[PropType79]
+	
+Type				= "Flower BirdParadise Grouping"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_01.abc"
+Skin				= "Props\Skins\Flower_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType80 - flower 1b
+*/
+
+[PropType80]
+	
+Type				= "Flower BirdParadise Single"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_01b.abc"
+Skin				= "Props\Skins\Flower_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType81 - flower 2a
+*/
+
+[PropType81]
+	
+Type				= "Flower Wild Group 1"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_02.abc"
+Skin				= "Props\Skins\Flower_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType82 - flower 2b
+*/
+
+[PropType82]
+	
+Type				= "Flower Yellow Single"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_02b.abc"
+Skin				= "Props\Skins\Flower_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType83 - flower 2c
+*/
+
+[PropType83]
+	
+Type				= "Flower Pink Single"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_02c.abc"
+Skin				= "Props\Skins\Flower_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType84 - flower 3a
+*/
+
+[PropType84]
+	
+Type				= "Flower Wild Group 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_03.abc"
+Skin				= "Props\Skins\Flower_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType85 - flower 3b
+*/
+
+[PropType85]
+	
+Type				= "Flower Daisy Single"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_03b.abc"
+Skin				= "Props\Skins\Flower_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType86 - flower 3c
+*/
+
+[PropType86]
+	
+Type				= "Flower Orange Single"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Flower_03c.abc"
+Skin				= "Props\Skins\Flower_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType87 - flower vase 1
+*/
+
+[PropType87]
+	
+Type				= "Flower Vase 1"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\FlowerVase_01.abc"
+Skin				= "Props\Skins\Flower_02.dtx;Props\Skins\FlowerVase_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType88 - flower vase 2
+*/
+
+[PropType88]
+	
+Type				= "Flower Vase 2"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\FlowerVase_01.abc"
+Skin				= "Props\Skins\Flower_03.dtx;Props\Skins\FlowerVase_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType89 - ForkKnifeSpoon
+*/
+
+[PropType89]
+	
+Type				= "ForkKnifeSpoon"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\ForkKnifeSpoon.abc"
+Skin				= "Props\Skins\ForkKnifeSpoon.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType90 - Fork
+*/
+
+[PropType90]
+	
+Type				= "Fork"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Fork.abc"
+Skin				= "Props\Skins\SilverWare.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType91 - Frozen Meat
+*/
+
+[PropType91]
+	
+Type				= "Meat On Stick Frozen"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\FrozenMeat.abc"
+Skin				= "Props\Skins\FrozenMeat.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType92 - Goat
+*/
+
+[PropType92]
+	
+Type				= "Goat"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\Goat1.abc"
+Skin				= "Props\Skins\goat.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 200
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\baa1a.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType93 - Goggles
+*/
+
+[PropType93]
+	
+Type				= "Goggles For Lab"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Goggles.abc"
+Skin				= "Props\Skins\Goggle.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType94 - Greasepan
+*/
+
+[PropType94]
+	
+Type				= "Greasepan for Garage"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\greasepan.abc"
+Skin				= "Props\Skins\greasepan.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType95 - Hatch Door 1
+*/
+
+[PropType95]
+	
+Type				= "HatchWheel Silver"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\HatchDoor.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType96 - Hatch Door 2
+*/
+
+[PropType96]
+	
+Type				= "HatchWheel Gold"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\HatchDoor_b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType97 - Hatch Door 3
+*/
+
+[PropType97]
+	
+Type				= "HatchWheel Bronze"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\HatchDoor_c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType98 - Helicopter
+*/
+
+[PropType98]
+	
+Type				= "Helicopter"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\helicopter.abc"
+Skin				= "Props\Skins\helicopter.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType99 - Helicopter
+*/
+
+[PropType99]
+	
+Type				= "Helicopter 1"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\helicopter.abc"
+Skin				= "Props\Skins\helicopter_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType100 - Helicopter
+*/
+
+[PropType100]
+	
+Type				= "Helicopter 2"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\helicopter.abc"
+Skin				= "Props\Skins\helicopter_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType101 - Hubcap
+*/
+
+[PropType101]
+	
+Type				= "Hubcap"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\hubcap.abc"
+Skin				= "Props\Skins\hubcap.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType102 - KitchenKnife
+*/
+
+[PropType102]
+	
+Type				= "KitchenKnife"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\KitchenKnife.abc"
+Skin				= "Props\Skins\KitchenKnife.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType103 - Knife
+*/
+
+[PropType103]
+	
+Type				= "Knife"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Knife.abc"
+Skin				= "Props\Skins\SilverWare.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType104 - Hors Doeuvre 1
+*/
+
+[PropType104]
+	
+Type				= "Hors Doeuvre 1"
+DebrisType			= "Generic_yellow"
+Filename			= "Props\Models\Snack_01.abc"
+Skin				= "Props\Skins\Snack_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType105 - Hors Doeuvre 2
+*/
+
+[PropType105]
+	
+Type				= "Hors Doeuvre 2"
+DebrisType			= "Generic_yellow"
+Filename			= "Props\Models\Snack_02.abc"
+Skin				= "Props\Skins\Snack_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType106 - Lab Coat
+*/
+
+[PropType106]
+	
+Type				= "Lab Coat On Hanger"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\LabCoat.abc"
+Skin				= "Props\Skins\LabCoat.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "snd\event\touchclothes.wav"
+TouchSoundRadius	= 600
+
+/*
+**  PropType107 - Lamp 1
+*/
+
+[PropType107]
+	
+Type				= "Lamp Iron Wall Sconce"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_01.abc"
+Skin				= "Props\Skins\Lamp_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType108 - Lamp 2
+*/
+
+[PropType108]
+	
+Type				= "Lamp Wall Small MetalGlass"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_02.abc"
+Skin				= "Props\Skins\Lamp_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType109 - Lamp 3a
+*/
+
+[PropType109]
+	
+Type				= "Lamp Hanging From Ceiling"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_03.abc"
+Skin				= "Props\Skins\Lamp_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType110 - Lamp 3b
+*/
+
+[PropType110]
+	
+Type				= "Lamp Wall Big MetalGlass"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_03b.abc"
+Skin				= "Props\Skins\Lamp_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType111 - LifeRing
+*/
+
+[PropType111]
+	
+Type				= "LifeRing Red"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\LifeRing.abc"
+Skin				= "Props\Skins\LifeRing.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType112 - Lilypad 1
+*/
+
+[PropType112]
+	
+Type				= "Lily Pad 1"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Lilypad_01.abc"
+Skin				= "Props\Skins\Lilypad_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType113 - Lilypad 2
+*/
+
+[PropType113]
+	
+Type				= "Lily Pad 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Lilypad_02.abc"
+Skin				= "Props\Skins\Lilypad_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType114 - Lunch Box
+*/
+
+[PropType114]
+	
+Type				= "Lunch Box Metal"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\LunchBox.abc"
+Skin				= "Props\Skins\LunchBox.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType115 - Matchbook 1
+*/
+
+[PropType115]
+	
+Type				= "Matchbook Closed"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Matchbook_01a.abc"
+Skin				= "Props\Skins\Matchbook.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType116 - Matchbook 2
+*/
+
+[PropType116]
+	
+Type				= "Matchbook Open"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Matchbook_01b.abc"
+Skin				= "Props\Skins\Matchbook.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType117 - Microphone
+*/
+
+[PropType117]
+	
+Type				= "Microphone"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Microphone.abc"
+Skin				= "Props\Skins\Microphone.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType118 - monkey
+*/
+
+[PropType118]
+	
+Type				= "Monkey"
+DebrisType			= "Generic_Red"
+Filename			= "Props\Models\monkey.abc"
+Skin				= "Props\Skins\monkey.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType119 - Motorcycle
+*/
+
+[PropType119]
+	
+Type				= "Motorcycle Old"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Motorcycle.abc"
+Skin				= "Props\Skins\Motorcycle.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType120 - Movie Projector 1
+*/
+
+[PropType120]
+	
+Type				= "Movie Projector Off"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\MovieP.abc"
+Skin				= "Props\Skins\MovieP.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 200
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType121 - Movie Projector 2
+*/
+
+[PropType121]
+	
+Type				= "Movie Projector On"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\MovieP_A.abc"
+Skin				= "Props\Skins\MovieP.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 200
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType122 - Mug
+*/
+
+[PropType122]
+	
+Type				= "Mug"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Mug_01.abc"
+Skin				= "Props\Skins\Mug_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType123 - Napkins
+*/
+
+[PropType123]
+	
+Type				= "Napkin Used"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Napkins_01.abc"
+Skin				= "Props\Skins\Napkins_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType124 - Onion
+*/
+
+[PropType124]
+	
+Type				= "Onion Single"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Onion.abc"
+Skin				= "Props\Skins\Onion.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType125 - Orange 1
+*/
+
+[PropType125]
+	
+Type				= "Orange Single"
+DebrisType			= "orange"
+Filename			= "Props\Models\Orange_01.abc"
+Skin				= "Props\Skins\Orange.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType126 - Orange 2
+*/
+
+[PropType126]
+	
+Type				= "Orange Line of"
+DebrisType			= "orange2"
+Filename			= "Props\Models\Orange_02.abc"
+Skin				= "Props\Skins\Orange.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType127 - Orange 3
+*/
+
+[PropType127]
+	
+Type				= "Orange Stack of"
+DebrisType			= "orange2"
+Filename			= "Props\Models\Orange_03.abc"
+Skin				= "Props\Skins\Orange.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType128 - Pan
+*/
+
+[PropType128]
+	
+Type				= "Pan Fry Iron"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pan_01.abc"
+Skin				= "Props\Skins\Pans_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType129 - Pan
+*/
+
+[PropType129]
+	
+Type				= "Pan Fry Copper"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pan_01.abc"
+Skin				= "Props\Skins\Pan_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType130 - Paratrooper Falling
+*/
+
+[PropType130]
+	
+Type				= "Paratrooper Falling"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Para_Falling.abc"
+Skin				= "Chars\Skins\Paratrooper_action.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType131 - Pay Phone 1
+*/
+
+[PropType131]
+	
+Type				= "Payphone Yellow"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\PayPhone_01.abc"
+Skin				= "Props\Skins\PayPhone_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType132 - Pay Phone 2
+*/
+
+[PropType132]
+	
+Type				= "Payphone Green"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\PayPhone_01.abc"
+Skin				= "Props\Skins\PayPhone_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType133 - Pay Phone 3
+*/
+
+[PropType133]
+	
+Type				= "Payphone Red"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\PayPhone_01.abc"
+Skin				= "Props\Skins\PayPhone_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType134 - Pen
+*/
+
+[PropType134]
+	
+Type				= "Pen Feather Style"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Pen_01.abc"
+Skin				= "Props\Skins\Pen_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType135 - Phone 1
+*/
+
+[PropType135]
+	
+Type				= "Phone Pink"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Phone_01.abc"
+Skin				= "Props\Skins\Phone_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType136 - Phone 2
+*/
+
+[PropType136]
+	
+Type				= "Phone Green"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Phone_01.abc"
+Skin				= "Props\Skins\Phone_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType137 - Phone 3
+*/
+
+[PropType137]
+	
+Type				= "Phone Red"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Phone_01.abc"
+Skin				= "Props\Skins\Phone_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType138 - Phone 4
+*/
+
+[PropType138]
+	
+Type				= "Phone Blue"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Phone_01.abc"
+Skin				= "Props\Skins\Phone_01d.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType139 - Pillow 1
+*/
+
+[PropType139]
+	
+Type				= "Pillow White"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Pillow_01.abc"
+Skin				= "Props\Skins\Pillow_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType140 - Pillow 2
+*/
+
+[PropType140]
+	
+Type				= "Pillow GreenDot"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Pillow_01.abc"
+Skin				= "Props\Skins\Pillow_02a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType141 - Pillow 3
+*/
+
+[PropType141]
+	
+Type				= "Pillow BlueDot"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Pillow_01.abc"
+Skin				= "Props\Skins\Pillow_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType142 - plane 1
+*/
+
+[PropType142]
+	
+Type				= "Plane 1"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\plane.abc"
+Skin				= "Props\Skins\plane.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType143 - Plane 2
+*/
+
+[PropType143]
+	
+Type				= "Plane 2"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Plane2.abc"
+Skin				= "Props\Skins\Plane2.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType144 - Plant 3
+*/
+
+[PropType144]
+	
+Type				= "Plant Spiny Small"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_03.abc"
+Skin				= "Props\Skins\Plant_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType145 - Plant 4
+*/
+
+[PropType145]
+	
+Type				= "Plant Small Leaf Green"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_04.abc"
+Skin				= "Props\Skins\Plant_04.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible			= 1
+Solid				= 0
+Gravity			= 0
+Shadow			= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome			= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit			= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius		= 256
+
+
+/*
+**  PropType146 - Plant 4
+*/
+
+[PropType146]
+	
+Type				= "Plant Small Leaf Brown"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_04.abc"
+Skin				= "Props\Skins\Plant_04b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType147 - Plant 5
+*/
+
+[PropType147]
+	
+Type				= "Plant HangIvy Big"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_05.abc"
+Skin				= "Props\Skins\Plant_05.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType148 - Plant 6
+*/
+
+[PropType148]
+	
+Type				= "Plant HangIvy Big 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_06.abc"
+Skin				= "Props\Skins\Plant_06.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType149 - Plant 7
+*/
+
+[PropType149]
+	
+Type				= "Plant HangIvy Small"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_07.abc"
+Skin				= "Props\Skins\Plant_07.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType150 - Plant 8
+*/
+
+[PropType150]
+	
+Type				= "Plant HangIvy Small 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_08.abc"
+Skin				= "Props\Skins\Plant_07.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType151 - Plant 9
+*/
+
+[PropType151]
+	
+Type				= "Fern Green"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant_09.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType152 - Plant 9
+*/
+
+[PropType152]
+	
+Type				= "Fern Snow"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant_09s.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType153 - Plant 11a
+*/
+
+[PropType153]
+	
+Type				= "Plant Long Grass 1"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_11.abc"
+Skin				= "Props\Skins\Plant_11.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType154 - Plant 11b
+*/
+
+[PropType154]
+	
+Type				= "Plant long Grass 3"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_11b.abc"
+Skin				= "Props\Skins\Plant_11.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType155 - Plant 11c
+*/
+
+[PropType155]
+	
+Type				= "Plant long Grass 4"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_11c.abc"
+Skin				= "Props\Skins\Plant_11.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+
+/*
+**  PropType156 - Plant 11d
+*/
+
+[PropType156]
+	
+Type				= "Plant long Grass 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_11d.abc"
+Skin				= "Props\Skins\Plant_11.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType157 - Plant 1
+*/
+
+[PropType157]
+	
+Type				= "Plant Unknown 1"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant01.abc"
+Skin				= "Props\Skins\Plant01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType158 - Plant 2
+*/
+
+[PropType158]
+	
+Type				= "Plant Unknown 2"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant02.abc"
+Skin				= "Props\Skins\Plant01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType159 - Plate 3
+*/
+
+[PropType159]
+	
+Type				= "Plate Yellow Stack"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Plate_03.abc"
+Skin				= "Props\Skins\Plate_01s.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType160 - Plate 4
+*/
+
+[PropType160]
+	
+Type				= "Plate Blue Stack"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Plate_03.abc"
+Skin				= "Props\Skins\Plate_02s.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType161 - Plate 5
+*/
+
+[PropType161]
+	
+Type				= "Plate Blue Half Stack"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Plate_04.abc"
+Skin				= "Props\Skins\Plate_02s.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 30
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType162 - Plate 6
+*/
+
+[PropType162]
+	
+Type				= "Plate Yellow Half Stack"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Plate_04.abc"
+Skin				= "Props\Skins\Plate_01s.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 30
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType163 - Pot 1
+*/
+
+[PropType163]
+	
+Type				= "Pot Copper Big"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pot_01.abc"
+Skin				= "Props\Skins\Pot_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType164 - Pot 2
+*/
+
+[PropType164]
+	
+Type				= "Pot Copper Small"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pot_02.abc"
+Skin				= "Props\Skins\Pots_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType165 - Pot 3
+*/
+
+[PropType165]
+	
+Type				= "Pot Metal Small"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Pot_02b.abc"
+Skin				= "Props\Skins\Pots_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType166 - Pot 4
+*/
+
+[PropType166]
+	
+Type				= "Pot Metal Big"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pot_03.abc"
+Skin				= "Props\Skins\Pots_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType167 - Purse 1
+*/
+
+[PropType167]
+	
+Type				= "Purse Pink Big"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Purses_01.abc"
+Skin				= "Props\Skins\Purses_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType168 - Purse 2
+*/
+
+[PropType168]
+	
+Type				= "Purse Green Big"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Purses_01.abc"
+Skin				= "Props\Skins\Purses_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType169 - Purse 3
+*/
+
+[PropType169]
+	
+Type				= "Purse Blue Small"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Purses_02.abc"
+Skin				= "Props\Skins\Purses_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType170 - Purse 4
+*/
+
+[PropType170]
+	
+Type				= "Purse Green Small"
+DebrisType			= "Generic_Yellow"
+Filename			= "Props\Models\Purses_02.abc"
+Skin				= "Props\Skins\Purses_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType171 - Scoutcopter
+*/
+
+[PropType171]
+	
+Type				= "Scout Helicopter"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\scoutcopter.abc"
+Skin				= "Props\Skins\scoutcopter.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType172 - Sculpture 1
+*/
+
+[PropType172]
+	
+Type				= "Sculpture Flower Purple"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\sculpture_01.abc"
+Skin				= "Props\Skins\sculpture_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType173 - Sculpture 2a
+*/
+
+[PropType173]
+	
+Type				= "Sculpture Pink Spinning"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\sculpture_02.abc"
+Skin				= "Props\Skins\sculpture_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType174 - Sculpture 2b
+*/
+
+[PropType174]
+	
+Type				= "Sculpture Green Spinning"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\sculpture_02b.abc"
+Skin				= "Props\Skins\sculpture_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType175 - Silverware
+*/
+
+[PropType175]
+	
+Type				= "Silverware Plate Yellow Set"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Silverware_01.abc"
+Skin				= "Props\Skins\Silverware.dtx;Props\Skins\Plate_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType176 - Silverware
+*/
+
+[PropType176]
+	
+Type				= "Silverware Plate Blue Set"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Silverware_01.abc"
+Skin				= "Props\Skins\Silverware.dtx;Props\Skins\Plate_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType177 - Slide Projector
+*/
+
+[PropType177]
+	
+Type				= "Slide Projector"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\SlideP.abc"
+Skin				= "Props\Skins\SlideP.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType178 - Spoon
+*/
+
+[PropType178]
+	
+Type				= "Spoon"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Spoon.abc"
+Skin				= "Props\Skins\SilverWare.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType179 - Snowmobile
+*/
+
+[PropType179]
+	
+Type				= "Snowmobile"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Snowmobile.abc"
+Skin				= "Props\Skins\Snowmobile.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType180 - Statue
+*/
+
+[PropType180]
+	
+Type				= "Statue Unknown"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\statue.abc"
+Skin				= "Props\Skins\statue.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType181 - Spatula
+*/
+
+[PropType181]
+	
+Type				= "Spatula"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Spatula.abc"
+Skin				= "Props\Skins\Tenderizer.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType182 - Steak
+*/
+
+[PropType182]
+	
+Type				= "Steak Raw"
+DebrisType			= "generic_red"
+Filename			= "Props\Models\Steak.abc"
+Skin				= "Props\Skins\Steak.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType183 - suitofarmor
+*/
+
+[PropType183]
+	
+Type				= "Suit of Armor"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\suitofarmor.abc"
+Skin				= "Props\Skins\suitofarmor.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType184 - Tenderizer
+*/
+
+[PropType184]
+	
+Type				= "Tenderizer"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Tenderizer.abc"
+Skin				= "Props\Skins\Tenderizer.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType185 - Test Tube
+*/
+
+[PropType185]
+	
+Type				= "Test Tubes Rack of"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\TestTube.abc"
+Skin				= "Props\Skins\TestTube.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType186 - Thermos
+*/
+
+[PropType186]
+	
+Type				= "Thermos Metal"
+DebrisType			= "Metal small"
+Filename			= "Props\Models\Thermos.abc"
+Skin				= "Props\Skins\Thermos.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType187 - Tire
+*/
+
+[PropType187]
+	
+Type				= "Tire Rubber"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Tire_01.abc"
+Skin				= "Props\Skins\Tire_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType188 - Toilet Paper
+*/
+
+[PropType188]
+	
+Type				= "Toilet Paper"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\ToiletPaper.abc"
+Skin				= "Props\Skins\ToiletPaper.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 50
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType189 - Tomato 1
+*/
+
+[PropType189]
+	
+Type				= "Tomato Single"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\Tomato_01.abc"
+Skin				= "Props\Skins\Tomato.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType190 - Tomato 2
+*/
+
+[PropType190]
+	
+Type				= "Tomato Two"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\Tomato_02.abc"
+Skin				= "Props\Skins\Tomato.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType191 - Tray 1
+*/
+
+[PropType191]
+	
+Type				= "Tray Office Blue"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Tray_01.abc"
+Skin				= "Props\Skins\Tray_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType192 - Tray 2
+*/
+
+[PropType192]
+	
+Type				= "Tray Office Green"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Tray_01.abc"
+Skin				= "Props\Skins\Tray_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType193 - Tree 1
+*/
+
+[PropType193]
+	
+Type				= "Tree Fir Skinny"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_01.abc"
+Skin				= "Props\Skins\Tree_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType194 - Tree 3
+*/
+
+[PropType194]
+	
+Type				= "Palm Tall"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_03.abc"
+Skin				= "Props\Skins\Tree_03.dtx;Props\Skins\Tree_03t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType195 - Tree 4 a
+*/
+
+[PropType195]
+	
+Type				= "Palm Spiky Tall 1"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_04.abc"
+Skin				= "Props\Skins\Tree_04.dtx;Props\Skins\Tree_04t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType196 - Tree 4 b
+*/
+
+[PropType196]
+	
+Type				= "Palm Spiky Tall 2"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_04.abc"
+Skin				= "Props\Skins\Tree_04b.dtx;Props\Skins\Tree_04t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType197 - Tree 5
+*/
+
+[PropType197]
+	
+Type				= "Palm Spiky Short"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_05.abc"
+Skin				= "Props\Skins\Tree_04.dtx;Props\Skins\Tree_05t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType198 - Tree 6A
+*/
+
+[PropType198]
+	
+Type				= "Tree Fir Short"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_06.abc"
+Skin				= "Props\Skins\Tree_06.dtx;Props\Skins\Tree_06t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType199 - Tree 6B
+*/
+
+[PropType199]
+	
+Type				= "Tree Fir Snow Skinny"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_01.abc"
+Skin				= "Props\Skins\Tree_06b.dtx;Props\Skins\Tree_06t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType200 - Tree 6C
+*/
+
+[PropType200]
+	
+Type				= "Tree Fir Tall"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_06c.abc"
+Skin				= "Props\Skins\Tree_06.dtx;Props\Skins\Tree_06t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType201 - Tree 6SA
+*/
+
+[PropType201]
+	
+Type				= "Tree Fir Snow 2 short"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_06sa.abc"
+Skin				= "Props\Skins\Tree_06s.dtx;Props\Skins\Tree_06St.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType202 - Tree 6SB
+*/
+
+[PropType202]
+	
+Type				= "Tree Fir Snow 2 tall"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_06sb.abc"
+Skin				= "Props\Skins\Tree_06s.dtx;Props\Skins\Tree_06St.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType203 - Tree 7
+*/
+
+[PropType203]
+	
+Type				= "Tree Poplar"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_07.abc"
+Skin				= "Props\Skins\Tree_07.dtx;Props\Skins\Tree_07t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType204 - Tree 7 Snow
+*/
+
+[PropType204]
+	
+Type				= "Tree Poplar Snow"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_07.abc"
+Skin				= "Props\Skins\Tree_07s.dtx;Props\Skins\Tree_07st.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 0
+
+/*
+**  PropType205 - Tree Deciduous A
+*/
+
+[PropType205]
+	
+Type				= "Tree Deciduous Green A"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_08.abc"
+Skin				= "Props\Skins\Tree_08a.dtx;Props\Skins\Tree_08t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType206 - Tree Deciduous B
+*/
+
+[PropType206]
+	
+Type				= "Tree Deciduous B"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_08.abc"
+Skin				= "Props\Skins\Tree_08b.dtx;Props\Skins\Tree_08t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType207 - Tree Deciduous C
+*/
+
+[PropType207]
+	
+Type				= "Tree Deciduous C"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_08.abc"
+Skin				= "Props\Skins\Tree_08c.dtx;Props\Skins\Tree_08t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType208 - Tree Deciduous Snow
+*/
+
+[PropType208]
+	
+Type				= "Tree Deciduous Snow"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_08.abc"
+Skin				= "Props\Skins\Tree_08s.dtx;Props\Skins\Tree_08St.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType209 - Tree 9A
+*/
+
+[PropType209]
+	
+Type				= "Tree Bush Bare 9A"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_09.abc"
+Skin				= "Props\Skins\Tree_09a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType210 - Tree 9B
+*/
+
+[PropType210]
+	
+Type				= "Tree Bush 9B"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_09.abc"
+Skin				= "Props\Skins\Tree_09b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 245
+
+/*
+**  PropType211 - Tree 9C
+*/
+
+[PropType211]
+	
+Type				= "Tree Bush 9C"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_09.abc"
+Skin				= "Props\Skins\Tree_09c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType212 - Tree Snow 9A
+*/
+
+[PropType212]
+	
+Type				= "Tree Bush Snow 9A"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_09.abc"
+Skin				= "Props\Skins\Tree_09Sa.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType213 - Tree Snow 9B
+*/
+
+[PropType213]
+	
+Type				= "Tree Bush Snow 9B"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_09.abc"
+Skin				= "Props\Skins\Tree_09Sb.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType214 - Tree Bush 10A
+*/
+
+[PropType214]
+	
+Type				= "Bush Round Green"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_10.abc"
+Skin				= "Props\Skins\Tree_10a.dtx;Props\Skins\Tree_09a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType215 - Tree Bush 10B
+*/
+
+[PropType215]
+	
+Type				= "Bush Round Dark"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_10.abc"
+Skin				= "Props\Skins\Tree_10b.dtx;Props\Skins\Tree_09a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType216 - Tree Bush Snow 10
+*/
+
+[PropType216]
+	
+Type				= "Bush Round Snow"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_10.abc"
+Skin				= "Props\Skins\Tree_10s.dtx;Props\Skins\Tree_09a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType217 - Typewriter 1
+*/
+
+[PropType217]
+	
+Type				= "Typewriter Gray"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Typewriter_01.abc"
+Skin				= "Props\Skins\Typewriter_01a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType218 - Typewriter 2
+*/
+
+[PropType218]
+	
+Type				= "Typewriter Red"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Typewriter_01.abc"
+Skin				= "Props\Skins\Typewriter_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType219 - Umbrella
+*/
+
+[PropType219]
+	
+Type				= "Umbrella"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\umbrella.abc"
+Skin				= "Props\Skins\umbrella.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType220 - Valve b
+*/
+
+[PropType220]
+	
+Type				= "Valve Blue"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\Valve_B.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType221 - Valve g
+*/
+
+[PropType221]
+	
+Type				= "Valve Green"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\Valve_G.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType222 - Valve o
+*/
+
+[PropType222]
+	
+Type				= "Valve Orange"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\Valve_O.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType223 - Valve R
+*/
+
+[PropType223]
+	
+Type				= "Valve Red"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\Valve_R.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType224 - Valve y
+*/
+
+[PropType224]
+	
+Type				= "Valve Yellow"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\HatchDoor.abc"
+Skin				= "Props\Skins\Valve_Y.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType225 - Vase 2a
+*/
+
+[PropType225]
+	
+Type				= "Platter Brown"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Vase_02.abc"
+Skin				= "Props\Skins\Vase_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType226 - Vase 2b
+*/
+
+[PropType226]
+	
+Type				= "Platter Blue"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Vase_02.abc"
+Skin				= "Props\Skins\Vase_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType227 - Vase 2c
+*/
+
+[PropType227]
+	
+Type				= "Platter Tan"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Vase_02.abc"
+Skin				= "Props\Skins\Vase_02c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType228 - Vase 3
+*/
+
+[PropType228]
+	
+Type				= "Jar Big Brown"
+DebrisType			= "Vase3"
+Filename			= "Props\Models\Vase_03.abc"
+Skin				= "Props\Skins\Vase_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 70
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType229 - Vent
+*/
+
+[PropType229]
+	
+Type				= "Vent"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Vent.abc"
+Skin				= "Props\Skins\Vent.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType230 - Watermelon 1
+*/
+
+[PropType230]
+	
+Type				= "Watermelon Single"
+DebrisType			= "Watermelon1"
+Filename			= "Props\Models\Watermelon_01.abc"
+Skin				= "Props\Skins\Watermelon.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType231 - Watermelon 2
+*/
+
+[PropType231]
+	
+Type				= "Watermelon Line of"
+DebrisType			= "Watermelon2"
+Filename			= "Props\Models\Watermelon_02.abc"
+Skin				= "Props\Skins\Watermelon.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType232 - Watermelon 3
+*/
+
+[PropType232]
+	
+Type				= "Watermelon Stack of"
+DebrisType			= "Watermelon2"
+Filename			= "Props\Models\Watermelon_03.abc"
+Skin				= "Props\Skins\Watermelon.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 100
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType233 - Winebottle 1
+*/
+
+[PropType233]
+	
+Type				= "WineBottle White"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\WineBottle_01.abc"
+Skin				= "Props\Skins\WineBottle_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType234 - Winebottle 2
+*/
+
+[PropType234]
+	
+Type				= "WineBottle Red"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\WineBottle_01.abc"
+Skin				= "Props\Skins\WineBottle_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType235 - Wine Glass 1
+*/
+
+[PropType235]
+	
+Type				= "WineGlass Red"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\WineGlass_01.abc"
+Skin				= "Props\Skins\WineGlass_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType236 - Wine Glass 2
+*/
+
+[PropType236]
+	
+Type				= "WineGlass White"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\WineGlass_02.abc"
+Skin				= "Props\Skins\WineGlass_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType237 - Crescent wrench
+*/
+
+[PropType237]
+	
+Type				= "Wrench Crescent"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\wrench_crescent.abc"
+Skin				= "Props\Skins\wrench_crescent.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType238 - Plumbers wrench
+*/
+
+[PropType238]
+	
+Type				= "Wrench Plumber"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\wrench_plumber.abc"
+Skin				= "Props\Skins\wrench_plumber.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType239 - Speaker 1
+*/
+
+[PropType239]
+	
+Type				= "Megaphone Speaker 1"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Megaphone_01.abc"
+Skin				= "Props\Skins\Megaphone_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType240 - Lamp 4
+*/
+
+[PropType240]
+	
+Type				= "WorkLight 1"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_04.abc"
+Skin				= "Props\Skins\Lamp_04.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType241 - Chain 2
+*/
+
+[PropType241]
+	
+Type				= "WorklightWire 1"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Chain_02.abc"
+Skin				= "Props\Skins\Lamp_04.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= ""
+
+
+/*
+**  PropType242 - JungleTree1
+*/
+
+[PropType242]
+	
+Type				= "JungleTree1"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_11b.abc"
+Skin				= "Props\Skins\Tree_11a.dtx;Props\Skins\Tree_04t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 512
+
+/*
+**  PropType243 - JunglePlant1 - greenleafy
+*/
+
+[PropType243]
+	
+Type				= "JunglePlntGrnLeafy"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant01a.dtx"
+Scale				= <3.0, 3.0, 3.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 384
+
+
+/*
+**  PropType244 - JunglePlant1 - Orangeleafy
+*/
+
+[PropType244]
+	
+Type				= "JunglePlntOrngLeafy"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant_04b.dtx"
+Scale				= <3.0, 3.0, 3.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 384
+
+/*
+**  PropType245 - JunglePlant1 - Fern
+*/
+
+[PropType245]
+	
+Type				= "JungleFern"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant_09b.dtx"
+Scale				= <3.0, 3.0, 3.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 384
+
+/*
+**  PropType246 - JungleTree - No Trunk
+*/
+
+[PropType246]
+	
+Type				= "JungleTree-NoTrunk"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Tree_11a.abc"
+Skin				= "Props\Skins\Tree_11a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 512
+
+/*
+**  PropType247 - *****JungleTreeTest - No Trunk
+*/
+
+
+//[PropType247]
+	
+//Type				= "**JungleTest-NoTrunk"
+//DebrisType			= "Foliage"
+//Filename			= "Props\Models\Tree_11d.abc"
+//Skin				= "Props\Skins\Tree_11a.dtx"
+//Scale				= <1.0, 1.0, 1.0>
+//ObjectColor			= <255.0, 255.0, 255.0>
+//Alpha				= 1.0
+//HitPoints			= -1
+//Visible				= 1
+//Solid				= 0
+//Gravity				= 0
+//Shadow				= 0
+//MoveToFloor			= 0
+//DetailTexture		= 0
+//Chrome				= 0
+//Chromakey			= 1
+//Additive			= 0
+//Multiply			= 0
+//RayHit				= 0
+//TouchSound			= "Snd\event\touchplant.wav"
+//TouchSoundRadius	= 512
+
+/*
+**  PropType247 - Rock 1
+*/
+
+[PropType247]
+	
+Type				= "Rock big 1"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Rock_01.abc"
+Skin				= "Props\Skins\Rock_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType248 - Rock 1b
+*/
+
+[PropType248]
+	
+Type				= "Rock small 1"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Rock_01b.abc"
+Skin				= "Props\Skins\Rock_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType249 - Rock 1c
+*/
+
+[PropType249]
+	
+Type				= "Rock small 2"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Rock_01c.abc"
+Skin				= "Props\Skins\Rock_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType250 - Hook 1
+*/
+
+[PropType250]
+	
+Type				= "Zipcord Hook 1"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Ziphook.abc"
+Skin				= "Props\Skins\Ziphook.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType251 - Hook 2
+*/
+
+[PropType251]
+	
+Type				= "Zipcord Hook 2"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Ziphook_02.abc"
+Skin				= "Props\Skins\Ziphook_02.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType252 - Car 2b
+*/
+
+[PropType252]
+	
+Type				= "Car red"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Car_02b.abc"
+Skin				= "Props\Skins\Car_02b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType253 - Plant 9b
+*/
+
+[PropType253]
+	
+Type				= "Fern Dark"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_09.abc"
+Skin				= "Props\Skins\Plant_09b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType254 - Plant 10
+*/
+
+[PropType254]
+	
+Type				= "Plant Flat"
+DebrisType			= "Foliage"
+Filename			= "Props\Models\Plant_10.abc"
+Skin				= "Props\Skins\Plant_10.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 0
+TouchSound			= "Snd\event\touchplant.wav"
+TouchSoundRadius	= 256
+
+/*
+**  PropType255 - Change 4
+*/
+
+[PropType255]
+	
+Type				= "Money Paper Med 2"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_01.abc"
+Skin				= "Props\Skins\Change_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType256 - Change 4
+*/
+
+[PropType256]
+	
+Type				= "Money Paper Big 2"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_02.abc"
+Skin				= "Props\Skins\Change_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType257 - Change 5
+*/
+
+[PropType257]
+	
+Type				= "Money Paper Small 2"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Change_03.abc"
+Skin				= "Props\Skins\Change_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType258 - Mug2
+*/
+
+[PropType258]
+	
+Type				= "Mug green"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Mug_01.abc"
+Skin				= "Props\Skins\Mug_01b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType259 - Mug3
+*/
+
+[PropType259]
+	
+Type				= "Mug yellow"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\Mug_01.abc"
+Skin				= "Props\Skins\Mug_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType260 - wheel
+*/
+
+[PropType260]
+	
+Type				= "wheel car"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\wheel.abc"
+Skin				= "Props\Skins\Car_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType261 - gascap
+*/
+
+[PropType261]
+	
+Type				= "Gascap"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Gascap.abc"
+Skin				= "Props\Skins\Gascap.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType262 - SteeringWheel
+*/
+
+[PropType262]
+	
+Type				= "SteeringWheel"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\SteeringWheel.abc"
+Skin				= "Props\Skins\SteeringWheel.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType263 - Security Pass
+*/
+
+[PropType263]
+	
+Type				= "SecurityPass"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\securitypass.abc"
+Skin				= "Props\Skins\securitypass.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType264 - Lamp_05a
+*/
+
+[PropType264]
+	
+Type				= "Hanging Lamp green"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_05.abc"
+Skin				= "Props\Skins\Lamp_05a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType265 - Lamp_05b
+*/
+
+[PropType265]
+	
+Type				= "Hanging Lamp Orange"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Lamp_05.abc"
+Skin				= "Props\Skins\Lamp_05b.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType266 - Chain_03
+*/
+
+[PropType266]
+	
+Type				= "Hanging Lamp wire"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Chain_03.abc"
+Skin				= "Props\Skins\Lamp_05a.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType267 - Chain
+*/
+
+[PropType267]
+	
+Type				= "Hanging Lamp Chain"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Chain.abc"
+Skin				= "Props\Skins\Lamp_03.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType268 - TruckTire
+*/
+
+[PropType268]
+	
+Type				= "Truck tire front"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\TruckTire_01.abc"
+Skin				= "Props\Skins\TruckTire.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType269 - TruckTire2
+*/
+
+[PropType269]
+	
+Type				= "Truck tire Back"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\TruckTire_02.abc"
+Skin				= "Props\Skins\TruckTire.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType270 - mudflap
+*/
+
+[PropType270]
+	
+Type				= "mudflap"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\mudflap.abc"
+Skin				= "Props\Skins\TruckTire.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType271 - TruckMirrorR
+*/
+
+[PropType271]
+	
+Type				= "TruckMirror R"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\TruckMirrorR.abc"
+Skin				= "Props\Skins\TruckMirror.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType272 - TruckMirrorL
+*/
+
+[PropType272]
+	
+Type				= "TruckMirror L"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\TruckMirrorL.abc"
+Skin				= "Props\Skins\TruckMirror.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType273 - TruckPipe
+*/
+
+[PropType273]
+	
+Type				= "TruckPipe"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\TruckPipe.abc"
+Skin				= "Props\Skins\TruckMirror.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType274 - TruckSteering
+*/
+
+[PropType274]
+	
+Type				= "TruckSteering"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\SteeringWheel.abc"
+Skin				= "Props\Skins\TruckSteering.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.999
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType275 - DeskBell
+*/
+
+[PropType275]
+	
+Type				= "Desk Bell"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\DeskBell.abc"
+Skin				= "Props\Skins\DeskBell.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType276 - PhotoFrame
+*/
+
+[PropType276]
+	
+Type				= "Sasha photo"
+DebrisType			= "Glass small"
+Filename			= "Props\Models\PhotoFrame.abc"
+Skin				= "Props\Skins\PhotoFrame.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.000
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType277 - Globe
+*/
+
+[PropType277]
+	
+Type				= "globe"
+DebrisType			= "Charred Chunks"
+Filename			= "Props\Models\globe.abc"
+Skin				= "Props\Skins\globe.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 0.99
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 1
+Multiply			= 0
+RayHit				= 0
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType278 - Pan3
+*/
+
+[PropType278]
+	
+Type				= "Pan Fry Iron 2"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pan_02.abc"
+Skin				= "Props\Skins\Pans_01c.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType279 - Pan4
+*/
+
+[PropType279]
+	
+Type				= "Pan Fry Copper 2"
+DebrisType			= "Small metal"
+Filename			= "Props\Models\Pan_02.abc"
+Skin				= "Props\Skins\Pan_01.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType280 - Monkeytotem
+*/
+
+[PropType280]
+	
+Type				= "Monkeytotem"
+DebrisType			= "Wood"
+Filename			= "Props\Models\monkeytotem.abc"
+Skin				= "Props\Skins\monkeytotem.dtx"
+Scale				= <1.0, 2.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType281 - Palm
+*/
+
+[PropType281]
+	
+Type				= "Palm"
+DebrisType			= "Wood"
+Filename			= "Props\Models\palm.abc"
+Skin				= "Props\Skins\palm.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType282 - Monkeymask
+*/
+
+[PropType282]
+	
+Type				= "Monkeymask"
+DebrisType			= "Wood"
+Filename			= "Props\Models\monkeymask.abc"
+Skin				= "Props\Skins\monkeymask.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 1
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType283 - Monkeyshine1
+*/
+
+[PropType283]
+	
+Type				= "Monkeyshine1"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\monkeyshine1.abc"
+Skin				= "Props\Skins\monkey1.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType284 - Monkeyshine2
+*/
+
+[PropType284]
+	
+Type				= "Monkeyshine2"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\monkeyshine2.abc"
+Skin				= "Props\Skins\monkey1.dtx;Guns\Skins_hh\walther_hh.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType285 - Templetotem
+*/
+
+[PropType285]
+	
+Type				= "Templetotem"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\templetotem.abc"
+Skin				= "Props\Skins\templetotem.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType286 - ShellLamp
+*/
+
+[PropType286]
+	
+Type				= "ShellLamp"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\shelllamp.abc"
+Skin				= "Props\Skins\shelllamp.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType287 - Palm2
+*/
+
+[PropType287]
+	
+Type				= "Palm 2"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Tree_03.abc"
+Skin				= "Props\Skins\Palm2.dtx;Props\Skins\Tree_03t.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType288 - Monkey1
+*/
+
+[PropType288]
+	
+Type				= "Monkey1"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\monkey1.abc"
+Skin				= "Props\Skins\monkey1.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+
+/*
+**  PropType289 - Colada
+*/
+
+[PropType289]
+	
+Type				= "Colada"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\colada.abc"
+Skin				= "Props\Skins\colada.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType290 - ParasolBlue
+*/
+
+[PropType290]
+	
+Type				= "ParasolBlue"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\parasol.abc"
+Skin				= "Props\Skins\parablu.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType291 - ParasolGreen
+*/
+
+[PropType291]
+	
+Type				= "ParasolGreen"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\parasol.abc"
+Skin				= "Props\Skins\paragreen.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType292 - ParasolPink
+*/
+
+[PropType292]
+	
+Type				= "ParasolPink"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\parasol.abc"
+Skin				= "Props\Skins\parapink.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType293 - ParasolRed
+*/
+
+[PropType293]
+	
+Type				= "ParasolRed"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\parasol.abc"
+Skin				= "Props\Skins\parared.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType294 - Pufferlamp
+*/
+
+[PropType294]
+	
+Type				= "Pufferlamp"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Pufferlamp.abc"
+Skin				= "Props\Skins\Pufferlamp.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 1
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType295 - Tikiface
+*/
+
+[PropType295]
+	
+Type				= "Tikiface"
+DebrisType			= "Charred chunks"
+Filename			= "Props\Models\Tikiface.abc"
+Skin				= "Props\Skins\Tikiface.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType296 - Cate
+*/
+
+[PropType296]
+	
+Type				= "Cate"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\Cate.abc"
+Skin				= "Props\Skins\Cateswimface.dtx;Props\Skins\Cateswim.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType297 - Beachchair
+*/
+
+[PropType297]
+	
+Type				= "Beachchair"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Beachchair.abc"
+Skin				= "Props\Skins\Beachchair.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 1
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType298 - Cateshades
+*/
+
+[PropType298]
+	
+Type				= "Cateshades"
+DebrisType			= "Wood"
+Filename			= "Props\Models\Cateshades.abc"
+Skin				= "Props\Skins\Cateshades.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType299 - Monkey1gun
+*/
+
+[PropType299]
+	
+Type				= "Monkey1gun"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\Monkey1gun.abc"
+Skin				= "Props\Skins\monkey1.dtx;Guns\Skins_hh\walther_hh.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+ModelKeys			= 1
+
+/*
+**  PropType300 - Monkeyshine1
+*/
+
+[PropType300]
+	
+Type				= "Monkeyshine3"
+DebrisType			= "Generic_red"
+Filename			= "Props\Models\monkeyshine3.abc"
+Skin				= "Props\Skins\monkey1.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <255.0, 255.0, 255.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 0
+DetailTexture		= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+
+/*
+**  PropType280 - Thief levels Money Bag
+*/
+
+[PropType301]
+
+Type				= "Money Bag"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\MoneyBag.abc"
+Skin				= "Props\Skins\MONEYBAG.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <128.0, 128.0, 128.0>
+Alpha				= 1.0
+HitPoints			= 10
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture			= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius		= 0
+
+/*
+**  PropType281 - Car 1c
+*/
+
+[PropType302]
+
+
+Type				= "Car Blue High"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_01.abc"
+Skin				= "Props\Skins\Car_01c_MA.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <128.0, 128.0, 128.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture		= 0
+Chrome				= 1
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType116 - Matchbook 2
+*/
+
+[PropType303]
+
+Type				= "Matchbook Open High"
+DebrisType			= "Fuzz"
+Filename			= "Props\Models\Matchbook_01b.abc"
+Skin				= "Props\Skins\Matchbook_MA.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <128.0, 128.0, 128.0>
+Alpha				= 1.0
+HitPoints			= 1
+Visible				= 1
+Solid				= 0
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture			= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius		= 0
+
+/*
+**  PropType24 - Car Black High Rez (ps2)
+*/
+
+[PropType304]
+
+Type				= "Car Black High"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_01.abc"
+Skin				= "Props\Skins\Car_01_MA.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <128.0, 128.0, 128.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture			= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius	= 0
+
+/*
+**  PropType27 - Car white Hi Rez (ps2)
+*/
+
+[PropType305]
+
+Type				= "Car White Hi"
+DebrisType			= "Machinery"
+Filename			= "Props\Models\Car_02.abc"
+Skin				= "Props\Skins\Car_02_MA.dtx"
+Scale				= <1.0, 1.0, 1.0>
+ObjectColor			= <128.0, 128.0, 128.0>
+Alpha				= 1.0
+HitPoints			= -1
+Visible				= 1
+Solid				= 1
+Gravity				= 0
+Shadow				= 0
+MoveToFloor			= 1
+DetailTexture			= 0
+Chrome				= 0
+Chromakey			= 0
+Additive			= 0
+Multiply			= 0
+RayHit				= 1
+TouchSound			= ""
+TouchSoundRadius		= 0

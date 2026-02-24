@@ -1,0 +1,427 @@
+/************************************************************************
+**
+**		No One Lives Forever Prop Types Attributes file
+**
+** This file contains the following Prop Type related definitions:
+**
+**  Intel
+**
+**
+** NOTES:  
+**
+**  1) All definition properties (i.e., [Intel0]) ARE case sensitive.
+**	   If you are adding a new definition, it is best to start with a 
+**     copy of an existing (working) definition.
+**  2) The Float type is the same as Real (i.e., 1.0 or 1.5)
+**  3) The valid range of all RGB color properties is between
+**     0 and 255 (e.g., (0, 255, 0) would be green).
+**
+*/
+
+
+/************************************************************************
+**
+** I N T E L
+**
+** The Intel definitions define all of the attributes associated with
+** a particular intelligence item.  Defining the Intelligence items in 
+** this way allows us to easily make global changes to all the items.
+**
+**
+** All Intel definitions should contain the following properties:
+**
+**  Name (String)
+**
+**      The user friendly name of the intelligence item 
+**		(what shows up in DEdit).  NOTE:  This is NOT the same as the object
+**		name in DEdit!
+**
+**	Filename (String)
+**
+**		Name of the model file
+**
+**	Skin (String)
+**
+**		Name of the skin file.
+**
+**	DefaultTextId (Integer)
+**
+**		The default text id used for this intelligence item (corresponds to
+**		a string id in CRes.dll).  This string is used if not overwritten in
+**		the intelligence item.
+**
+**	Chrome (Boolean)
+**
+**		Should the model use chrome (environment mapping) (1=true, 0=false)
+**
+**	Chromakey (Integer)
+**
+**		Set to 1 if the model using chromakeying.
+**
+**	ScaleName# (String)  (OPTIONAL)
+**
+**		Specifies the optional name of scale fx to create when this item
+**		is picked up.  The value of this property MUST correspond to the 
+**		name of a ScaleFX defined in the FX.txt bute file.  You may 
+**		specify multiple ScaleName properties.  For example:
+**
+**			ScaleName0	= "DefaultPopup"
+**			ScaleName1	= "PopupModel1"
+**		
+**
+*/
+
+/*
+**  Intel0 - Letter
+*/
+
+[Intel0]
+	
+Name			= "Letter"
+Filename		= "Powerups\Models\Letter_01.abc"
+Skin			= "Powerups\Skins\Letter_01.dtx"
+DefaultTextId	= 8000
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "LetterPopup"		
+
+/*
+**  Intel1 - 35mm
+*/
+
+[Intel1]
+	
+Name			= "35mm"
+Filename		= "Powerups\Models\35mm.abc"
+Skin			= "Powerups\Skins\35mm.dtx"
+DefaultTextId	= 8001
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "35mmPopup"		
+
+/*
+**  Intel2 - Blueprint
+*/
+
+[Intel2]
+	
+Name			= "Blueprint"
+Filename		= "Powerups\Models\Blueprint.abc"
+Skin			= "Powerups\Skins\Blueprint.dtx"
+DefaultTextId	= 8002
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "BlueprintPopup"		
+
+/*
+**  Intel3 - Briefcase
+*/
+
+[Intel3]
+	
+Name			= "Briefcase"
+Filename		= "Powerups\Models\Briefcase.abc"
+Skin			= "Powerups\Skins\Briefcase.dtx"
+DefaultTextId	= 8003
+Chrome			= 0
+Chromakey		= 1
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "BriefcasePopup"		
+
+/*
+**  Intel4 - Dossier
+*/
+
+[Intel4]
+	
+Name			= "Dossier"
+Filename		= "Powerups\Models\Dossier.abc"
+Skin			= "Powerups\Skins\Dossier.dtx"
+DefaultTextId	= 8004
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "DossierPopup"
+
+/*
+**  Intel5 - Loose Files	
+*/
+
+[Intel5]
+	
+Name			= "Loose Files"
+Filename		= "Powerups\Models\LooseFiles_01.abc"
+Skin			= "Powerups\Skins\LooseFiles_01.dtx"
+DefaultTextId	= 8005
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "LooseFilesPopup"
+
+/*
+**  Intel6 - Envelope	
+*/
+
+[Intel6]
+	
+Name			= "Envelope"
+Filename		= "Powerups\Models\MEnvelope.abc"
+Skin			= "Powerups\Skins\MEnvelope.dtx"
+DefaultTextId	= 8006
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "EnvelopePopup"
+
+/*
+**  Intel7 - Reel-to-Reel	
+*/
+
+[Intel7]
+	
+Name			= "Reel-to-Reel"
+Filename		= "Powerups\Models\ReelToReel.abc"
+Skin			= "Powerups\Skins\ReelToReel.dtx"
+DefaultTextId	= 8007
+Chrome			= 0
+Chromakey		= 1
+ScaleName0		= "PopupBackground"	
+ScaleName1		= "ReelToReelPopup"
+
+/*
+**  Intel8 - Dims Only	
+*/
+
+[Intel8]
+	
+Name			= "Dims Only"
+Filename		= "Models\1x1_square.abc"
+Skin			= "Models\1x1_square.dtx"
+DefaultTextId	= 8008
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DimsOnlyPopup"
+
+/*
+**  Intel9 - Ledger 1
+*/
+
+[Intel9]
+	
+Name			= "Ledger 1"
+Filename		= "Powerups\models\ledger.abc"
+Skin			= "Powerups\skins\ledger.dtx"
+DefaultTextId	= 8009
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DimsOnlyPopup"
+
+/*
+**  Intel10 - Ledger 2
+*/
+
+[Intel10]
+	
+Name			= "Ledger 2"
+Filename		= "Powerups\models\ledger.abc"
+Skin			= "Powerups\skins\ledger2.dtx"
+DefaultTextId	= 8010
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DimsOnlyPopup"
+
+/*
+**  Intel11 - Note
+*/
+
+[Intel11]
+	
+Name			= "Note"
+Filename		= "Powerups\models\note.abc"
+Skin			= "Powerups\skins\note.dtx"
+DefaultTextId	= 8011
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "NotePopup"
+
+/*
+**  Intel12 - Ticket
+*/
+
+[Intel12]
+	
+Name			= "Train Ticket"
+Filename		= "Powerups\Models\ticket.abc"
+Skin			= "Powerups\Skins\ticket.dtx"
+DefaultTextId	= 8012
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "TicketPopup"	
+
+/*
+**  Intel13 - Securitypass
+*/
+
+[Intel13]
+	
+Name			= "Security Pass"
+Filename		= "Powerups\Models\securitypass.abc"
+Skin			= "Powerups\Skins\securitypass.dtx"
+DefaultTextId	= 8013
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "securitypassPopup"	
+
+/*
+**  Intel14 - Shipping Manifest
+*/
+
+[Intel14]
+	
+Name			= "Shipping Manifest"
+Filename		= "Powerups\Models\manifest.abc"
+Skin			= "Powerups\Skins\manifest.dtx"
+DefaultTextId	= 8014
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "manifestPopup"	
+
+/*
+**  Intel15 - Captain's Log
+*/
+
+[Intel15]
+	
+Name			= "Captain's Log"
+Filename		= "Powerups\Models\captainslog.abc"
+Skin			= "Powerups\Skins\captainslog.dtx"
+DefaultTextId	= 8015
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "captainslogPopup"	
+
+/*
+**  Intel16 - Passenger Roster
+*/
+
+[Intel16]
+	
+Name			= "Passenger Roster"
+Filename		= "Powerups\Models\roster.abc"
+Skin			= "Powerups\Skins\roster.dtx"
+DefaultTextId	= 8016
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"		
+ScaleName1		= "rosterPopup"	
+
+/*
+**  Intel17 - Unity Briefcase
+*/
+
+[Intel17]
+	
+Name			= "Unity Briefcase"
+Filename		= "Powerups\models\Ubriefcase.abc"
+Skin			= "Powerups\skins\Ubriefcase.dtx"
+DefaultTextId	= 8017
+Chrome			= 1
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DimsOnlyPopup"
+
+/*
+**  Intel18 - Harm Briefcase
+*/
+
+[Intel18]
+	
+Name			= "Harm Briefcase"
+Filename		= "Powerups\models\Hbriefcase.abc"
+Skin			= "Powerups\skins\Hbriefcase.dtx"
+DefaultTextId	= 8018
+Chrome			= 1
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DimsOnlyPopup"
+
+/*
+**  Intel19 - HandBag
+*/
+
+[Intel19]
+Name			= "HandBag"
+Filename		= "props\models\purses_01.abc"
+Skin			= "props\skins\purses_01.dtx"
+DefaultTextId	= 8019
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "HandBagPopup"
+
+/*
+**  Intel20 - Money Bag
+*/
+
+[Intel20]
+Name			= "MoneyBag"
+Filename		= "interface\models\MoneyBag.abc"
+Skin			= "props\skins\MoneyBag.dtx"
+DefaultTextId	= 8020
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "MoneyBagPopup"
+
+/*
+**  Intel21 - Paper Money
+*/
+
+[Intel21]
+Name			= "Paper Money"
+Filename		= "interface\models\change_01.abc"
+Skin			= "props\skins\change_01c.dtx"
+DefaultTextId	= 8021
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "PaperMoneyPopup"
+
+/*
+**  Intel22 - Employees Wages
+*/
+
+[Intel22]
+Name			= "Employees Wages"
+Filename		= "interface\models\change_01.abc"
+Skin			= "interface\skins\change_01d.dtx"
+DefaultTextId	= 8022
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "EmployeesWagesPopup"
+
+/*
+**  Intel23 - Robin's Egg
+*/
+
+[Intel23]
+Name			= "Diamond"
+Filename		= "interface\models\diamond.abc"
+Skin			= "interface\skins\diamond.dtx"
+DefaultTextId	= 8023
+Chrome			= 0
+Chromakey		= 0
+ScaleName0		= "PopupBackground"
+ScaleName1		= "DiamondPopup"

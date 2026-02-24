@@ -1686,11 +1686,6 @@ Head0 = "Default,chars\skins\hero_Undercover2_head.dtx"
 Skin0 = "Default,chars\skins\hero_winter.dtx"
 Head0 = "Default,chars\skins\hero_winter_head.dtx"
 
-[hero_thief]
-
-Skin0 = "Default,chars\skins\hero_thief.dtx"
-Head0 = "Default,chars\skins\hero_thief_head.dtx"
-
 [maid_action]
 
 Skin0 = "Default,chars\skins\maid_action.dtx"
@@ -1874,3 +1869,13 @@ Head0 = "Default,chars\skins\eliteblack_action_head.dtx"
 
 Skin0 = "Default,chars\skins\eliteasian_action.dtx"
 Head0 = "Default,chars\skins\eliteasian_action_head.dtx"
+
+[player_thief]
+
+Skin0 = "Default,chars\skins\player_thief.dtx"
+Head0 = "Default,chars\skins\player_thief_head.dtx"
+
+[hero_thief]
+
+Skin0 = "Default,chars\skins\hero_thief.dtx"
+Head0 = "Default,chars\skins\hero_thief_head.dtx"

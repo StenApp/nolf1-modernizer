@@ -556,6 +556,41 @@ Type			= 0
 Model			= "attachments\models\rag.abc"
 Skin			= "attachments\skins\rag.dtx"
 
+[Attachment74]
+
+Name			= "IntP38"
+Type			= 0
+Model			= "Guns\Models_HH\IntWalther_hh.abc"
+Skin			= "Guns\Skins_HH\Walther_hh.dtx"
+
+[Attachment75]
+
+Name			= "IntSunGlasses"
+Model			= "Guns\Models_HH\IntSunglasses_hh.abc"
+Skin			= "Guns\Skins_HH\Sunglasses_hh.dtx"
+
+[Attachment76]
+
+Name			= "Britishpolicehat"
+Type			= 0
+Model			= "Attachments\Models\BritishPoliceHat.abc"
+Skin			= "Attachments\Skins\MALEBYSTANDER_ACTION_BRITHAT.DTX"
+
+[Attachment77]
+
+Name			= "ScottishpoliceHat"
+Type			= 0
+Model			= "Attachments\Models\BritishPoliceHat.abc"
+Skin			= "Attachments\Skins\MALEBYSTANDER_ACTION_SCOTHAT.DTX"
+
+[Attachment78]
+
+Name			= "Cosmonaut Helmet Cate"
+Type			= 0
+Model			= "Attachments\Models\Cosmonaut_action_helmet.abc"
+Skin			= "Attachments\Skins\Cosmonaut_action_helmet_cate.dtx"
+Properties		= "Chromakey 1.0"
+
 
 /*************************************************************************
 **

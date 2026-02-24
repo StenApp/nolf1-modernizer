@@ -1,0 +1,1616 @@
+/************************************************************************
+**
+** M I S S I O N   R A T I N G
+**
+** The MissionRating definition specifies the global values for calculating
+** the mission and player rating values.
+**
+** The mission rating definition should contain the following properties:
+**
+**	SuccessPoints (Integer)
+**
+**		The number of points rewarded for successfully completing a mission.
+**
+**	IntelPoints (Integer)
+**
+**		The number of points rewarded for obtaining all of the intelligence
+**		material in a mission.
+**
+**	ReputationInc (Integer)
+**
+**		How much the player's reputation is increased for each reputation point
+**		recieved.
+**
+**	ReputationMax (Integer)
+**
+**		The highest reputation the player may achieve.
+**
+**	HealthInc (Float)
+**
+**		The percentage the player's max health capacity is increased for 
+**		each health point recieved (a value between 0 and 1.0).
+**
+**	HealthMax (Float)
+**
+**		The maximum percentage the player's health can be increased (1.0 = 100%
+**		the player's default health value)
+**
+**	ArmorInc (Float)
+**
+**		The percentage the player's max Armor capacity is increased for 
+**		each Armor point recieved (a value between 0 and 1.0).
+**
+**	ArmorMax (Float)
+**
+**		The maximum percentage the player's Armor can be increased (1.0 = 100%
+**		the player's default Armor value)
+**
+**	AmmoInc (Float)
+**
+**		The percentage the player's max Ammo capacity is increased for 
+**		each Ammo point recieved (a value between 0 and 1.0).
+**
+**	AmmoMax (Float)
+**
+**		The maximum percentage the player's Ammo can be increased (1.0 = 100%
+**		the player's default Ammo value)
+**
+**	DamageInc (Float)
+**
+**		The percentage the damage player inflicts is increased for 
+**		each Damage point recieved (a value between 0 and 1.0).
+**
+**	DamageMax (Float)
+**
+**		The maximum percentage the player's damage can be increased (1.0 = 100%
+**		the player's default Damage value)
+**
+**	PerturbDec (Float)
+**
+**		The percentage the perturb for the player's shots is decreased for 
+**		each Perturb point recieved (a value between 0 and 1.0).
+**
+**	PerturbMin (Float)
+**
+**		The minimum percentage to which the player's perturb can be decreased.
+**
+**	StealthDec (Float)
+**
+**		The percentage the sound of the player's footsteps is decreased for 
+**		each Stealth point recieved (a value between 0 and 1.0).
+**
+**	StealthMin (Float)
+**
+**		The minimum percentage to which the player's noise can be decreased.
+**
+**
+*/
+
+[MissionRating]
+
+SuccessPoints		= 25
+IntelPoints			= 75
+ReputationInc		= 1
+ReputationMax		= 5
+HealthInc			= 0.1  // 10%
+HealthMax			= 2.0  // 100% extra
+ArmorInc			= 0.1  // 10%
+ArmorMax			= 2.0  // 100% extra
+AmmoInc				= 0.1  // 10%
+AmmoMax				= 2.0  // 100% extra
+PerturbDec			= 0.1 // -10%
+PerturbMin			= 0.0
+DamageInc			= 0.1  // 10%
+DamageMax			= 2.0  // 100% extra
+StealthDec			= 0.1 // -10%
+StealthMin			= 1.0
+
+
+/************************************************************************
+**
+** R A N K
+**
+** The Rank definitions specify the global values for calculating
+** the player ranks.
+**
+** Each rank definition should contain the following properties:
+**
+**
+**	Id (Integer)
+**
+**		The Id (stored in CRes.dll)	of the text string containing the
+**		text representing the ranking.
+**
+**	Percent (Float)
+**
+**		This is the maximum percentage (a value between 0 and 1.0) of 
+**		total mission points (i.e., SuccessPoints + IntelPoints) that
+**		is associated with this rank. 
+**
+**/
+
+[Rank0] //Mark
+Id				= 2800
+Percent			= 0.39  // 0%  - 39%
+
+[Rank1] //Amateur
+Id				= 2801
+Percent			= 0.59  // 40% - 59%
+
+[Rank2] //Trainee
+Id				= 2802
+Percent			= 0.69  // 60% - 69%
+
+[Rank3] //Agent
+Id				= 2803
+Percent			= 0.79  // 70% - 79%
+
+[Rank4] //Spy
+Id				= 2804
+Percent			= 0.89  // 80% - 89%
+
+[Rank5] //MasterSpy
+Id				= 2805
+Percent			= 0.99  // 90% - 99%
+
+[Rank6] //SuperSpy
+Id				= 2806
+Percent			= 1.0   // 100% (perfect)
+
+/************************************************************************
+**
+** A W A R D S
+**
+** The Awards definition specifies the global values for calculating
+** player awards.
+**
+** The awards definition should contain the following properties:
+**
+**	Accuracy (Float)
+**
+**		The minimum accuracy percentage needed to earn an accuracy award.
+**
+**	Marksman (Float)
+**
+**		The minimum head-shot percentage needed to earn a marksmanship award.
+**
+**	HighAmmoAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for high ammo use. (No more than 10 are allowed)
+**
+**	LowAmmoAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for low ammo use. (No more than 10 are allowed)
+**
+**	MarksmanAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for high percentage of head shots. (No more than 10 are allowed)
+**
+**	AccuracyAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for high percentage of hits. (No more than 10 are allowed)
+**
+**	NonInjuryAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for avoiding health loss. (No more than 10 are allowed)
+**
+**	NotShotAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for avoiding being shot. (No more than 10 are allowed)
+**
+**	StealthAward (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of awards given
+**		for avoiding detection. (No more than 10 are allowed)
+**
+**/
+[Awards]
+Accuracy		= 0.9
+Marksman		= 0.9
+HighAmmoAward	= "2810,2811,2812"
+LowAmmoAward	= "2820,2821,2822"
+MarksmanAward	= "2830,2831,2832"
+AccuracyAward	= "2840,2841,2842"
+NonInjuryAward	= "2850,2851,2852"
+NotShotAward	= "2860,2861,2862"
+StealthAward	= "2870,2871,2872"
+
+
+/************************************************************************
+**
+** M I S S I O N
+**
+** Mission definitions specify what levels are in the game.  The 
+** ordering of the missions are the same as they appear in this file
+** (Mission0, Mission1, Mission2, etc.)
+**
+** All mission definitions should contain the following properties:
+**
+**	NameId (Integer)
+**
+**		The Id (stored in CRes.dll)	of the text string containing the
+**		name of the mission.
+**
+**	DescriptionId (Integer)
+**
+**		The Id (stored in CRes.dll)	of the text containing a brief 
+**		description of the mission.
+**
+**	BriefingId (Integer)
+**
+**		The Id (stored in CRes.dll)	of the text containing a detailed
+**		explanaation the mission.
+**
+**	ObjectiveIds (String)
+**
+**		A comma separated list of Ids (stored in CRes.dll) of objectives
+**		known at the start of the mission.
+**
+**	Photo (String)
+**
+**		The file name for photo associated with the mission
+**		(e.g., interface\0000club.pcx).
+**
+**	DefaultWeapons (String)
+**
+**		A comma separated list of weapon names that should be chosen by default
+**		for the mission. These weapons will be selected on the outfitting screen
+**		and also added to the list of available weapons.
+**		(e.g., "P38,AK47" ).
+**
+**	AllowedWeapons (String)
+**
+**		A comma separated list of weapon names that should be added to the list
+**		of weapons available for the mission.
+**		Note: Once a weapon is allowed, it remains available in future 
+**		missions and doesn't need to be listed again.
+**
+**	RequiredWeapons (String)
+**
+**		A comma separated list of weapon names that are mandatory for the
+**		mission. The player will not be able to unselect this item in
+**		the outfitting screen. 
+**		Note: This weapon will be considered available in future missions.
+**
+**	OneTimeWeapons (String)
+**
+**		A comma separated list of weapon names that are mandatory for the
+**		mission, but are not automatically available in future levels.
+**
+**	DeniedWeapons (String)
+**
+**		A comma separated list of weapon names that are not allowed for this
+**		mission. If they were available in prior missions, they will be
+**		available in future missions.  
+**
+**	DefaultGadgets (String)
+**
+**		A comma separated list of gadget names that should be chosen by default
+**		for the mission. These gadgets will be selected on the outfitting screen
+**		and also added to the list of available gadgets.
+**		(e.g., "Camera Disabler,Code Breaker" ).
+**
+**	AllowedGadgets (String)
+**
+**		A comma separated list of gadget names that should be added to the list
+**		of gadgets available for the mission.
+**		Note: Once a gadget is allowed, it remains available in future 
+**		missions and doesn't need to be listed again.
+**
+**	RequiredGadgets (String)
+**
+**		A comma separated list of gadget names that are mandatory for the
+**		mission. The player will not be able to unselect this item in
+**		the outfitting screen. 
+**		Note: This gadget will be considered available in future missions.
+**
+**	OneTimeGadgets (String)
+**
+**		A comma separated list of gadget names that are mandatory for the
+**		mission, but are not automatically available in future levels.
+**
+**	DeniedGadgets (String)
+**
+**		A comma separated list of gadget names that are not allowed for this
+**		mission. If they were available in prior missions, they will be
+**		available in future missions.  
+**
+**	AllowedAmmo (String)
+**
+**		A comma separated list of ammo names that should be added to the list
+**		of ammos types available for the mission.
+**		Note: Once a ammo type is allowed, it remains available in future 
+**		missions and doesn't need to be listed again.
+**
+**	RequiredAmmo (String)
+**
+**		A comma separated list of ammo names that are mandatory for the
+**		mission, and are automatically available in future missions.
+**
+**	OneTimeAmmo (String)
+**
+**		A comma separated list of ammo names that are mandatory for the
+**		mission, but are not automatically available in future missions.
+**
+**	DeniedAmmo (String)
+**
+**		A comma separated list of ammo names that are not allowed for this
+**		mission. If they were available in prior missions, they will be
+**		available in future missions. 
+**
+**	AllowedMods (String)
+**
+**		A comma separated list of mod names that should be added to the list
+**		of mods available for the mission.
+**		Note: Once a mod is allowed, it remains available in future 
+**		missions and doesn't need to be listed again.
+**
+**	RequiredMods (String)
+**
+**		A comma separated list of mod names that are mandatory for the
+**		mission. The player will not be able to unselect this item in
+**		the outfitting screen. 
+**		Note: This mod will be considered available in future missions.
+**
+**	AllowedGear (String)
+**
+**		A comma separated list of Gear names that should be added to the list
+**		of Gears types available for the mission.
+**		Note: Once a Gear type is allowed, it remains available in future 
+**		missions and doesn't need to be listed again.
+**
+**	RequiredGear (String)
+**
+**		A comma separated list of Gear names that are mandatory for the
+**		mission, and are automatically available in future missions.
+**
+**	OneTimeGear (String)
+**
+**		A comma separated list of Gear names that are mandatory for the
+**		mission, but are not automatically available in future missions.
+**
+**	DeniedGear (String)
+**
+**		A comma separated list of Gear names that are not allowed for this
+**		mission. If they were available in prior missions, they will be
+**		available in future missions. 
+**
+**	NumWeapons (Integer)
+**
+**		Number of total weapons that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	NumGadgets (Integer)
+**
+**		Number of total gadgets that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	NumAmmo (Integer)
+**
+**		Number of total ammo types that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	NumSupplies (Integer)
+**
+**		Number of total gadget supplies types that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	NumWeaponMods (Integer)
+**
+**		Number of weapon mods that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	NumGear (Integer)
+**
+**		Number of total gear types that can be selected for this mission 
+**		(-1 indicates no limit).
+**
+**	AllowAwards (Integer)
+**
+**		Determines whether performance awards will be given for this mission.
+**		(0 indictes no awards will be given)
+**
+**	HighAmmoUsage (Integer)
+**
+**		Mininum number of shots needed to get the high ammo use award.
+**		(-1 indicates award is not available).
+**
+**	LowAmmoUsage (Integer)
+**
+**		Maxinum number of shots allowed to get the low ammo use award.
+**		(-1 indicates award is not available).
+**
+**	MaximumDetections (Integer)
+**
+**		Maxinum number of detections and bodies found allowed to get the stealth award.
+**		(-1 indicates award is not available).
+**
+**	Rank??? (String)
+**
+**		The list of bonuses given for achieving the rank for this mission. 
+**		These are cumulative bonuses, so achieving Rank6 gives all of the 
+**		bonuses from Rank0 through Rank6. The bonuses are in a comma separated
+**		list with each item in the list consisting of a category and the number
+**		of points earned in that category. The category names may be abbreviated
+**		to as little as the their first letter. (or first 2 letters for Ammo and Armor)
+**		The categories are:
+**			Reputation, Health, Armor, Ammo, Perturb, Damage, Stealth
+**
+**		Example:
+**			Rank6 = "H 1, Ar 1, Rep 1, Am 1"
+**			(gives a bonus of 1 point each to Health, Armor, Reputation, and Ammo)
+**	
+**	
+**	Level0-??? (String)
+**
+**		The file name for each level (scene) file (e.g., Worlds\m01s01).
+**		associated with this mission.  Multiple levels may be specified
+**		(e.g., Level0 = "xxx", Level1 = "yyy", etc.).
+**	
+**		NOTE:  the .dat extension should NOT be included.
+*/
+
+[Mission0]
+//	The Assignment
+
+NameId			= 2500
+DescriptionId	= 2600
+BriefingId		= 2700
+ObjectiveIds	= "5261,5263"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= 20
+LowAmmoUsage	= 4
+MaxDetections	= 0
+Rank6			= "Rep 1"
+Level0			= "Worlds\t01s01"
+Level1			= "Worlds\t01s02"
+Level2			= "Worlds\t01s03"
+
+[Mission1]
+//	Misfortune in Morocco - Mission 1
+
+NameId			= 2501
+DescriptionId	= 2601
+BriefingId		= 2701
+ObjectiveIds	= "5001, 5002, 5003, 5004"
+Photo			= "Interface/Photos/Missions/m01.pcx"
+DefaultWeapons	= "P38"
+AllowedWeapons	= "Revolver,P38"
+RequiredWeapons	= ""
+OneTimeWeapons	= "Delisle"
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Coin,Barrette,Decay Powder"
+AllowedGadgets	= "Coin,Decay Powder,Barrette"
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "9mm fmj,.38 fmj,9mm dum dum,.38 dum dum,DecayPowder,Coin,BarretteLockpick,BarrettePoison"
+RequiredAmmo	= ""
+OneTimeAmmo		= ".45 fmj"
+DeniedAmmo		= ""
+AllowedMods		= "P38 Silencer"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= "Delisle Scope"
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 2
+NumGadgets		= 4
+NumAmmo			= 4
+NumSupplies		= 1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= 400
+LowAmmoUsage	= 100
+MaxDetections	= 0
+Rank4			= "D 1"
+Rank5			= "P 1"
+Rank6			= "Ar 1"
+Level0		= "Worlds\m01s01"
+Level1		= "Worlds\m01s02"
+Level2		= "Worlds\m01s03"
+Level3		= "Worlds\m01s04"
+
+[Mission2]
+//	Requiem for a Spy
+
+NameId			= 2502
+DescriptionId	= 2602
+BriefingId		= 2702
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank6			= "R 1"
+Level0			= "Worlds\t02s01"
+
+[Mission3]
+//	Rainy Night in Berlin - Mission 2
+
+NameId			= 2503
+DescriptionId	= 2603
+BriefingId		= 2703
+ObjectiveIds	= "5021,5022,5023,5024,5025,5026"
+Photo			= "Interface/Photos/Missions/m02.pcx"
+DefaultWeapons	= "P38,Walther SMG,Lipstick Impact Bomb"
+AllowedWeapons	= "Revolver,Walther SMG,Lipstick Impact Bomb"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Coin,Barrette,Lighter"
+AllowedGadgets	= "Coin,Decay Powder,Lighter"
+RequiredGadgets	= "Sunglasses"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "9mm fmj,Coin,DecayPowder,Lighter"
+RequiredAmmo	= "Camera"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "P38 Silencer"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 4
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= 0
+Rank4			= "S 1"
+Rank5			= "D 1"
+Rank6			= "Am 1"
+Level0			= "Worlds\m02s01"
+Level1			= "Worlds\m02s02"
+Level2			= "Worlds\m02s03"
+
+[Mission4]
+//	Unexpected Turbulence - Mission 3
+
+NameId			= 2504
+DescriptionId	= 2604
+BriefingId		= 2704
+ObjectiveIds	= "5041"
+Photo			= "Interface/Photos/Missions/m03.pcx"
+DefaultWeapons	= "P38,Walther SMG"
+AllowedWeapons	= "Revolver"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 2
+NumGadgets		= 3
+NumAmmo			= 3
+NumSupplies		= -1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "Am 1"
+Rank5			= "P 1"
+Rank6			= "D 1"
+Level0			= "Worlds\m03s01"
+Level1			= "Worlds\thiefmission1"
+Level2			= "Worlds\m03s02"
+
+[Mission5]
+//	Care to Explain?
+
+NameId			= 2505
+DescriptionId	= 2605
+BriefingId		= 2705
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank6			= "R 1"
+Level0			= "Worlds\t03s01"
+
+[Mission6]
+//	Rendezvous in Hamburg - Mission 4
+
+NameId			= 2506
+DescriptionId	= 2606
+BriefingId		= 2706
+ObjectiveIds	= "5051"
+Photo			= "Interface/Photos/Missions/m04.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= "Coin,Sunglasses"
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 0
+NumGadgets		= 3
+NumAmmo			= -1
+NumSupplies		= -1
+NumWeaponMods	= 1
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "H 1"
+Rank5			= "A 1"
+Rank6			= "Ar 1"
+Level0		= "Worlds\m04s01"
+Level1		= "Worlds\m04s02"
+
+[Mission7]
+//	Visit to Santa's Workshop
+
+NameId			= 2507
+DescriptionId	= 2607
+BriefingId		= 2707
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t04s01"
+
+[Mission8]
+//	A Tenuous Lead - Mission 5
+
+NameId			= 2508
+DescriptionId	= 2608
+BriefingId		= 2708
+ObjectiveIds	= "5061,5065,5067,5071,5068"
+Photo			= "Interface/Photos/Missions/m05.pcx"
+DefaultWeapons	= "P38,Lipstick Timed Bomb,Delisle"
+AllowedWeapons	= "Revolver,Delisle,Lipstick Timed Bomb"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Coin,Barrette"
+AllowedGadgets	= ""
+RequiredGadgets	= "Sunglasses,Lighter"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "BarretteLockpick,BarrettePoison,"
+RequiredAmmo	= "Camera,Lighter,Welder"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "Delisle Scope"
+DefaultMods		= "P38 Silencer,Delisle Scope"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 4
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "Ar 1"
+Rank5			= "S 1"
+Rank6			= "Am 1"
+Level0			= "Worlds\m05s01"
+Level1			= "Worlds\m05s02"
+Level2			= "Worlds\m05s03"
+Level3			= "Worlds\m05s04"
+Level4			= "Worlds\thiefmission2"
+Level5			= "Worlds\m05s05"
+
+[Mission9]
+//	H.A.R.M.'s Dire Promise
+
+NameId			= 2509
+DescriptionId	= 2609
+BriefingId		= 2709
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t05s01"
+
+[Mission10]
+//	The Dive - Mission 6
+
+NameId			= 2510
+DescriptionId	= 2610
+BriefingId		= 2710
+ObjectiveIds	= "5083,5084,5086,5087"
+Photo			= "Interface/Photos/Missions/m06.pcx"
+DefaultWeapons	= "P38,Sterling,Lipstick Timed Bomb"
+AllowedWeapons	= "Revolver,Sterling,Lipstick Timed Bomb,Delisle,Luger"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= "Lighter,Zipcord"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= "Lighter,Welder,Zipcord"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "Delisle Scope,Luger Silencer"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 3
+NumAmmo			= -1
+NumSupplies		= -1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "P 1"
+Rank5			= "D 1"
+Rank6			= "Am 1"
+Level0			= "Worlds\m06s01"
+Level1			= "Worlds\m06s02"
+Level2			= "Worlds\m06s03"
+
+[Mission11]
+//	If Our Demands Are Not Met
+
+NameId			= 2511
+DescriptionId	= 2611
+BriefingId		= 2711
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t06s01"
+
+[Mission12]
+//	Contact - Mission 7
+
+NameId			= 2512
+DescriptionId	= 2612
+BriefingId		= 2712
+ObjectiveIds	= "5097,5092"
+Photo			= "Interface/Photos/Missions/m07.pcx"
+DefaultWeapons	= "P38,Perfume Stun Gas,Delisle"
+AllowedWeapons	= "Revolver,Perfume Stun Gas,Sterling,Lipstick Timed Bomb,Delisle,Luger"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Barrette,Poodle"
+AllowedGadgets	= "Poodle"
+RequiredGadgets	= "Sunglasses,Lighter"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "Poodle"
+RequiredAmmo	= "Camera,Lighter,Welder"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "Luger Silencer"
+DefaultMods		= "P38 Silencer,Delisle Scope"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 4
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "R 1"
+Rank5			= "S 1"
+Rank6			= "Ar 1"
+Level0			= "Worlds\m07s01"
+Level1			= "Worlds\m07s02"
+Level2			= "Worlds\m07s03"
+
+[Mission13]
+//	Further Investigation Required
+
+NameId			= 2513
+DescriptionId	= 2613
+BriefingId		= 2713
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t07s01"
+
+[Mission14]
+//	Mastermind - Mission 8
+
+NameId			= 2514
+DescriptionId	= 2614
+BriefingId		= 2714
+ObjectiveIds	= "5111,5106,5107,5109,5110"
+Photo			= "Interface/Photos/Missions/m08.pcx"
+DefaultWeapons	= "Crossbow,Lipstick Proximity Bomb,Sterling"
+AllowedWeapons	= "Perfume Stun Gas,Revolver,Lipstick Proximity Bomb,Crossbow,Lipstick Timed Bomb,Delisle,Luger"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Code Breaker"
+AllowedGadgets	= "Code Breaker"
+RequiredGadgets	= "Zipcord,Sunglasses"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "Bolt"
+RequiredAmmo	= "Zipcord,Camera,InfraRed"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "Delisle Scope,Luger Silencer,P38 Silencer"
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 4
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "S 1"
+Rank5			= "P 1"
+Rank6			= "Am 1"
+Level0			= "Worlds\m08s01"
+Level1			= "Worlds\m08s02"
+Level2			= "Worlds\m08s03"
+Level3			= "Worlds\m08s04"
+Level4			= "Worlds\m08s05"
+Level5			= "Worlds\m08s06"
+
+[Mission15]
+//	The Villain Unmasked
+
+NameId			= 2515
+DescriptionId	= 2615
+BriefingId		= 2715
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t08s01"
+
+[Mission16]
+//	Rescue Attempt - Mission 9
+
+NameId			= 2516
+DescriptionId	= 2616
+BriefingId		= 2716
+ObjectiveIds	= "5121,5122,5123,5125,5126,5127,5128"
+Photo			= "Interface/Photos/Missions/m09.pcx"
+DefaultWeapons	= "P38,Sterling,Lipstick Timed Bomb,Perfume Stun Gas"
+AllowedWeapons	= "Revolver,Perfume Acid Gas,Lipstick Proximity Bomb"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Camera Disabler,Sunglasses,Barrette,Code Breaker"
+AllowedGadgets	= "Camera Disabler"
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "Cam Dis Gadget"
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 4
+NumGadgets		= 4
+NumAmmo			= -1
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "S 1"
+Rank5			= "Am 1"
+Rank6			= "P 1"
+Level0			= "Worlds\m09s01"
+Level1			= "Worlds\m09s02"
+Level2			= "Worlds\m09s03"
+
+[Mission17]
+//	A Stern Warning
+
+NameId			= 2519
+DescriptionId	= 2619
+BriefingId		= 2719
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= "P38"
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t09s01"
+
+[Mission18]
+//	Trouble in the Tropics - Mission 10
+
+NameId			= 2517
+DescriptionId	= 2617
+BriefingId		= 2717
+ObjectiveIds	= "5142,5143,5144,5147"
+Photo			= "Interface/Photos/Missions/m10.pcx"
+DefaultWeapons	= "Dragunov,Grenade Launcher,Sterling"
+AllowedWeapons	= "Revolver,Dragunov,Grenade Launcher,Lipstick Proximity Bomb"
+RequiredWeapons	= "Speargun"
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Barrette,Code Breaker"
+AllowedGadgets	= ""
+RequiredGadgets	= "Lighter,Zipcord"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= "Lighter,Welder,Zipcord"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= "SCUBA Gear"
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 4
+NumGadgets		= 5
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "R 1"
+Rank5			= "S 1"
+Rank6			= "P 1"
+Level0			= "Worlds\m10s01"
+Level1			= "Worlds\m10s02"
+Level2			= "Worlds\m10s03"
+Level3			= "Worlds\m10s04"
+
+[Mission19]
+//	Low Earth Orbit - Mission 11
+NameId			= 2518
+DescriptionId	= 2618
+BriefingId		= 2718
+ObjectiveIds	= "5161,5162,5163,5164,5165"
+Photo			= "Interface/Photos/Missions/m11.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= -1
+NumWeaponMods	= 0
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "P 1"
+Rank5			= "Am 1"
+Rank6			= "Ar 1"
+Level0			= "Worlds\m11s01"
+Level1			= "Worlds\m11s02"
+
+[Mission20]
+//	Good Luck and Godspeed
+
+NameId			= 2521
+DescriptionId	= 2621
+BriefingId		= 2721
+ObjectiveIds	= "5267"
+Photo			= "Interface/Photos/Missions/mt1.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= 0
+NumSupplies		= 0
+NumWeaponMods	= 0
+NumGear			= 0
+AllowAwards		= 0
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Level0			= "Worlds\t10s01"
+
+[Mission21]
+//	Alpine Approach - Mission 12
+
+NameId			= 2520
+DescriptionId	= 2620
+BriefingId		= 2720
+ObjectiveIds	= "5181,5182,5184,5185,5186"
+Photo			= "Interface/Photos/Missions/m12.pcx"
+DefaultWeapons	= "P38,Contender,Sterling"
+AllowedWeapons	= "Revolver,Contender,Lasergun,Atomic Lasergun"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Barrette,Coin"
+AllowedGadgets	= "Barrette"
+RequiredGadgets	= "Zipcord,Sunglasses,Lighter"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "BarretteLockpick,BarrettePoison"
+RequiredAmmo	= "Zipcord,MineDetector,Lighter,Welder"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "Crossbow Scope"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 5
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "S 1"
+Rank5			= "P 1"
+Rank6			= "Am 1"
+Level0			= "Worlds\m12s01"
+Level1			= "Worlds\m12s02"
+Level2			= "Worlds\m12s03"
+Level3			= "Worlds\m12s04"
+
+[Mission22]
+//	Confrontation - Mission 13
+
+NameId			= 2522
+DescriptionId	= 2622
+BriefingId		= 2722
+ObjectiveIds	= "5201,5202,5207,5208"
+Photo			= "Interface/Photos/Missions/m13.pcx"
+DefaultWeapons	= "P38,Sterling,Perfume Acid Gas"
+AllowedWeapons	= "Revolver"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= "Coin,Lighter,Barrette,Decay Powder,Zipcord"
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= "Lighter,Welder"
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "AK47 Scope,Dragunov Nightvision Scope,Walther SMG Silencer"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 3
+NumGadgets		= 5
+NumAmmo			= 4
+NumSupplies		= -1
+NumWeaponMods	= 2
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "D 1"
+Rank5			= "S 1"
+Rank6			= "D 1"
+Level0			= "Worlds\m13s01"
+Level1			= "Worlds\thiefmission3"
+Level2			= "Worlds\m13s02"
+Level3			= "Worlds\m13s03"
+Level4			= "Worlds\m13s04"
+
+[Mission23]
+//	Escape - Mission 14
+
+NameId			= 2523
+DescriptionId	= 2623
+BriefingId		= 2723
+ObjectiveIds	= "5221"
+Photo			= "Interface/Photos/Missions/m14.pcx"
+DefaultWeapons	= "P38,Sterling,Dragunov,Grenade Launcher"
+AllowedWeapons	= "Revolver,Rocket Launcher"
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= "Zipcord"
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= "Zipcord"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= "AK47 Scope,Dragunov Nightvision Scope,Walther SMG Silencer"
+DefaultMods		= "P38 Silencer"
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 4
+NumGadgets		= 5
+NumAmmo			= 5
+NumSupplies		= -1
+NumWeaponMods	= 3
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "Am 1"
+Rank5			= "P 1"
+Rank6			= "D 1"
+Level0			= "Worlds\m14s01"
+Level1			= "Worlds\m14s02"
+
+[Mission24]
+//	Revenge? - Mission 15
+
+NameId			= 2524
+DescriptionId	= 2624
+BriefingId		= 2724
+ObjectiveIds	= "5241,5242"
+Photo			= "Interface/Photos/Missions/m15.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= "Revolver"
+OneTimeWeapons	= ""
+DeniedWeapons	= "Space Lasergun,Space Fists,Space Atomic Lasergun"
+DefaultGadgets	= ""
+AllowedGadgets	= ""
+RequiredGadgets	= ""
+OneTimeGadgets	= ""
+DeniedGadgets	= "Space Code Breaker"
+AllowedAmmo		= ""
+RequiredAmmo	= ""
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= "SCUBA Gear"
+NumWeapons		= 0
+NumGadgets		= 0
+NumAmmo			= -1
+NumSupplies		= -1
+NumWeaponMods	= 0
+NumGear			= 1
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "D 1"
+Rank5			= "P 1"
+Rank6			= "Ar 1"
+Level0			= "Worlds\m15s01"
+Level1			= "Worlds\m15s02"
+
+
+[Mission25]
+//	Rest and Relaxation - Mission 16
+
+NameId			= 30000
+DescriptionId	= 30001
+BriefingId		= 30002
+ObjectiveIds	= "30003"
+Photo			= "Interface/Photos/Missions/m16.pcx"
+DefaultWeapons	= ""
+AllowedWeapons	= ""
+RequiredWeapons	= ""
+OneTimeWeapons	= ""
+DeniedWeapons	= ""
+DefaultGadgets	= "Barrette,Lighter"
+AllowedGadgets	= ""
+RequiredGadgets	= "Zipcord"
+OneTimeGadgets	= ""
+DeniedGadgets	= ""
+AllowedAmmo	= ""
+RequiredAmmo	= "Lighter,Welder,Zipcord"
+OneTimeAmmo		= ""
+DeniedAmmo		= ""
+AllowedMods		= ""
+DefaultMods		= ""
+RequiredMods	= ""
+AllowedGear		= ""
+RequiredGear	= ""
+OneTimeGear		= ""
+DeniedGear		= ""
+NumWeapons		=0
+NumGadgets		=0
+NumAmmo			=0
+NumSupplies		=0
+NumWeaponMods	= 0
+NumGear			=0
+AllowAwards		= 1
+HighAmmoUsage	= -1
+LowAmmoUsage	= -1
+MaxDetections	= -1
+Rank4			= "R 1"
+Rank5			= "S 1"
+Rank6			= "P 1"
+Level0			= "Worlds\goty\m16s01"
+Level1			= "Worlds\goty\m16s02"
+Level2			= "Worlds\goty\m16s03"
+Level3			= "Worlds\goty\m16s04"
