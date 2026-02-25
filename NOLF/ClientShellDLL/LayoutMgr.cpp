@@ -288,11 +288,11 @@ char s_aFolderTag[FOLDER_ID_UNASSIGNED+1][32] =
 	"FolderHostLevels",		//FOLDER_ID_HOST_LEVELS,
 	"LoadScreenSingle",		//FOLDER_ID_LOADSCREEN_SINGLE,
 	"LoadScreenMulti",		//FOLDER_ID_LOADSCREEN_MULTI,
-	"FolderMainCasual",
-	"FolderMainWinter",
-	"FolderMainThief",
+	"FolderMainCasual",		//FOLDER_ID_MAIN_CASUAL
+	"FolderMainWinter",		//FOLDER_ID_MAIN_WINTER
 	"FolderHUD",			//FOLDER_ID_HUD
-	"FolderJukebox",			//FOLDER_ID_JUKEBOX
+	"FolderJukebox",		//FOLDER_ID_JUKEBOX
+	"FolderMainThief",		//FOLDER_ID_MAIN_THIEF
 
 	LO_DEFAULT_TAG			//FOLDER_ID_UNASSIGNED,
 
