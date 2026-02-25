@@ -39,6 +39,7 @@ protected:
 	int					m_nPickupMsgDur;
 	LTBOOL				m_bObjMessages;
 	LTBOOL				m_bQuickSwitch;
+	LTBOOL				m_bUsePS2Music;		// PS2 Music toggle
 
 
 	CLTGUICycleCtrl		*m_pDifficultyCtrl;			// The difficulty control

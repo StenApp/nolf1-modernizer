@@ -37,6 +37,7 @@ CFolderGame::CFolderGame()
 	m_nWeaponSway = 0;
 	m_nPickupMsgDur = 0;
 	m_bObjMessages = LTTRUE;
+	m_bUsePS2Music = LTFALSE;
 }
 
 CFolderGame::~CFolderGame()
@@ -116,6 +117,10 @@ LTBOOL CFolderGame::Build()
 	pToggle->SetOnString(IDS_YES);
 	pToggle->SetOffString(IDS_NO);
 
+	pToggle = AddToggle(IDS_USE_PS2_MUSIC, IDS_HELP_USE_PS2_MUSIC, kGap, &m_bUsePS2Music);
+	pToggle->SetOnString(IDS_YES);
+	pToggle->SetOffString(IDS_NO);
+
 
 
 	// Make sure to call the base class
@@ -161,6 +166,8 @@ void CFolderGame::OnFocus(LTBOOL bFocus)
 
 		m_bQuickSwitch = g_vtQuickSwitch.GetFloat();
 
+		m_bUsePS2Music = ( GetConsoleInt("UsePS2Music", 0) > 0 );
+
         UpdateData(LTFALSE);
 	}
 	else
@@ -182,6 +189,8 @@ void CFolderGame::OnFocus(LTBOOL bFocus)
 		WriteConsoleInt("ObjectiveMessages",m_bObjMessages);
 
 		WriteConsoleInt("QuickSwitch", m_bQuickSwitch);
+
+		WriteConsoleInt("UsePS2Music", m_bUsePS2Music);
 
 		g_pLTClient->WriteConfigFile("autoexec.cfg");
 	}

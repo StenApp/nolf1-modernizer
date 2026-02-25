@@ -6406,6 +6406,9 @@
 #define IDS_HELP_UI_SCALE               20586
 #define IDS_JUKEBOX                     20587
 #define IDS_HELP_JUKEBOX                20588
+//PS2 Music
+#define IDS_USE_PS2_MUSIC       		20589
+#define IDS_HELP_USE_PS2_MUSIC  		20590
 //GOTY IDS
 #define IDS_MISSION_GOTY                30000
 #define IDS_MISSION_GOTY_DESC           30001

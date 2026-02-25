@@ -550,7 +550,10 @@ class CGameClientShell : public IClientShell
 		LTBOOL		m_bGetBaseMouse;
 		LARGE_INTEGER m_lTimerFrequency;
 
-		CJukeboxButeMgr m_JukeBoxButeMgr;
+		CJukeboxButeMgr    m_JukeBoxButeMgr;
+
+		// PS2 Music
+		HLTSOUND           m_hPS2MusicSound;
 
 		int			m_nTimeoutBugRetriesLeft;
 		std::string m_sRetryAddress;

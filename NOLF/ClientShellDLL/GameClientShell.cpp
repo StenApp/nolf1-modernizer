@@ -12,6 +12,7 @@
 
 #include "stdafx.h"
 #include "GameClientShell.h"
+#include "LevelMusicButeMgr.h"
 #include "MsgIds.h"
 #include "CommandIds.h"
 #include "WeaponModel.h"
@@ -596,6 +597,7 @@ CGameClientShell::CGameClientShell()
 
     m_h3rdPersonCrosshair   = LTNULL;
     m_hContainerSound       = LTNULL;
+    m_hPS2MusicSound        = LTNULL;
 	m_eCurContainerCode		= CC_NO_CONTAINER;
 	m_nSoundFilterId		= 0;
 	m_nGlobalSoundFilterId	= 0;
@@ -1179,6 +1181,7 @@ uint32 CGameClientShell::OnEngineInitialized(RMode *pMode, LTGUID *pAppGuid)
 
 	// Init the jukebox attribute manager
 	m_JukeBoxButeMgr.Init(g_pLTClient);
+
 
 	m_CameraOffsetMgr.Init();
 	m_HeadBobMgr.Init();
@@ -1831,6 +1834,13 @@ void CGameClientShell::OnExitWorld()
 	{
         g_pLTClient->KillSound(m_hContainerSound);
         m_hContainerSound = LTNULL;
+	}
+
+	// PS2 Music stoppen
+	if (m_hPS2MusicSound)
+	{
+		g_pLTClient->KillSound(m_hPS2MusicSound);
+		m_hPS2MusicSound = LTNULL;
 	}
 
 	m_InterfaceMgr.OnExitWorld();
@@ -7103,22 +7113,78 @@ void CGameClientShell::FirstUpdate()
 
 	if (m_Music.IsInitialized() && (SINGLE == m_eGameType) )
 	{
-		// Initialize music for the current level...
-
-		char* pMusicDirectory = g_pLTClient->GetServerConVarValueString("MusicDirectory");
-		char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
-
-		if (pMusicDirectory && pMusicControlFile)
+		if (GetConsoleInt("UsePS2Music", 0))
 		{
-			CMusicState MusicState;
-			strcpy(MusicState.szDirectory, pMusicDirectory);
-			strcpy(MusicState.szControlFile, pMusicControlFile);
+			// PS2 Music Mode: DirectMusic stoppen, WAV starten
+			m_Music.Stop();
 
-			m_Music.RestoreMusicState(MusicState);
+			// Level-Namen extrahieren (nur Dateiname, lowercase, ohne Extension)
+			char szLevelName[128] = "";
+			const char* pSlash  = strrchr(m_strCurrentWorldName, '\\');
+			const char* pSlash2 = strrchr(m_strCurrentWorldName, '/');
+			const char* pStart  = (pSlash > pSlash2) ? pSlash : pSlash2;
+			pStart = pStart ? pStart + 1 : m_strCurrentWorldName;
+			strncpy(szLevelName, pStart, sizeof(szLevelName) - 1);
+			char* pDot = strrchr(szLevelName, '.');
+			if (pDot) *pDot = 0;
+			_strlwr(szLevelName);
+
+			// Alten Sound stoppen
+			if (m_hPS2MusicSound)
+			{
+				g_pLTClient->KillSound(m_hPS2MusicSound);
+				m_hPS2MusicSound = LTNULL;
+			}
+
+			// WAV-Pfad aus statischer Tabelle nachschlagen
+			const char* pszWAV = GetPS2MusicForLevel(szLevelName);
+			if (pszWAV)
+			{
+				// PS2-Track gefunden - WAV abspielen
+				m_hPS2MusicSound = g_pClientSoundMgr->PlaySoundLocal(
+					const_cast<char*>(pszWAV),
+					SOUNDPRIORITY_MISC_MEDIUM,
+					PLAYSOUND_LOOP | PLAYSOUND_GETHANDLE
+				);
+			}
+			else
+			{
+				// Kein PS2-Track (z.B. M16/GOTY) - DirectMusic als Fallback
+				char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
+				char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
+
+				if (pMusicDirectory && pMusicControlFile)
+				{
+					CMusicState MusicState;
+					strcpy(MusicState.szDirectory, pMusicDirectory);
+					strcpy(MusicState.szControlFile, pMusicControlFile);
+					m_Music.RestoreMusicState(MusicState);
+				}
+			}
 		}
+		else
+		{
+			// UsePS2Music aus - normaler DirectMusic-Pfad
+			if (m_hPS2MusicSound)
+			{
+				g_pLTClient->KillSound(m_hPS2MusicSound);
+				m_hPS2MusicSound = LTNULL;
+			}
 
-		//m_InterfaceMgr.RestoreGameMusic();
-		//m_Music.Play();
+			char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
+			char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
+
+			if (pMusicDirectory && pMusicControlFile)
+			{
+				CMusicState MusicState;
+				strcpy(MusicState.szDirectory, pMusicDirectory);
+				strcpy(MusicState.szControlFile, pMusicControlFile);
+				m_Music.RestoreMusicState(MusicState);
+			}
+
+			//m_InterfaceMgr.RestoreGameMusic();
+			//m_Music.Play();
+		}
 	}
 
 

@@ -288,6 +288,7 @@
     <ClCompile Include="IpMgr.cpp" />
     <ClCompile Include="JoystickAxis.cpp" />
     <ClCompile Include="JukeboxButeMgr.cpp" />
+    <ClCompile Include="LevelMusicButeMgr.cpp" />
     <ClCompile Include="KeyFixes.cpp" />
     <ClCompile Include="LaserBeam.cpp" />
     <ClCompile Include="LaserTriggerFX.cpp" />
@@ -513,6 +514,7 @@
     <ClInclude Include="IpMgr.h" />
     <ClInclude Include="JoystickAxis.h" />
     <ClInclude Include="JukeboxButeMgr.h" />
+    <ClInclude Include="LevelMusicButeMgr.h" />
     <ClInclude Include="KeyFixes.h" />
     <ClInclude Include="LaserBeam.h" />
     <ClInclude Include="LayoutMgr.h" />
