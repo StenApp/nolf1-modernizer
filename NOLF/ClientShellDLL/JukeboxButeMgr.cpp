@@ -9,11 +9,13 @@ CJukeboxButeMgr* g_pJukeboxButeMgr = nullptr;
 #define JBM_THEME_DIRECTORY "Directory"
 #define JBM_THEME_CONTROL_FILE "ControlFile"
 #define JBM_THEME_REQUIRES_GOTY "RequiresGOTY"
+#define JBM_THEME_IS_WAV "IsWAV"
 
 #define JBM_SONG "Song"
 #define JBM_SONG_NAME "Name"
 #define JBM_SONG_INTENSITY "IntensityLevel"
 #define JBM_SONG_THEME "Theme"
+#define JBM_SONG_FILENAME "FileName"
 
 
 CJukeboxButeMgr::CJukeboxButeMgr()
@@ -106,6 +108,18 @@ bool CJukeboxButeMgr::GetThemeRequiresGOTY(int nThemeID)
 	return m_buteMgr.GetBool(sTagName.c_str(), JBM_THEME_REQUIRES_GOTY);
 }
 
+bool CJukeboxButeMgr::GetThemeIsWAV(int nThemeID)
+{
+	if (nThemeID < 0 || nThemeID > m_nThemeIDCount) return false;
+
+	std::string sTagName = JBM_THEME + std::to_string(nThemeID);
+
+	// Default false - if key doesn't exist, it's a normal LithTech music theme
+	if (!m_buteMgr.Exist(sTagName.c_str(), JBM_THEME_IS_WAV)) return false;
+
+	return m_buteMgr.GetBool(sTagName.c_str(), JBM_THEME_IS_WAV);
+}
+
 //
 // Song stuff
 //
@@ -135,4 +149,16 @@ int CJukeboxButeMgr::GetSongThemeID(int nSongID)
 	std::string sTagName = JBM_SONG + std::to_string(nSongID);
 
 	return m_buteMgr.GetInt(sTagName.c_str(), JBM_SONG_THEME);
+}
+
+CString CJukeboxButeMgr::GetSongFileName(int nSongID)
+{
+	if (nSongID < 0 || nSongID > m_nSongIDCount) return "";
+
+	std::string sTagName = JBM_SONG + std::to_string(nSongID);
+
+	// Key may not exist for non-WAV songs
+	if (!m_buteMgr.Exist(sTagName.c_str(), JBM_SONG_FILENAME)) return "";
+
+	return m_buteMgr.GetString(sTagName.c_str(), JBM_SONG_FILENAME);
 }

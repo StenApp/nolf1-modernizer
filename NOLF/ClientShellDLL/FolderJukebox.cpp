@@ -10,6 +10,8 @@
 #include <string>
 
 #include "JukeboxButeMgr.h"
+#include "ClientSoundMgr.h"
+
 namespace
 {
 	int kGap = 0;
@@ -136,16 +138,32 @@ std::string m_sGOTYIntensity[8] = {
 };
 #endif
 
+void CFolderJukebox::StopCurrentWAV()
+{
+	if (m_hCurrentWAV)
+	{
+		g_pLTClient->SoundMgr()->KillSound(m_hCurrentWAV);
+		m_hCurrentWAV = LTNULL;
+	}
+}
+
 CFolderJukebox::CFolderJukebox()
 {
 	m_sCurrentSong = "";
 
 	m_CurrentSongList = nullptr;
 	m_PreviousMusicState.Clear();
+
+	m_hCurrentWAV = LTNULL;
+	m_bCurrentThemeIsWAV = false;
+	m_sCurrentWAVDirectory = "";
 }
 
 CFolderJukebox::~CFolderJukebox()
 {
+	// Stop any playing WAV before cleanup
+	StopCurrentWAV();
+
 	// Clean up!
 	for (auto Song : m_Songs)
 	{
@@ -158,6 +176,13 @@ CFolderJukebox::~CFolderJukebox()
 
 LTBOOL CFolderJukebox::Build()
 {
+	// Safety check: JukeboxButeMgr may not have initialized (e.g. missing Attributes\Jukebox.txt)
+	if (!g_pJukeboxButeMgr)
+	{
+		g_pLTClient->CPrint("WARNING: JukeboxButeMgr not initialized - Jukebox.txt missing?");
+		return LTFALSE;
+	}
+
 	CreateTitle(IDS_TITLE_JUKEBOX);
 
 	rcSongListRect = g_pLayoutMgr->GetFolderCustomRect((eFolderID)m_nFolderID, "SongListRect");
@@ -206,16 +231,33 @@ LTBOOL CFolderJukebox::Build()
 		auto sName = g_pJukeboxButeMgr->GetSongName(i);
 		auto nIntensityLevel = g_pJukeboxButeMgr->GetSongIntensityLevel(i);
 		auto nThemeID = g_pJukeboxButeMgr->GetSongThemeID(i);
+		auto sFileName = g_pJukeboxButeMgr->GetSongFileName(i);
+		bool bThemeIsWAV = g_pJukeboxButeMgr->GetThemeIsWAV(nThemeID);
 
 		// If the ID is in the "to skip" list, then skip this song!
-		// This is needed if the player doesn't have the required files installed.
 		if (std::find(m_ThemeIDsToSkip.begin(), m_ThemeIDsToSkip.end(), nThemeID) != m_ThemeIDsToSkip.end())
 		{
 			continue;
 		}
 
-		// Insert the song into its proper theme map.
-		m_Songs[nThemeID].insert( std::pair<std::string, int>(sName, nIntensityLevel) );
+		if (bThemeIsWAV)
+		{
+			// For WAV themes: key = display name, value = 0 (unused), 
+			// but we need the filename for playback - store it as the key
+			// so OnCommand can build the path directly.
+			// Convention: map key = FileName, display in list = Name
+			// We use FileName as the map key so playback is straightforward.
+			std::string sKey = sFileName.GetBuffer();
+			if (!sKey.empty())
+			{
+				m_Songs[nThemeID].insert(std::pair<std::string, int>(sKey, 0));
+			}
+		}
+		else
+		{
+			// Normal theme: key = song name, value = intensity level
+			m_Songs[nThemeID].insert(std::pair<std::string, int>(sName, nIntensityLevel));
+		}
 	}
 
 	LTIntPt pos;
@@ -262,8 +304,25 @@ uint32 CFolderJukebox::OnCommand(uint32 dwCommand, uint32 dwParam1, uint32 dwPar
 
 		m_sCurrentSong = key;
 
-		int intensity = (*m_CurrentSongList).at(key);
-		g_pGameClientShell->GetMusic()->Play(intensity);
+		if (m_bCurrentThemeIsWAV)
+		{
+			// Stop previous WAV before starting new one
+			StopCurrentWAV();
+
+			// Build full path: Directory + FileName stored in map value as negative sentinel,
+			// actual filename is the key itself (we stored "filename.wav" as the map key)
+			std::string sFullPath = m_sCurrentWAVDirectory + key;
+
+			m_hCurrentWAV = g_pClientSoundMgr->PlayInterfaceSound(
+				(char*)sFullPath.c_str(),
+				PLAYSOUND_LOOP
+			);
+		}
+		else
+		{
+			int intensity = (*m_CurrentSongList).at(key);
+			g_pGameClientShell->GetMusic()->Play(intensity);
+		}
 
 		UpdateHelpText();
 
@@ -294,19 +353,18 @@ void CFolderJukebox::OnFocus(LTBOOL bFocus)
 	// Leave
 	UpdateData(LTTRUE);
 
+	// Stop any WAV that's still playing
+	StopCurrentWAV();
+	m_bCurrentThemeIsWAV = false;
+
 	// Restore the music that was playing before they entered this menu.
 	g_pGameClientShell->GetMusic()->RestoreMusicState(m_PreviousMusicState);
-
 
 	CBaseFolder::OnFocus(bFocus);
 }
 
 LTBOOL CFolderJukebox::PlayScore(int scoreId)
 {
-	// excuse my mixed naming convetion here...
-	std::string directory = "Music\\";
-	std::string controlFile;
-
 	int nThemeID = scoreId - FOLDER_CMD_CUSTOM;
 
 	// Make doubly sure we're not trying to access a theme we don't have the files for!
@@ -316,19 +374,42 @@ LTBOOL CFolderJukebox::PlayScore(int scoreId)
 	}
 
 	auto sDirectory = g_pJukeboxButeMgr->GetThemeDirectory(nThemeID);
-	auto sControlFile = g_pJukeboxButeMgr->GetThemeControlFile(nThemeID);
+	bool bIsWAV = g_pJukeboxButeMgr->GetThemeIsWAV(nThemeID);
 
 	m_CurrentSongList = &m_Songs[nThemeID];
-	directory += sDirectory.GetBuffer();
-	controlFile = sControlFile.GetBuffer();
 
-	CMusicState MusicState;
-	strcpy(MusicState.szDirectory, (char*)(LPCSTR)directory.c_str());
-	strcpy(MusicState.szControlFile, (char*)(LPCSTR)controlFile.c_str());
+	// Stop any currently playing WAV
+	StopCurrentWAV();
 
-	if (!g_pGameClientShell->GetMusic()->RestoreMusicState(MusicState))
+	if (bIsWAV)
 	{
-		return LTFALSE;
+		// WAV theme: stop LithTech music, set up for direct WAV playback
+		m_bCurrentThemeIsWAV = true;
+		m_sCurrentWAVDirectory = "Music\\";
+		m_sCurrentWAVDirectory += sDirectory.GetBuffer();
+
+		// Stop the LithTech music system while WAV is playing
+		g_pGameClientShell->GetMusic()->Stop();
+	}
+	else
+	{
+		// Normal LithTech music theme
+		m_bCurrentThemeIsWAV = false;
+		m_sCurrentWAVDirectory = "";
+
+		std::string directory = "Music\\";
+		auto sControlFile = g_pJukeboxButeMgr->GetThemeControlFile(nThemeID);
+		directory += sDirectory.GetBuffer();
+		std::string controlFile = sControlFile.GetBuffer();
+
+		CMusicState MusicState;
+		strcpy(MusicState.szDirectory, (char*)(LPCSTR)directory.c_str());
+		strcpy(MusicState.szControlFile, (char*)(LPCSTR)controlFile.c_str());
+
+		if (!g_pGameClientShell->GetMusic()->RestoreMusicState(MusicState))
+		{
+			return LTFALSE;
+		}
 	}
 
 	UpdateData(LTTRUE);
@@ -338,14 +419,12 @@ LTBOOL CFolderJukebox::PlayScore(int scoreId)
 	std::map<std::string, int>::iterator it = (*m_CurrentSongList).begin();
 	while (it != (*m_CurrentSongList).end()) {
 
-		// Add the string to the control
 		HSTRING hTemp = g_pLTClient->CreateString((char*)it->first.c_str());
 
 		CStaticTextCtrl* pCtrl = CreateStaticTextItem((char*)(LPCTSTR)(it->first.c_str()), PLAY_SONG, LTNULL, 200, GetMediumFont()->GetHeight(), LTFALSE, GetMediumFont());
 
 		m_SongListCtrl->AddControl(pCtrl);
 
-		// Free the strings
 		g_pLTClient->FreeString(hTemp);
 		it++;
 	}

@@ -307,3 +307,91 @@ Theme=5
 Name="Combat"
 IntensityLevel=7
 Theme=5
+
+/*
+** PS2 Music (WAV-based)
+*/
+[Theme6]
+Name           = "PS2 Music"
+Directory      = "PS2Music\\"
+ControlFile    = ""
+RequiresGOTY   = FALSE
+IsWAV          = TRUE
+
+[Song46]
+Name="Track 01"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_01.wav"
+
+[Song47]
+Name="Track 02"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_02.wav"
+
+[Song48]
+Name="Track 03"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_03.wav"
+
+[Song49]
+Name="Track 04"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_04.wav"
+
+[Song50]
+Name="Track 05"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_05.wav"
+
+[Song51]
+Name="Track 06"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_06.wav"
+
+[Song52]
+Name="Track 07"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_07.wav"
+
+[Song53]
+Name="Track 08"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_08.wav"
+
+[Song54]
+Name="Track 09"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_09.wav"
+
+[Song55]
+Name="Track 10"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_10.wav"
+
+[Song56]
+Name="Track 11"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_11.wav"
+
+[Song57]
+Name="Track 12"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_12.wav"
+
+[Song58]
+Name="Track 13"
+IntensityLevel=0
+Theme=6
+FileName="nolf_ps2_13.wav"

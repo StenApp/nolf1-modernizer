@@ -28,6 +28,13 @@ protected:
 
 	std::vector< std::map<std::string, int> > m_Songs;
 
+	// WAV playback support
+	HLTSOUND	m_hCurrentWAV;			// Handle to currently playing WAV
+	bool		m_bCurrentThemeIsWAV;	// Is the active theme WAV-based?
+	std::string	m_sCurrentWAVDirectory;	// Directory of current WAV theme
+
+	void		StopCurrentWAV();		// Stop WAV and release handle
+
 private:
 
 };

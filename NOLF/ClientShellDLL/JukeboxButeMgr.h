@@ -29,11 +29,13 @@ public:
 	CString		GetThemeDirectory(int nThemeID);
 	CString		GetThemeControlFile(int nThemeID);
 	bool		GetThemeRequiresGOTY(int nThemeID);
+	bool		GetThemeIsWAV(int nThemeID);		// True if this theme plays WAV files directly
 
 	// Songs
 	CString		GetSongName(int nSongID);
 	int			GetSongIntensityLevel(int nSongID);
 	int			GetSongThemeID(int nSongID);
+	CString		GetSongFileName(int nSongID);	// WAV filename (only used for WAV themes)
 
 private:
 
