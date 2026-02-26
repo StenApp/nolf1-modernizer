@@ -5054,7 +5054,15 @@ void CGameClientShell::OnMessage(uint8 messageID, HMESSAGEREAD hMessage)
 		{
 			if (m_Music.IsInitialized())
 			{
-				m_Music.ProcessMusicMessage(hMessage);
+				// PS2Music aktiv - DirectMusic-Trigger ignorieren
+				if (GetConsoleInt("UsePS2Music", 0) && m_hPS2MusicSound)
+				{
+					g_pLTClient->CPrint("[PS2Music] Ignoring DirectMusic trigger (PS2 track active)");
+				}
+				else
+				{
+					m_Music.ProcessMusicMessage(hMessage);
+				}
 			}
 		}
 		break;
@@ -7110,8 +7118,7 @@ void CGameClientShell::FirstUpdate()
 
 
 	// Initialize the music playlists...
-
-	if (m_Music.IsInitialized() && (SINGLE == m_eGameType) )
+	if (m_Music.IsInitialized() && (SINGLE == m_eGameType))
 	{
 		if (GetConsoleInt("UsePS2Music", 0))
 		{
@@ -7119,9 +7126,9 @@ void CGameClientShell::FirstUpdate()
 
 			// Level-Namen extrahieren (nur Dateiname, lowercase, ohne Extension)
 			char szLevelName[128] = "";
-			const char* pSlash  = strrchr(m_strCurrentWorldName, '\\');
+			const char* pSlash = strrchr(m_strCurrentWorldName, '\\');
 			const char* pSlash2 = strrchr(m_strCurrentWorldName, '/');
-			const char* pStart  = (pSlash > pSlash2) ? pSlash : pSlash2;
+			const char* pStart = (pSlash > pSlash2) ? pSlash : pSlash2;
 			pStart = pStart ? pStart + 1 : m_strCurrentWorldName;
 			strncpy(szLevelName, pStart, sizeof(szLevelName) - 1);
 			char* pDot = strrchr(szLevelName, '.');
@@ -7130,49 +7137,48 @@ void CGameClientShell::FirstUpdate()
 
 			// WAV-Pfad aus statischer Tabelle nachschlagen
 			const char* pszWAV = GetPS2MusicForLevel(szLevelName);
+
+			BOOL bPlayingPS2Music = FALSE;
+
 			if (pszWAV)
 			{
-				// Datei physisch pruefen bevor DirectMusic gestoppt wird
-				DWORD dwAttr = GetFileAttributes(pszWAV);
-				if (dwAttr != INVALID_FILE_ATTRIBUTES)
+				// Datei in .rez pruefen
+				ILTStream* pTestStream = LTNULL;
+				LTRESULT ltRes = g_pLTClient->OpenFile(const_cast<char*>(pszWAV), &pTestStream);
+				if (ltRes == LT_OK && pTestStream)
 				{
-					// Datei vorhanden - jetzt erst DirectMusic stoppen
-					m_Music.Stop();
+					pTestStream->Release();
+					pTestStream = LTNULL;
 
-					// Alten Sound stoppen
+					// Datei vorhanden - DirectMusic stoppen und PS2-Track spielen
+					m_Music.Stop();
 					if (m_hPS2MusicSound)
 					{
 						g_pLTClient->KillSound(m_hPS2MusicSound);
 						m_hPS2MusicSound = LTNULL;
 					}
-
 					g_pLTClient->CPrint("[PS2Music] Playing: %s", pszWAV);
 					m_hPS2MusicSound = g_pClientSoundMgr->PlaySoundLocal(
 						const_cast<char*>(pszWAV),
 						SOUNDPRIORITY_MISC_MEDIUM,
 						PLAYSOUND_LOOP | PLAYSOUND_GETHANDLE
 					);
+					bPlayingPS2Music = TRUE;
 				}
 				else
 				{
-					// Datei fehlt - DirectMusic als Fallback
 					g_pLTClient->CPrint("[PS2Music] File not found: %s - falling back to DirectMusic", pszWAV);
-					char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
-					char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
-					if (pMusicDirectory && pMusicControlFile)
-					{
-						CMusicState MusicState;
-						strcpy(MusicState.szDirectory, pMusicDirectory);
-						strcpy(MusicState.szControlFile, pMusicControlFile);
-						m_Music.RestoreMusicState(MusicState);
-					}
 				}
 			}
 			else
 			{
-				// Kein PS2-Track (z.B. M16/GOTY) - DirectMusic als Fallback
 				g_pLTClient->CPrint("[PS2Music] No PS2 track mapped for level '%s' - falling back to DirectMusic", szLevelName);
-				char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
+			}
+
+			// DirectMusic-Fallback - nur einmal fuer beide Faelle
+			if (!bPlayingPS2Music)
+			{
+				char* pMusicDirectory = g_pLTClient->GetServerConVarValueString("MusicDirectory");
 				char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
 				if (pMusicDirectory && pMusicControlFile)
 				{
@@ -7191,10 +7197,8 @@ void CGameClientShell::FirstUpdate()
 				g_pLTClient->KillSound(m_hPS2MusicSound);
 				m_hPS2MusicSound = LTNULL;
 			}
-
-			char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
+			char* pMusicDirectory = g_pLTClient->GetServerConVarValueString("MusicDirectory");
 			char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
-
 			if (pMusicDirectory && pMusicControlFile)
 			{
 				CMusicState MusicState;
@@ -7202,7 +7206,6 @@ void CGameClientShell::FirstUpdate()
 				strcpy(MusicState.szControlFile, pMusicControlFile);
 				m_Music.RestoreMusicState(MusicState);
 			}
-
 			//m_InterfaceMgr.RestoreGameMusic();
 			//m_Music.Play();
 		}
