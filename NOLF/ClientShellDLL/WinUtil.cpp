@@ -97,7 +97,7 @@ BOOL CWinUtil::CreateDir (char* strPath)
 
 BOOL CWinUtil::FileExist (char* strPath)
 {
-	OFSTRUCT ofs;
+	OFSTRUCT ofs = {};
 	HFILE hFile = OpenFile (strPath, &ofs, OF_EXIST);
 	if (hFile == HFILE_ERROR) return FALSE;
 

@@ -2048,7 +2048,7 @@ LTBOOL CAI::IsObjectPositionVisible(ObjectFilterFn ofn, PolyFilterFn pfn, const 
 	vDirNorm.Norm();
 
     LTFLOAT fNoFOVDistanceSqr = g_pAIButeMgr->GetSenses()->fNoFOVDistanceSqr;
-    LTFLOAT fDp;
+	LTFLOAT fDp = 0.0f;
 
 	// Make sure it is in our FOV
 
@@ -2154,7 +2154,7 @@ LTBOOL CAI::IsPositionVisible(ObjectFilterFn ofn, PolyFilterFn pfn, const LTVect
 	vDirNorm.Norm();
 
     LTFLOAT fNoFOVDistanceSqr = g_pAIButeMgr->GetSenses()->fNoFOVDistanceSqr;
-    LTFLOAT fDp;
+	LTFLOAT fDp = 0.0f;
 
 	// Make sure it is in our FOV
 

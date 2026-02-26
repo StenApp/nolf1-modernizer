@@ -72,6 +72,19 @@ void CAnimator::Init(ILTCSBase *pInterface, HOBJECT hObject)
 
 	m_eAniTrackerDims = eAniTrackerInvalid;
 
+	// NEU: Pitch weightsets initialisieren
+	for (int iPitchWeightset = 0; iPitchWeightset < kNumPitchWeightsets; iPitchWeightset++)
+	{
+		char szPitchWeightset[64];
+		LTFLOAT fWeightsetAmount = 100.0f / (LTFLOAT)(kNumPitchWeightsets - 1);
+		sprintf(szPitchWeightset, "Morph%d", (int32)(iPitchWeightset * fWeightsetAmount));
+
+		if (LT_OK != g_pModelLT->FindWeightSet(hObject, szPitchWeightset, m_ahPitchWeightsets[iPitchWeightset]))
+		{
+			m_ahPitchWeightsets[iPitchWeightset] = NULL;
+		}
+	}
+
     m_bInitialized = LTTRUE;
 }
 

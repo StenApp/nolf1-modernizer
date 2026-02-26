@@ -3200,7 +3200,7 @@ void CGameClientShell::UpdateCameraZoom()
     m_bZooming = LTTRUE;
 
 
-    LTFLOAT fFovXZoomed, fZoomDist;
+	LTFLOAT fFovXZoomed = 0.0f, fZoomDist = 0.0f;
 
 	if (m_bZoomingIn)
 	{

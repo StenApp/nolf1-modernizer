@@ -617,11 +617,14 @@
 			// won't fail.)
 			if( pNewArray || newAllocSize == 0 )
 			{
-				for( i=0; i < index; i++ )
-					pNewArray[i] = m_pArray[i];
+				if (pNewArray)
+				{
+					for (i = 0; i < index; i++)
+						pNewArray[i] = m_pArray[i];
 
-				for( i=index; i < m_nElements-1; i++ )
-					pNewArray[i] = m_pArray[i+1];
+					for (i = index; i < m_nElements - 1; i++)
+						pNewArray[i] = m_pArray[i + 1];
+				}
 
 				_DeleteAndDestroyArray(pAlloc, GetNumAllocatedElements());
 				m_pArray = pNewArray;

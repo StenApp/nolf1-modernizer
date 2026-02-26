@@ -1199,7 +1199,10 @@ void CBodyStateExplode::Update()
 {
 	CBodyState::Update();
 
-	if ( m_pBody && ((g_pLTServer->GetTime() - m_pBody->GetStarttime()) > g_BodyStateTimeout.GetFloat()) )
+	if (!m_pBody) return;  //NEU: expliziter Guard ganz oben
+
+	//if ( m_pBody && ((g_pLTServer->GetTime() - m_pBody->GetStarttime()) > g_BodyStateTimeout.GetFloat()) )
+	if ((g_pLTServer->GetTime() - m_pBody->GetStarttime()) > g_BodyStateTimeout.GetFloat())
 	{
 		g_pLTServer->SetModelAnimation(m_pBody->m_hObject, m_hAniStop);
 		g_pLTServer->SetModelLooping(m_pBody->m_hObject, LTFALSE);

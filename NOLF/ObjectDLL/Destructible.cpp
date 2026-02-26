@@ -1294,15 +1294,15 @@ void CDestructible::ProcessPlayerDeath(HOBJECT hDamager)
 			}
 		}
 
+		uint8 nLivesLeft = 255;
 		if (g_pGameServerShell)
 		{
 			g_pGameServerShell->SetUpdateGameServ();
-		}
 
-		uint8 nLivesLeft = 255;
-		if (g_pGameServerShell->GetGameType() == COOPERATIVE_ASSAULT && g_NetUseSpawnLimit.GetFloat() > 0.0f)
-		{
-			nLivesLeft = (uint8)g_NetSpawnLimit.GetFloat() - (uint8)pVictim->GetRespawnCount();
+			if (g_pGameServerShell->GetGameType() == COOPERATIVE_ASSAULT && g_NetUseSpawnLimit.GetFloat() > 0.0f)
+			{
+				nLivesLeft = (uint8)g_NetSpawnLimit.GetFloat() - (uint8)pVictim->GetRespawnCount();
+			}
 		}
 
 
@@ -1463,25 +1463,27 @@ LTBOOL CDestructible::AddGear(uint8 nGearId)
 				{
 					GEAR* pGear = g_pWeaponMgr->GetGear(nGearId);
 
-					if (pGear && pGear->bExclusive)
+					if (pGear)
 					{
-                        m_bGearOwned[nGearId] = LTTRUE;
-					}
-
-					if (pGear->fArmor)
-					{
-						bGearAdded = Repair(pGear->fArmor);
-
-						// Give the player health if necessary...
-						if (IsMultiplayerGame() && g_NetArmorHealthPercent.GetFloat() > 0.0f)
+						if (pGear->bExclusive)
 						{
-							LTFLOAT fHeal = g_NetArmorHealthPercent.GetFloat() * pGear->fArmor;
-							Heal(fHeal);
+							m_bGearOwned[nGearId] = LTTRUE;
 						}
-					}
-					else
-					{
-						bGearAdded = LTTRUE;
+
+						if (pGear->fArmor)
+						{
+							bGearAdded = Repair(pGear->fArmor);
+
+							if (IsMultiplayerGame() && g_NetArmorHealthPercent.GetFloat() > 0.0f)
+							{
+								LTFLOAT fHeal = g_NetArmorHealthPercent.GetFloat() * pGear->fArmor;
+								Heal(fHeal);
+							}
+						}
+						else
+						{
+							bGearAdded = LTTRUE;
+						}
 					}
 				}
 			}

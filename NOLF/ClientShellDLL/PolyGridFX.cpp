@@ -411,7 +411,8 @@ void CPolyGridFX::PrecalculatePlasma()
 		{
 			testDist = (float)((x-halfWidth)*(x-halfWidth) + (y-halfHeight)*(y-halfHeight));
 			t = testDist / maxDistSqr;
-            m_DistanceGrid[y*height+x] = (uint8)(t * 255.0f);
+            //m_DistanceGrid[y*height+x] = (uint8)(t * 255.0f); -->buffer overflow
+			m_DistanceGrid[y * width + x] = (uint8)(t * 255.0f);
 		}
 	}
 }

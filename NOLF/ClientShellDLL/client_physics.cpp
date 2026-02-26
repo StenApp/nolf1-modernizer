@@ -45,7 +45,7 @@ void InitMovingObject(MovingObject *pObject, LTVector *pPos, LTVector *pVelocity
 	// Determine if we are in any containers (like liquid) that would
 	// affect physics...
 
-    uint32 dwUserFlags;
+    uint32 dwUserFlags = 0;
 	HLOCALOBJ objList[1];
     uint32 dwNum = g_pLTClient->GetPointContainers(&pObject->m_vPos, objList, 1);
 

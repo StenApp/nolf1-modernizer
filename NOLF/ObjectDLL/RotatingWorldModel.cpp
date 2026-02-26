@@ -726,7 +726,8 @@ void RotatingWorldModel::UpdateNormalRotation()
 
 	if (m_nLightAnims)
 	{
-        LTFLOAT fPercent, fTemp, fTemp2;
+        LTFLOAT fTemp, fTemp2;
+		LTFLOAT fPercent = 0.0f;
         uint32 nTemp;
 
 		fTemp = 0.0f;

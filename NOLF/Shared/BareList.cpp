@@ -32,7 +32,7 @@ void CBareList::InsertLast(CBareListItem* pItem) {
 };
 
 void CBareList::InsertAfter(CBareListItem* pBeforeItem, CBareListItem* pNewItem) {
-  if (pBeforeItem == 0) InsertFirst(pNewItem); // Insert at start of list if pBeforeItem is 0
+  if (pBeforeItem == 0) { InsertFirst(pNewItem); return; } // Insert at start of list if pBeforeItem is 0
   if (pBeforeItem->m_pNext != 0) pBeforeItem->m_pNext->m_pPrev = pNewItem;
   else m_pLast = pNewItem;
   pNewItem->m_pPrev = pBeforeItem;
@@ -42,7 +42,7 @@ void CBareList::InsertAfter(CBareListItem* pBeforeItem, CBareListItem* pNewItem)
 };
 
 void CBareList::InsertBefore(CBareListItem* pAfterItem, CBareListItem* pNewItem) {
-  if (pAfterItem == 0) InsertLast(pNewItem); // Insert at end of list if pAfterItem is 0
+  if (pAfterItem == 0) { InsertLast(pNewItem); return; } // Insert at end of list if pAfterItem is 0
   if (pAfterItem->m_pPrev != 0) pAfterItem->m_pPrev->m_pNext = pNewItem;
   else m_pFirst = pNewItem;
   pNewItem->m_pNext= pAfterItem;

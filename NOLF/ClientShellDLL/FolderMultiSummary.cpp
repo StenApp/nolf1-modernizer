@@ -236,7 +236,8 @@ void CFolderMultiSummary::OnFocus(LTBOOL bFocus)
 
 					ptr = ptr->pNext;
 				}
-				pLastCtrl = pCtrls[nNumCtrls-1] ;
+				//pLastCtrl = pCtrls[nNumCtrls-1] ;
+				pLastCtrl = (nNumCtrls > 0) ? pCtrls[nNumCtrls - 1] : LTNULL;
 				g_pLTClient->FreeString(hEmpty);
 	
 			}

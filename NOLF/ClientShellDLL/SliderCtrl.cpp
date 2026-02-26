@@ -70,6 +70,7 @@ LTBOOL CSliderCtrl::Create ( HSTRING hText, CLTGUIFont *pFont, int nSliderOffset
 	//get arrow dimensions
 	HSURFACE hSurf = g_pInterfaceResMgr->GetSharedSurface(m_sLeftArrow);
 	if (!hSurf) return LTFALSE;
+	if (!g_pLTClient) return LTFALSE;
 	uint32 surfWidth = 0;
 	uint32 surfHeight = 0;
 
