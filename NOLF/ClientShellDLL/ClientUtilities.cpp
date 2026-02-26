@@ -318,7 +318,8 @@ void GetConfigFile(std::string file)
 	// You want index 1 and 2.
 	// 
 	// ^\"([\w\d]*)\"[\s]*\"([\w\d\.\,\s\\\/\-\#]*)?\"[\s]*$
-	std::string pattern = "^\\\"([\\\w\\\d]*)\\\"[\\\s]*\\\"([\\\w\\\d\\\.\\\,\\\s\\\\\\\\\/\\\-\\\#]*)?\\\"[\\\s]*$";
+	//std::string pattern = "^\\\"([\\\w\\\d]*)\\\"[\\\s]*\\\"([\\\w\\\d\\\.\\\,\\\s\\\\\\\\\/\\\-\\\#]*)?\\\"[\\\s]*$";
+	std::string pattern = R"(^\"([\w\d]*)\"[\s]*\"([\w\d\.\,\s\\\/\-\#]*)?\"[\s]*$)";
 	std::regex commandRegex(pattern);
 	std::smatch match;
 

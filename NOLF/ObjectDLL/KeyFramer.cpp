@@ -2806,16 +2806,16 @@ void KeyFramer::Load(HMESSAGEREAD hRead, uint32 dwLoadFlags)
 			HOBJECT* hObjectArray = debug_newa(HOBJECT, nNumInList);
 
 			HOBJECT hObj = LTNULL;
-			for (int i=0; i < nNumInList; i++)
+			for (int j=0; j < nNumInList; j++)
 			{
                 g_pLTServer->ReadFromLoadSaveMessageObject(hRead, &hObj);
 				if (hObj)
 				{
-					hObjectArray[i] = hObj;
+					hObjectArray[j] = hObj;
 				}
 				else
 				{
-					hObjectArray[i] = LTNULL;
+					hObjectArray[j] = LTNULL;
 				}
 			}
 

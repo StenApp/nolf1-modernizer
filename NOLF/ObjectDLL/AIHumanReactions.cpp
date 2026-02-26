@@ -224,7 +224,7 @@ void CAIHuman::HitSwitch(CAISense* pAISense, LTBOOL bIndividual)
 			CAINode* pAINode = g_pAINodeMgr->FindNearestUseObject(m_vPos, "Switch");
 			if ( !pAINode )
 			{
-				sprintf(s_szTrigger, "TARGET (%s);ATTACK %s", ::GetEnemyTargetName(pAISense));
+				sprintf(s_szTrigger, "TARGET (%s);ATTACK", ::GetEnemyTargetName(pAISense));
 			}
 			else
 			{

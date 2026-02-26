@@ -1349,7 +1349,7 @@ LTBOOL CAttachmentProp::HandleProjectileImpact(CProjectile* pProjectile, CAttach
 void CAttachmentProp::CreateSpawnString(char* szSpawn)
 {
 	sprintf(szSpawn, "Prop Filename %s; Skin %s; Gravity 0",
-		g_pAttachButeMgr->GetAttachmentModel(m_nAttachmentID), g_pAttachButeMgr->GetAttachmentSkin(m_nAttachmentID));
+		(const char*)g_pAttachButeMgr->GetAttachmentModel(m_nAttachmentID), (const char*)g_pAttachButeMgr->GetAttachmentSkin(m_nAttachmentID));
 }
 
 // ----------------------------------------------------------------------- //
