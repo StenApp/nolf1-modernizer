@@ -5,192 +5,206 @@
 // PS2 had some levels separated in _A/_B parts; on PC _A is always main track.
 // IMPORTANT: File format must be wav
 
-[m01s01]
-WAV = nolf_ps2_13.wav
+[Level0]
+Name = "m01s01"
+WAV = "nolf_ps2_13.wav"
 
-[m01s02]
-WAV = nolf_ps2_02.wav
-// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+[Level1]
+Name = "m01s02"
+WAV = "nolf_ps2_02.wav"
 
-[m01s03]
-WAV = nolf_ps2_02.wav
-// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+[Level2]
+Name = "m01s03"
+WAV = "nolf_ps2_02.wav"
 
-[m01s04]
-WAV = nolf_ps2_02.wav
-// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+[Level3]
+Name = "m01s04"
+WAV = "nolf_ps2_02.wav"
 
-[m02s01]
-WAV = nolf_ps2_01.wav
-// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+[Level4]
+Name = "m02s01"
+WAV = "nolf_ps2_01.wav"
 
-[m02s02]
-WAV = nolf_ps2_05.wav
-// PS2: _A = nolf_ps2_05, _B = nolf_ps2_07
+[Level5]
+Name = "m02s02"
+WAV = "nolf_ps2_05.wav"
 
-[m02s03]
-WAV = nolf_ps2_08.wav
-// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+[Level6]
+Name = "m02s03"
+WAV = "nolf_ps2_08.wav"
 
-[m03s01]
-WAV = nolf_ps2_03.wav
+[Level7]
+Name = "m03s01"
+WAV = "nolf_ps2_03.wav"
 
-[m03s02]
-WAV = nolf_ps2_09.wav
-// PS2: _A = nolf_ps2_09, _B = nolf_ps2_03
+[Level8]
+Name = "m03s02"
+WAV = "nolf_ps2_09.wav"
 
-[m04s01]
-WAV = nolf_ps2_10.wav
-// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
+[Level9]
+Name = "m04s01"
+WAV = "nolf_ps2_10.wav"
 
-[m04s02]
-WAV = nolf_ps2_10.wav
-// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
+[Level10]
+Name = "m04s02"
+WAV = "nolf_ps2_10.wav"
 
-[m05s01]
-WAV = nolf_ps2_01.wav
-// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+[Level11]
+Name = "m05s01"
+WAV = "nolf_ps2_01.wav"
 
-[m05s02]
-WAV = nolf_ps2_07.wav
-// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
+[Level12]
+Name = "m05s02"
+WAV = "nolf_ps2_07.wav"
 
-[m05s03]
-WAV = nolf_ps2_01.wav
+[Level13]
+Name = "m05s03"
+WAV = "nolf_ps2_01.wav"
 
-[m05s04]
-WAV = nolf_ps2_04.wav
-// PS2: _A = nolf_ps2_04, _B = nolf_ps2_07
+[Level14]
+Name = "m05s04"
+WAV = "nolf_ps2_04.wav"
 
-[m05s05]
-WAV = nolf_ps2_08.wav
-// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+[Level15]
+Name = "m05s05"
+WAV = "nolf_ps2_08.wav"
 
-[m06s01]
-WAV = nolf_ps2_01.wav
+[Level16]
+Name = "m06s01"
+WAV = "nolf_ps2_01.wav"
 
-[m06s02]
-WAV = nolf_ps2_03.wav
+[Level17]
+Name = "m06s02"
+WAV = "nolf_ps2_03.wav"
 
-[m06s03]
-WAV = nolf_ps2_07.wav
-// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
+[Level18]
+Name = "m06s03"
+WAV = "nolf_ps2_07.wav"
 
-[m07s01]
-WAV = nolf_ps2_03.wav
+[Level19]
+Name = "m07s01"
+WAV = "nolf_ps2_03.wav"
 
-[m07s02]
-WAV = nolf_ps2_06.wav
-// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03, _C = nolf_ps2_06
+[Level20]
+Name = "m07s02"
+WAV = "nolf_ps2_06.wav"
 
-[m07s03]
-WAV = nolf_ps2_06.wav
-// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03
+[Level21]
+Name = "m07s03"
+WAV = "nolf_ps2_06.wav"
 
-[m08s01]
-WAV = nolf_ps2_01.wav
+[Level22]
+Name = "m08s01"
+WAV = "nolf_ps2_01.wav"
 
-// m08s02: No PS2 track -> DirectMusic
+[Level23]
+Name = "m08s03"
+WAV = "nolf_ps2_05.wav"
 
-[m08s03]
-WAV = nolf_ps2_05.wav
+[Level24]
+Name = "m08s04"
+WAV = "nolf_ps2_07.wav"
 
-[m08s04]
-WAV = nolf_ps2_07.wav
+[Level25]
+Name = "m08s05"
+WAV = "nolf_ps2_08.wav"
 
-[m08s05]
-WAV = nolf_ps2_08.wav
+[Level26]
+Name = "m08s06"
+WAV = "nolf_ps2_01.wav"
 
-[m08s06]
-WAV = nolf_ps2_01.wav
-// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+[Level27]
+Name = "m09s01"
+WAV = "nolf_ps2_01.wav"
 
-[m09s01]
-WAV = nolf_ps2_01.wav
+[Level28]
+Name = "m09s02"
+WAV = "nolf_ps2_03.wav"
 
-[m09s02]
-WAV = nolf_ps2_03.wav
-// PS2: _A = nolf_ps2_03, _B = nolf_ps2_04
+[Level29]
+Name = "m09s03"
+WAV = "nolf_ps2_08.wav"
 
-[m09s03]
-WAV = nolf_ps2_08.wav
-// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+[Level30]
+Name = "m10s01"
+WAV = "nolf_ps2_02.wav"
 
-[m10s01]
-WAV = nolf_ps2_02.wav
+[Level31]
+Name = "m10s02"
+WAV = "nolf_ps2_02.wav"
 
-[m10s02]
-WAV = nolf_ps2_02.wav
-// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+[Level32]
+Name = "m10s03"
+WAV = "nolf_ps2_02.wav"
 
-[m10s03]
-WAV = nolf_ps2_02.wav
+[Level33]
+Name = "m10s04"
+WAV = "nolf_ps2_02.wav"
 
-[m10s04]
-WAV = nolf_ps2_02.wav
-// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+[Level34]
+Name = "m11s01"
+WAV = "nolf_ps2_06.wav"
 
-[m11s01]
-WAV = nolf_ps2_06.wav
-// PS2: _A/_B/_C = nolf_ps2_06
+[Level35]
+Name = "m11s02"
+WAV = "nolf_ps2_06.wav"
 
-[m11s02]
-WAV = nolf_ps2_06.wav
+[Level36]
+Name = "m12s01"
+WAV = "nolf_ps2_05.wav"
 
-[m12s01]
-WAV = nolf_ps2_05.wav
-// PS2: _A/_B = nolf_ps2_05
+[Level37]
+Name = "m12s02"
+WAV = "nolf_ps2_05.wav"
 
-[m12s02]
-WAV = nolf_ps2_05.wav
+[Level38]
+Name = "m12s03"
+WAV = "nolf_ps2_05.wav"
 
-[m12s03]
-WAV = nolf_ps2_05.wav
-// PS2: _A/_B = nolf_ps2_05
+[Level39]
+Name = "m12s04"
+WAV = "nolf_ps2_05.wav"
 
-[m12s04]
-WAV = nolf_ps2_05.wav
-// PS2: _A/_B/_C = nolf_ps2_05
+[Level40]
+Name = "m13s01"
+WAV = "nolf_ps2_11.wav"
 
-[m13s01]
-WAV = nolf_ps2_11.wav
-// PS2: _A/_B = nolf_ps2_11
+[Level41]
+Name = "m13s02"
+WAV = "nolf_ps2_11.wav"
 
-[m13s02]
-WAV = nolf_ps2_11.wav
-// PS2: _A/_B = nolf_ps2_11
+[Level42]
+Name = "m13s03"
+WAV = "nolf_ps2_11.wav"
 
-[m13s03]
-WAV = nolf_ps2_11.wav
-// PS2: _A/_B = nolf_ps2_11
+[Level43]
+Name = "m13s04"
+WAV = "nolf_ps2_11.wav"
 
-[m13s04]
-WAV = nolf_ps2_11.wav
-// PS2: _A/_B = nolf_ps2_11
+[Level44]
+Name = "m14s01"
+WAV = "nolf_ps2_09.wav"
 
-[m14s01]
-WAV = nolf_ps2_09.wav
-// PS2: _A/_B/_C = nolf_ps2_09
+[Level45]
+Name = "m14s02"
+WAV = "nolf_ps2_09.wav"
 
-[m14s02]
-WAV = nolf_ps2_09.wav
-// PS2: _A/_B = nolf_ps2_09
+[Level46]
+Name = "m15s01"
+WAV = "nolf_ps2_03.wav"
 
-[m15s01]
-WAV = nolf_ps2_03.wav
-// PS2: _A = nolf_ps2_03, _B = nolf_ps2_09
+[Level47]
+Name = "m15s02"
+WAV = "nolf_ps2_03.wav"
 
-[m15s02]
-WAV = nolf_ps2_03.wav
+[Level48]
+Name = "thiefmission1"
+WAV = "nolf_ps2_03.wav"
 
-// m16s01-m16s04: PC GOTY only, no PS2 equivalent -> DirectMusic
-// t01s01-t10s01: no PS2 tracks -> DirectMusic
+[Level49]
+Name = "thiefmission2"
+WAV = "nolf_ps2_07.wav"
 
-[thiefmission1]
-WAV = nolf_ps2_03.wav
-
-[thiefmission2]
-WAV = nolf_ps2_07.wav
-
-[thiefmission3]
-WAV = nolf_ps2_11.wav
+[Level50]
+Name = "thiefmission3"
+WAV = "nolf_ps2_11.wav"
