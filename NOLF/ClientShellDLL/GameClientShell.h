@@ -37,6 +37,7 @@
 #include "NetDefs.h"
 #include "OptimizedRenderer.h"
 #include "JukeboxButeMgr.h"
+#include "LevelMusicButeMgr.h"
 
 #define DEG2RAD(x)		(((x)*MATH_PI)/180.0f)
 #define RAD2DEG(x)		(((x)*180.0f)/MATH_PI)
@@ -138,6 +139,7 @@ class CGameClientShell : public IClientShell
 		CCameraOffsetMgr*	GetCameraOffsetMgr()		{ return &m_CameraOffsetMgr; }
 
 		CJukeboxButeMgr* GetJukeboxButeMgr()			{ return &m_JukeBoxButeMgr; }
+		CLevelMusicButeMgr* GetLevelMusicButeMgr()		{ return &m_LevelMusicButeMgr; }
 
 		HLOCALOBJ		GetCamera()				const	{ return m_hCamera; }
 		HLOCALOBJ		GetInterfaceCamera()	const	{ return m_hInterfaceCamera; }
@@ -551,6 +553,7 @@ class CGameClientShell : public IClientShell
 		LARGE_INTEGER m_lTimerFrequency;
 
 		CJukeboxButeMgr    m_JukeBoxButeMgr;
+		CLevelMusicButeMgr m_LevelMusicButeMgr;
 
 		// PS2 Music
 		HLTSOUND           m_hPS2MusicSound;

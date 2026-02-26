@@ -1182,6 +1182,9 @@ uint32 CGameClientShell::OnEngineInitialized(RMode *pMode, LTGUID *pAppGuid)
 	// Init the jukebox attribute manager
 	m_JukeBoxButeMgr.Init(g_pLTClient);
 
+	// Init the level music attribute manager (non-fatal if LevelMusic.txt fehlt in .rez)
+	m_LevelMusicButeMgr.Init(g_pLTClient);
+
 
 	m_CameraOffsetMgr.Init();
 	m_HeadBobMgr.Init();
@@ -7124,27 +7127,20 @@ void CGameClientShell::FirstUpdate()
 		{
 			g_pLTClient->CPrint("[PS2Music] UsePS2Music enabled");
 
-			// Level-Namen extrahieren (nur Dateiname, lowercase, ohne Extension)
-			char szLevelName[128] = "";
-			const char* pSlash = strrchr(m_strCurrentWorldName, '\\');
-			const char* pSlash2 = strrchr(m_strCurrentWorldName, '/');
-			const char* pStart = (pSlash > pSlash2) ? pSlash : pSlash2;
-			pStart = pStart ? pStart + 1 : m_strCurrentWorldName;
-			strncpy(szLevelName, pStart, sizeof(szLevelName) - 1);
-			char* pDot = strrchr(szLevelName, '.');
-			if (pDot) *pDot = 0;
-			_strlwr(szLevelName);
-
-			// WAV-Pfad aus statischer Tabelle nachschlagen
-			const char* pszWAV = GetPS2MusicForLevel(szLevelName);
+			// WAV-Dateiname aus LevelMusic.txt nachschlagen (Pfad/Extension werden intern gestrippt)
+			CString sWAV = m_LevelMusicButeMgr.GetWAVForLevel(m_strCurrentWorldName);
 
 			BOOL bPlayingPS2Music = FALSE;
 
-			if (pszWAV)
+			if (!sWAV.IsEmpty())
 			{
+				// Vollstaendigen Pfad zusammenbauen
+				std::string sFullPath = "Music\\PS2Music\\";
+				sFullPath += (LPCSTR)sWAV;
+
 				// Datei in .rez pruefen
 				ILTStream* pTestStream = LTNULL;
-				LTRESULT ltRes = g_pLTClient->OpenFile(const_cast<char*>(pszWAV), &pTestStream);
+				LTRESULT ltRes = g_pLTClient->OpenFile(const_cast<char*>(sFullPath.c_str()), &pTestStream);
 				if (ltRes == LT_OK && pTestStream)
 				{
 					pTestStream->Release();
@@ -7157,9 +7153,9 @@ void CGameClientShell::FirstUpdate()
 						g_pLTClient->KillSound(m_hPS2MusicSound);
 						m_hPS2MusicSound = LTNULL;
 					}
-					g_pLTClient->CPrint("[PS2Music] Playing: %s", pszWAV);
+					g_pLTClient->CPrint("[PS2Music] Playing: %s", sFullPath.c_str());
 					m_hPS2MusicSound = g_pClientSoundMgr->PlaySoundLocal(
-						const_cast<char*>(pszWAV),
+						const_cast<char*>(sFullPath.c_str()),
 						SOUNDPRIORITY_MISC_MEDIUM,
 						PLAYSOUND_LOOP | PLAYSOUND_GETHANDLE
 					);
@@ -7167,12 +7163,12 @@ void CGameClientShell::FirstUpdate()
 				}
 				else
 				{
-					g_pLTClient->CPrint("[PS2Music] File not found: %s - falling back to DirectMusic", pszWAV);
+					g_pLTClient->CPrint("[PS2Music] File not found: %s - falling back to DirectMusic", sFullPath.c_str());
 				}
 			}
 			else
 			{
-				g_pLTClient->CPrint("[PS2Music] No PS2 track mapped for level '%s' - falling back to DirectMusic", szLevelName);
+				g_pLTClient->CPrint("[PS2Music] No PS2 track mapped for level '%s' - falling back to DirectMusic", m_strCurrentWorldName);
 			}
 
 			// DirectMusic-Fallback - nur einmal fuer beide Faelle

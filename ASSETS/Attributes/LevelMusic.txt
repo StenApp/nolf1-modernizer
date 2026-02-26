@@ -1,0 +1,196 @@
+// LevelMusic.txt
+// Bildet PC-Level-Namen auf PS2-WAV-Dateien ab.
+// WAV-Dateien liegen unter: Music\PS2Music\
+// Kein Eintrag = kein PS2-Track bekannt -> DirectMusic wird verwendet.
+// PS2 hatte manche Level in _A/_B-Teile aufgeteilt; auf PC gilt immer _A als Haupttrack.
+
+[m01s01]
+WAV = nolf_ps2_13.wav
+
+[m01s02]
+WAV = nolf_ps2_02.wav
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+
+[m01s03]
+WAV = nolf_ps2_02.wav
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+
+[m01s04]
+WAV = nolf_ps2_02.wav
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+
+[m02s01]
+WAV = nolf_ps2_01.wav
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+
+[m02s02]
+WAV = nolf_ps2_05.wav
+// PS2: _A = nolf_ps2_05, _B = nolf_ps2_07
+
+[m02s03]
+WAV = nolf_ps2_08.wav
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+
+[m03s01]
+WAV = nolf_ps2_03.wav
+
+[m03s02]
+WAV = nolf_ps2_09.wav
+// PS2: _A = nolf_ps2_09, _B = nolf_ps2_03
+
+[m04s01]
+WAV = nolf_ps2_10.wav
+// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
+
+[m04s02]
+WAV = nolf_ps2_10.wav
+// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
+
+[m05s01]
+WAV = nolf_ps2_01.wav
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+
+[m05s02]
+WAV = nolf_ps2_07.wav
+// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
+
+[m05s03]
+WAV = nolf_ps2_01.wav
+
+[m05s04]
+WAV = nolf_ps2_04.wav
+// PS2: _A = nolf_ps2_04, _B = nolf_ps2_07
+
+[m05s05]
+WAV = nolf_ps2_08.wav
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+
+[m06s01]
+WAV = nolf_ps2_01.wav
+
+[m06s02]
+WAV = nolf_ps2_03.wav
+
+[m06s03]
+WAV = nolf_ps2_07.wav
+// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
+
+[m07s01]
+WAV = nolf_ps2_03.wav
+
+[m07s02]
+WAV = nolf_ps2_06.wav
+// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03, _C = nolf_ps2_06
+
+[m07s03]
+WAV = nolf_ps2_06.wav
+// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03
+
+[m08s01]
+WAV = nolf_ps2_01.wav
+
+// m08s02: kein PS2-Track bekannt -> DirectMusic
+
+[m08s03]
+WAV = nolf_ps2_05.wav
+
+[m08s04]
+WAV = nolf_ps2_07.wav
+
+[m08s05]
+WAV = nolf_ps2_08.wav
+
+[m08s06]
+WAV = nolf_ps2_01.wav
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
+
+[m09s01]
+WAV = nolf_ps2_01.wav
+
+[m09s02]
+WAV = nolf_ps2_03.wav
+// PS2: _A = nolf_ps2_03, _B = nolf_ps2_04
+
+[m09s03]
+WAV = nolf_ps2_08.wav
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
+
+[m10s01]
+WAV = nolf_ps2_02.wav
+
+[m10s02]
+WAV = nolf_ps2_02.wav
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+
+[m10s03]
+WAV = nolf_ps2_02.wav
+
+[m10s04]
+WAV = nolf_ps2_02.wav
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
+
+[m11s01]
+WAV = nolf_ps2_06.wav
+// PS2: _A/_B/_C = nolf_ps2_06
+
+[m11s02]
+WAV = nolf_ps2_06.wav
+
+[m12s01]
+WAV = nolf_ps2_05.wav
+// PS2: _A/_B = nolf_ps2_05
+
+[m12s02]
+WAV = nolf_ps2_05.wav
+
+[m12s03]
+WAV = nolf_ps2_05.wav
+// PS2: _A/_B = nolf_ps2_05
+
+[m12s04]
+WAV = nolf_ps2_05.wav
+// PS2: _A/_B/_C = nolf_ps2_05
+
+[m13s01]
+WAV = nolf_ps2_11.wav
+// PS2: _A/_B = nolf_ps2_11
+
+[m13s02]
+WAV = nolf_ps2_11.wav
+// PS2: _A/_B = nolf_ps2_11
+
+[m13s03]
+WAV = nolf_ps2_11.wav
+// PS2: _A/_B = nolf_ps2_11
+
+[m13s04]
+WAV = nolf_ps2_11.wav
+// PS2: _A/_B = nolf_ps2_11
+
+[m14s01]
+WAV = nolf_ps2_09.wav
+// PS2: _A/_B/_C = nolf_ps2_09
+
+[m14s02]
+WAV = nolf_ps2_09.wav
+// PS2: _A/_B = nolf_ps2_09
+
+[m15s01]
+WAV = nolf_ps2_03.wav
+// PS2: _A = nolf_ps2_03, _B = nolf_ps2_09
+
+[m15s02]
+WAV = nolf_ps2_03.wav
+// PS2: _A = nolf_ps2_03, _B = unbekannt
+
+// m16s01-m16s04: PC-GOTY only, kein PS2-Aequivalent -> DirectMusic
+// t01s01-t10s01: kein PS2-Track bekannt -> DirectMusic
+
+[thiefmission1]
+WAV = nolf_ps2_03.wav
+
+[thiefmission2]
+WAV = nolf_ps2_07.wav
+
+[thiefmission3]
+WAV = nolf_ps2_11.wav
