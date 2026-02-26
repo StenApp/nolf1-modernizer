@@ -1,8 +1,9 @@
 // LevelMusic.txt
-// Bildet PC-Level-Namen auf PS2-WAV-Dateien ab.
-// WAV-Dateien liegen unter: Music\PS2Music\
-// Kein Eintrag = kein PS2-Track bekannt -> DirectMusic wird verwendet.
-// PS2 hatte manche Level in _A/_B-Teile aufgeteilt; auf PC gilt immer _A als Haupttrack.
+// Maps PC level names to PS2 WAV files.
+// WAV files are placed here: Music\PS2Music\
+// No entry = no PS2-Track -> DirectMusic is used.
+// PS2 had some levels separated in _A/_B parts; on PC _A is always main track.
+// IMPORTANT: File format must be wav
 
 [m01s01]
 WAV = nolf_ps2_13.wav
@@ -89,7 +90,7 @@ WAV = nolf_ps2_06.wav
 [m08s01]
 WAV = nolf_ps2_01.wav
 
-// m08s02: kein PS2-Track bekannt -> DirectMusic
+// m08s02: No PS2 track -> DirectMusic
 
 [m08s03]
 WAV = nolf_ps2_05.wav
@@ -181,10 +182,9 @@ WAV = nolf_ps2_03.wav
 
 [m15s02]
 WAV = nolf_ps2_03.wav
-// PS2: _A = nolf_ps2_03, _B = unbekannt
 
-// m16s01-m16s04: PC-GOTY only, kein PS2-Aequivalent -> DirectMusic
-// t01s01-t10s01: kein PS2-Track bekannt -> DirectMusic
+// m16s01-m16s04: PC GOTY only, no PS2 equivalent -> DirectMusic
+// t01s01-t10s01: no PS2 tracks -> DirectMusic
 
 [thiefmission1]
 WAV = nolf_ps2_03.wav

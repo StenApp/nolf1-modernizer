@@ -1183,7 +1183,10 @@ uint32 CGameClientShell::OnEngineInitialized(RMode *pMode, LTGUID *pAppGuid)
 	m_JukeBoxButeMgr.Init(g_pLTClient);
 
 	// Init the level music attribute manager (non-fatal if LevelMusic.txt fehlt in .rez)
-	m_LevelMusicButeMgr.Init(g_pLTClient);
+	if (m_LevelMusicButeMgr.Init(g_pLTClient))
+		g_pLTClient->CPrint("[LevelMusic] LevelMusic.txt geladen OK");
+	else
+		g_pLTClient->CPrint("[LevelMusic] FEHLER: LevelMusic.txt nicht gefunden – liegt sie in Attributes\\ in der .rez?");
 
 
 	m_CameraOffsetMgr.Init();
@@ -1839,7 +1842,7 @@ void CGameClientShell::OnExitWorld()
         m_hContainerSound = LTNULL;
 	}
 
-	// PS2 Music stoppen
+	// Stop PS2 Music
 	if (m_hPS2MusicSound)
 	{
 		g_pLTClient->KillSound(m_hPS2MusicSound);
@@ -5057,7 +5060,7 @@ void CGameClientShell::OnMessage(uint8 messageID, HMESSAGEREAD hMessage)
 		{
 			if (m_Music.IsInitialized())
 			{
-				// PS2Music aktiv - DirectMusic-Trigger ignorieren
+				// PS2Music aktive - ignore DirectMusic-Trigger
 				if (GetConsoleInt("UsePS2Music", 0) && m_hPS2MusicSound)
 				{
 					g_pLTClient->CPrint("[PS2Music] Ignoring DirectMusic trigger (PS2 track active)");
@@ -7127,18 +7130,18 @@ void CGameClientShell::FirstUpdate()
 		{
 			g_pLTClient->CPrint("[PS2Music] UsePS2Music enabled");
 
-			// WAV-Dateiname aus LevelMusic.txt nachschlagen (Pfad/Extension werden intern gestrippt)
+			// Get WAV filename from LevelMusic.txt  (path/extension internally stripped)
 			CString sWAV = m_LevelMusicButeMgr.GetWAVForLevel(m_strCurrentWorldName);
 
 			BOOL bPlayingPS2Music = FALSE;
 
 			if (!sWAV.IsEmpty())
 			{
-				// Vollstaendigen Pfad zusammenbauen
+				// Assembly complete path
 				std::string sFullPath = "Music\\PS2Music\\";
 				sFullPath += (LPCSTR)sWAV;
 
-				// Datei in .rez pruefen
+				// Check for file in .rez
 				ILTStream* pTestStream = LTNULL;
 				LTRESULT ltRes = g_pLTClient->OpenFile(const_cast<char*>(sFullPath.c_str()), &pTestStream);
 				if (ltRes == LT_OK && pTestStream)
@@ -7146,7 +7149,7 @@ void CGameClientShell::FirstUpdate()
 					pTestStream->Release();
 					pTestStream = LTNULL;
 
-					// Datei vorhanden - DirectMusic stoppen und PS2-Track spielen
+					// File present - stop DirectMusic and play PS2 track
 					m_Music.Stop();
 					if (m_hPS2MusicSound)
 					{
@@ -7171,7 +7174,7 @@ void CGameClientShell::FirstUpdate()
 				g_pLTClient->CPrint("[PS2Music] No PS2 track mapped for level '%s' - falling back to DirectMusic", m_strCurrentWorldName);
 			}
 
-			// DirectMusic-Fallback - nur einmal fuer beide Faelle
+			// DirectMusic fallback - once for both cases
 			if (!bPlayingPS2Music)
 			{
 				char* pMusicDirectory = g_pLTClient->GetServerConVarValueString("MusicDirectory");
@@ -7187,7 +7190,7 @@ void CGameClientShell::FirstUpdate()
 		}
 		else
 		{
-			// UsePS2Music aus - normaler DirectMusic-Pfad
+			// UsePS2Music off - normal DirectMusic path
 			if (m_hPS2MusicSound)
 			{
 				g_pLTClient->KillSound(m_hPS2MusicSound);

@@ -28,15 +28,14 @@ public:
     LTBOOL  Init(ILTCSBase* pInterface, const char* szAttributeFile = "Attributes\\LevelMusic.txt");
     void    Term();
 
-    // Returns the WAV filename (e.g. "nolf_ps2_01.wav") for the given world name.
-    // pszWorldName may contain a path and/or extension – both are stripped automatically.
-    // Returns an empty CString if no mapping exists or the level maps to "unknown_music.wav".
+    // Hand back WAV filename (e.g. "nolf_ps2_01.wav") for the level.
+    // Pass empty string if no entry is found.
     CString GetWAVForLevel(const char* pszWorldName);
 
 private:
-    LTBOOL      m_bLoaded;  // LTFALSE wenn LevelMusic.txt nicht geladen werden konnte
+    LTBOOL      m_bLoaded;
+    int         m_nLevelCount;
 
-    // Strips path and extension from a world name and returns the lowercase stem.
     std::string ExtractStem(const char* pszWorldName) const;
 };
 
