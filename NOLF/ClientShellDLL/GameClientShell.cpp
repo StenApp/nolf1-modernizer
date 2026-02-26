@@ -7115,8 +7115,7 @@ void CGameClientShell::FirstUpdate()
 	{
 		if (GetConsoleInt("UsePS2Music", 0))
 		{
-			// PS2 Music Mode: DirectMusic stoppen, WAV starten
-			m_Music.Stop();
+			g_pLTClient->CPrint("[PS2Music] UsePS2Music enabled");
 
 			// Level-Namen extrahieren (nur Dateiname, lowercase, ohne Extension)
 			char szLevelName[128] = "";
@@ -7129,30 +7128,52 @@ void CGameClientShell::FirstUpdate()
 			if (pDot) *pDot = 0;
 			_strlwr(szLevelName);
 
-			// Alten Sound stoppen
-			if (m_hPS2MusicSound)
-			{
-				g_pLTClient->KillSound(m_hPS2MusicSound);
-				m_hPS2MusicSound = LTNULL;
-			}
-
 			// WAV-Pfad aus statischer Tabelle nachschlagen
 			const char* pszWAV = GetPS2MusicForLevel(szLevelName);
 			if (pszWAV)
 			{
-				// PS2-Track gefunden - WAV abspielen
-				m_hPS2MusicSound = g_pClientSoundMgr->PlaySoundLocal(
-					const_cast<char*>(pszWAV),
-					SOUNDPRIORITY_MISC_MEDIUM,
-					PLAYSOUND_LOOP | PLAYSOUND_GETHANDLE
-				);
+				// Datei physisch pruefen bevor DirectMusic gestoppt wird
+				DWORD dwAttr = GetFileAttributes(pszWAV);
+				if (dwAttr != INVALID_FILE_ATTRIBUTES)
+				{
+					// Datei vorhanden - jetzt erst DirectMusic stoppen
+					m_Music.Stop();
+
+					// Alten Sound stoppen
+					if (m_hPS2MusicSound)
+					{
+						g_pLTClient->KillSound(m_hPS2MusicSound);
+						m_hPS2MusicSound = LTNULL;
+					}
+
+					g_pLTClient->CPrint("[PS2Music] Playing: %s", pszWAV);
+					m_hPS2MusicSound = g_pClientSoundMgr->PlaySoundLocal(
+						const_cast<char*>(pszWAV),
+						SOUNDPRIORITY_MISC_MEDIUM,
+						PLAYSOUND_LOOP | PLAYSOUND_GETHANDLE
+					);
+				}
+				else
+				{
+					// Datei fehlt - DirectMusic als Fallback
+					g_pLTClient->CPrint("[PS2Music] File not found: %s - falling back to DirectMusic", pszWAV);
+					char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
+					char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
+					if (pMusicDirectory && pMusicControlFile)
+					{
+						CMusicState MusicState;
+						strcpy(MusicState.szDirectory, pMusicDirectory);
+						strcpy(MusicState.szControlFile, pMusicControlFile);
+						m_Music.RestoreMusicState(MusicState);
+					}
+				}
 			}
 			else
 			{
 				// Kein PS2-Track (z.B. M16/GOTY) - DirectMusic als Fallback
+				g_pLTClient->CPrint("[PS2Music] No PS2 track mapped for level '%s' - falling back to DirectMusic", szLevelName);
 				char* pMusicDirectory   = g_pLTClient->GetServerConVarValueString("MusicDirectory");
 				char* pMusicControlFile = g_pLTClient->GetServerConVarValueString("MusicControlFile");
-
 				if (pMusicDirectory && pMusicControlFile)
 				{
 					CMusicState MusicState;
