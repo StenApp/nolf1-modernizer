@@ -12,26 +12,32 @@ WAV = "nolf_ps2_13.wav"
 [Level1]
 Name = "m01s02"
 WAV = "nolf_ps2_02.wav"
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
 
 [Level2]
 Name = "m01s03"
 WAV = "nolf_ps2_02.wav"
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
 
 [Level3]
 Name = "m01s04"
 WAV = "nolf_ps2_02.wav"
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
 
 [Level4]
 Name = "m02s01"
 WAV = "nolf_ps2_01.wav"
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
 
 [Level5]
 Name = "m02s02"
 WAV = "nolf_ps2_05.wav"
+// PS2: _A = nolf_ps2_05, _B = nolf_ps2_07
 
 [Level6]
 Name = "m02s03"
 WAV = "nolf_ps2_08.wav"
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
 
 [Level7]
 Name = "m03s01"
@@ -40,22 +46,27 @@ WAV = "nolf_ps2_03.wav"
 [Level8]
 Name = "m03s02"
 WAV = "nolf_ps2_09.wav"
+// PS2: _A = nolf_ps2_09, _B = nolf_ps2_03
 
 [Level9]
 Name = "m04s01"
 WAV = "nolf_ps2_10.wav"
+// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
 
 [Level10]
 Name = "m04s02"
 WAV = "nolf_ps2_10.wav"
+// PS2: _A = nolf_ps2_10, _B = nolf_ps2_12
 
 [Level11]
 Name = "m05s01"
 WAV = "nolf_ps2_01.wav"
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
 
 [Level12]
 Name = "m05s02"
 WAV = "nolf_ps2_07.wav"
+// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
 
 [Level13]
 Name = "m05s03"
@@ -64,10 +75,12 @@ WAV = "nolf_ps2_01.wav"
 [Level14]
 Name = "m05s04"
 WAV = "nolf_ps2_04.wav"
+// PS2: _A = nolf_ps2_04, _B = nolf_ps2_07
 
 [Level15]
 Name = "m05s05"
 WAV = "nolf_ps2_08.wav"
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
 
 [Level16]
 Name = "m06s01"
@@ -80,6 +93,7 @@ WAV = "nolf_ps2_03.wav"
 [Level18]
 Name = "m06s03"
 WAV = "nolf_ps2_07.wav"
+// PS2: _A = nolf_ps2_07, _B = nolf_ps2_08
 
 [Level19]
 Name = "m07s01"
@@ -88,14 +102,18 @@ WAV = "nolf_ps2_03.wav"
 [Level20]
 Name = "m07s02"
 WAV = "nolf_ps2_06.wav"
+// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03, _C = nolf_ps2_06
 
 [Level21]
 Name = "m07s03"
 WAV = "nolf_ps2_06.wav"
+// PS2: _A = nolf_ps2_06, _B = nolf_ps2_03
 
 [Level22]
 Name = "m08s01"
 WAV = "nolf_ps2_01.wav"
+
+// m08s02: No PS2 track -> DirectMusic
 
 [Level23]
 Name = "m08s03"
@@ -112,6 +130,7 @@ WAV = "nolf_ps2_08.wav"
 [Level26]
 Name = "m08s06"
 WAV = "nolf_ps2_01.wav"
+// PS2: _A = nolf_ps2_01, _B = nolf_ps2_04
 
 [Level27]
 Name = "m09s01"
@@ -120,10 +139,12 @@ WAV = "nolf_ps2_01.wav"
 [Level28]
 Name = "m09s02"
 WAV = "nolf_ps2_03.wav"
+// PS2: _A = nolf_ps2_03, _B = nolf_ps2_04
 
 [Level29]
 Name = "m09s03"
 WAV = "nolf_ps2_08.wav"
+// PS2: _A = nolf_ps2_08, _B = nolf_ps2_01
 
 [Level30]
 Name = "m10s01"
@@ -132,6 +153,7 @@ WAV = "nolf_ps2_02.wav"
 [Level31]
 Name = "m10s02"
 WAV = "nolf_ps2_02.wav"
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
 
 [Level32]
 Name = "m10s03"
@@ -140,10 +162,12 @@ WAV = "nolf_ps2_02.wav"
 [Level33]
 Name = "m10s04"
 WAV = "nolf_ps2_02.wav"
+// PS2: _A = nolf_ps2_02, _B = nolf_ps2_02
 
 [Level34]
 Name = "m11s01"
 WAV = "nolf_ps2_06.wav"
+// PS2: _A/_B/_C = nolf_ps2_06
 
 [Level35]
 Name = "m11s02"
@@ -152,6 +176,7 @@ WAV = "nolf_ps2_06.wav"
 [Level36]
 Name = "m12s01"
 WAV = "nolf_ps2_05.wav"
+// PS2: _A/_B = nolf_ps2_05
 
 [Level37]
 Name = "m12s02"
@@ -160,42 +185,54 @@ WAV = "nolf_ps2_05.wav"
 [Level38]
 Name = "m12s03"
 WAV = "nolf_ps2_05.wav"
+// PS2: _A/_B = nolf_ps2_05
 
 [Level39]
 Name = "m12s04"
 WAV = "nolf_ps2_05.wav"
+// PS2: _A/_B/_C = nolf_ps2_05
 
 [Level40]
 Name = "m13s01"
 WAV = "nolf_ps2_11.wav"
+// PS2: _A/_B = nolf_ps2_11
 
 [Level41]
 Name = "m13s02"
 WAV = "nolf_ps2_11.wav"
+// PS2: _A/_B = nolf_ps2_11
 
 [Level42]
 Name = "m13s03"
 WAV = "nolf_ps2_11.wav"
+// PS2: _A/_B = nolf_ps2_11
 
 [Level43]
 Name = "m13s04"
 WAV = "nolf_ps2_11.wav"
+// PS2: _A/_B = nolf_ps2_11
 
 [Level44]
 Name = "m14s01"
 WAV = "nolf_ps2_09.wav"
+// PS2: _A/_B/_C = nolf_ps2_09
 
 [Level45]
 Name = "m14s02"
 WAV = "nolf_ps2_09.wav"
+// PS2: _A/_B = nolf_ps2_09
 
 [Level46]
 Name = "m15s01"
 WAV = "nolf_ps2_03.wav"
+// PS2: _A = nolf_ps2_03, _B = nolf_ps2_09
 
 [Level47]
 Name = "m15s02"
 WAV = "nolf_ps2_03.wav"
+
+// m16s01-m16s04: PC GOTY only, no PS2 equivalent -> DirectMusic
+// t01s01-t10s01: no PS2 tracks -> DirectMusic
 
 [Level48]
 Name = "thiefmission1"
