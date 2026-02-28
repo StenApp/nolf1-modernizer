@@ -1,4 +1,3 @@
-
 %{
 
 #include "StdAfx.h"
@@ -18,69 +17,71 @@ CAnimationLex g_Lex;
 
 %}
 
-PROPERTIES		"[properties]"
-ANIMATIONS		"[animations]"
-TRANSITIONS		"[transitions]"
-CHARACTER		[a-zA-Z0-9]|"-"
-STRING			{CHARACTER}+
-WSPACE			[\ \t\n\r]+
-COMMA			","
-BRACE_LEFT		"{"
-BRACE_RIGHT		"}"
-SET_ADD			"+"
-SET_REMOVE		"~"
-SET_CONSTANT	"="
-SET_NOT			"!"
+PROPERTIES       "[properties]"
+ANIMATIONS       "[animations]"
+TRANSITIONS      "[transitions]"
+CHARACTER        [a-zA-Z0-9]|"-"
+STRING           {CHARACTER}+
+WSPACE           [\ \t\n\r]+
+COMMA            ","
+BRACE_LEFT       "{"
+BRACE_RIGHT      "}"
+SET_ADD          "+"
+SET_REMOVE       "~"
+SET_CONSTANT     "="
+SET_NOT          "!"
 
 %%
 
-{PROPERTIES}		{ 								return PROPERTIES;		}
-{ANIMATIONS}		{ 								return ANIMATIONS;		}
-{TRANSITIONS}		{								return TRANSITIONS;		}
-{STRING}			{ g_Lex.HandleString();			return STRING;			}
-{BRACE_LEFT}		{								return BRACE_LEFT;		}
-{BRACE_RIGHT}		{								return BRACE_RIGHT;		}
-{COMMA}				{								return COMMA;			}
-{SET_ADD}			{								return SET_ADD;			}
-{SET_REMOVE}		{								return SET_REMOVE;		}
-{SET_CONSTANT}		{								return SET_CONSTANT;	}
-{SET_NOT}			{								return SET_NOT;			}
-"//"				{ g_Lex.HandleComment();								}
-\n					{ g_Lex.HandleNewline();								}
-{WSPACE}			{														}
-.					{								return ERROR_TOKEN;		}
+{PROPERTIES}     { return PROPERTIES; }
+{ANIMATIONS}     { return ANIMATIONS; }
+{TRANSITIONS}    { return TRANSITIONS; }
+{STRING}         { g_Lex.HandleString(); return STRING; }
+{BRACE_LEFT}     { return BRACE_LEFT; }
+{BRACE_RIGHT}    { return BRACE_RIGHT; }
+{COMMA}          { return COMMA; }
+{SET_ADD}        { return SET_ADD; }
+{SET_REMOVE}     { return SET_REMOVE; }
+{SET_CONSTANT}   { return SET_CONSTANT; }
+{SET_NOT}        { return SET_NOT; }
+"//"             { g_Lex.HandleComment(); }
+\n               { g_Lex.HandleNewline(); }
+{WSPACE}         { }
+.                { return ERROR_TOKEN; }
 
 %%
 
 CAnimationLex::CAnimationLex()
 {
-	m_nLine = 1;
+    m_nLine = 1;
 }
 
 CAnimationLex::~CAnimationLex()
 {
-	if ( YY_CURRENT_BUFFER )
-	{
-		yy_delete_buffer(YY_CURRENT_BUFFER);
-	}
+    if (YY_CURRENT_BUFFER)
+    {
+        yy_delete_buffer(YY_CURRENT_BUFFER);
+    }
 }
 
 void CAnimationLex::HandleComment()
 {
-	char ch;
-	while ((ch = yyinput()) != '\n' && ch != 0 && ch != -1);
-	
-	m_nLine++;
+    char ch;
+    while ((ch = yyinput()) != '\n' && ch != 0 && ch != -1);
+
+    m_nLine++;
 }
 
-void CAnimationLex::HandleString()  
+void CAnimationLex::HandleString()
 {
-	strcpy(yyanimationlval.szString, yytext); 
+    // Safe copying, prevent buffer overrun
+    strncpy(yyanimationlval.szString, yytext, sizeof(yyanimationlval.szString) - 1);
+    yyanimationlval.szString[sizeof(yyanimationlval.szString) - 1] = '\0';
 }
 
 void CAnimationLex::HandleNewline()
 {
-	m_nLine++;
+    m_nLine++;
 }
 
 LTBOOL CAnimationLex::Lex(const char* szFile)
@@ -88,32 +89,35 @@ LTBOOL CAnimationLex::Lex(const char* szFile)
     ILTStream* pDStream;
     LTRESULT dr = g_pLTServer->OpenFile((char*)szFile, &pDStream);
 
-    if (dr != LT_OK) return(LTFALSE);
+    if (dr != LT_OK) return LTFALSE;
 
-	// Read the file...
+    // Read the file...
+    unsigned long uLen = pDStream->GetLen();
 
-	unsigned long uLen = pDStream->GetLen();
+    if (uLen == 0) // Fix: handle empty file safely
+    {
+        pDStream->Release();
+        return LTFALSE;
+    }
 
-	char* pData = debug_newa(char, uLen+2);
-	if (!pData)
-	{
-		pDStream->Release();
-		return(FALSE);
-	}
+    char* pData = debug_newa(char, uLen+2);
+    if (!pData)
+    {
+        pDStream->Release();
+        return LTFALSE;
+    }
 
-	pDStream->Read(pData, uLen);
+    pDStream->Read(pData, uLen);
 
-	// yyparse expects 2 bytes at end with 0
+    // yyparse expects 2 bytes at end with 0
+    pData[uLen] = 0;
+    pData[uLen+1] = 0;
 
-	pData[uLen] = 0;
-	pData[uLen+1] = 0;
+    yyanimation_scan_buffer(pData, uLen+2);
+    yyanimationparse();
 
-	yyanimation_scan_buffer(pData, uLen+2);
-	yyanimationparse();
+    debug_deletea(pData);
+    pDStream->Release();
 
-	debug_deletea(pData);
-
-	pDStream->Release();
-
-	return LTTRUE;
+    return LTTRUE;
 }
