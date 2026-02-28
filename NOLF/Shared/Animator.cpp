@@ -477,7 +477,9 @@ void CAnimator::EnablePitch(Ani eAni)
 
 //		if ( m_bHackToAvoidTheUsualOneFrameOffBullshit )
 		{
-			g_pModelLT->SetWeightSet(m_aAniTrackers[m_eAniTrackerPitchUp].m_pAnimTracker, m_ahPitchWeightsets[(int32)((2.0f*(m_fPitch-.5f))*(kNumPitchWeightsets-1))]);
+			int32 nIdx = (int32)((2.0f*(m_fPitch-.5f))*(kNumPitchWeightsets-1));
+			nIdx = nIdx < 0 ? 0 : (nIdx >= kNumPitchWeightsets ? kNumPitchWeightsets-1 : nIdx);
+			g_pModelLT->SetWeightSet(m_aAniTrackers[m_eAniTrackerPitchUp].m_pAnimTracker, m_ahPitchWeightsets[nIdx]);
 		}
 
 	}
@@ -490,7 +492,9 @@ void CAnimator::EnablePitch(Ani eAni)
 
 //		if ( m_bHackToAvoidTheUsualOneFrameOffBullshit )
 		{
-			g_pModelLT->SetWeightSet(m_aAniTrackers[m_eAniTrackerPitchDown].m_pAnimTracker, m_ahPitchWeightsets[(int32)((2.0f*(.5f-m_fPitch))*(kNumPitchWeightsets-1))]);
+			int32 nIdx = (int32)((2.0f*(.5f-m_fPitch))*(kNumPitchWeightsets-1));
+			nIdx = nIdx < 0 ? 0 : (nIdx >= kNumPitchWeightsets ? kNumPitchWeightsets-1 : nIdx);
+			g_pModelLT->SetWeightSet(m_aAniTrackers[m_eAniTrackerPitchDown].m_pAnimTracker, m_ahPitchWeightsets[nIdx]);
 		}
 	}
 

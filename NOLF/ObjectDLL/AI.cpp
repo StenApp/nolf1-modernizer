@@ -1458,17 +1458,33 @@ LTBOOL CAI::HandleCommand(char** pTokens, int nArgs)
 	}
 	else if ( !_stricmp(pTokens[0], "FACEPOS") )
 	{
-        LTVector vPos;
-		sscanf(pTokens[1], "%f,%f,%f", &vPos.x, &vPos.y, &vPos.z);
-		FacePos(vPos);
+		_ASSERT(pTokens[1]);
+		if ( !pTokens[1] )
+		{
+			g_pLTServer->CPrint("FACEPOS missing argument");
+		}
+		else
+		{
+			LTVector vPos;
+			sscanf(pTokens[1], "%f,%f,%f", &vPos.x, &vPos.y, &vPos.z);
+			FacePos(vPos);
+		}
 
         return LTTRUE;
 	}
 	else if ( !_stricmp(pTokens[0], "FACEDIR") )
 	{
-        LTVector vDir;
-		sscanf(pTokens[1], "%f,%f,%f", &vDir.x, &vDir.y, &vDir.z);
-		FaceDir(vDir);
+		_ASSERT(pTokens[1]);
+		if ( !pTokens[1] )
+		{
+			g_pLTServer->CPrint("FACEDIR missing argument");
+		}
+		else
+		{
+			LTVector vDir;
+			sscanf(pTokens[1], "%f,%f,%f", &vDir.x, &vDir.y, &vDir.z);
+			FaceDir(vDir);
+		}
 
         return LTTRUE;
 	}

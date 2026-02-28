@@ -210,7 +210,9 @@ void CAnimationContext::EnablePitch(const CAnimationInstance& ani)
 		if ( m_bHackToAvoidTheUsualOneFrameOffBullshit )
 		{
 //			g_pLTServer->CPrint("pitching up");
-			g_pModelLT->SetWeightSet(&m_trkPitchUp, m_ahPitchWeightsets[(int32)((2.0f*(m_fPitch-.5f))*(kNumPitchWeightsets-1))]);
+			int32 nIdx = (int32)((2.0f*(m_fPitch-.5f))*(kNumPitchWeightsets-1));
+			nIdx = nIdx < 0 ? 0 : (nIdx >= kNumPitchWeightsets ? kNumPitchWeightsets-1 : nIdx);
+			g_pModelLT->SetWeightSet(&m_trkPitchUp, m_ahPitchWeightsets[nIdx]);
 		}
 
 	}
@@ -224,7 +226,9 @@ void CAnimationContext::EnablePitch(const CAnimationInstance& ani)
 		if ( m_bHackToAvoidTheUsualOneFrameOffBullshit )
 		{
 //			g_pLTServer->CPrint("pitching down");
-			g_pModelLT->SetWeightSet(&m_trkPitchDown, m_ahPitchWeightsets[(int32)((2.0f*(.5f-m_fPitch))*(kNumPitchWeightsets-1))]);
+			int32 nIdx = (int32)((2.0f*(.5f-m_fPitch))*(kNumPitchWeightsets-1));
+			nIdx = nIdx < 0 ? 0 : (nIdx >= kNumPitchWeightsets ? kNumPitchWeightsets-1 : nIdx);
+			g_pModelLT->SetWeightSet(&m_trkPitchDown, m_ahPitchWeightsets[nIdx]);
 		}
 	}
 

@@ -326,7 +326,7 @@ namespace
 
 void CGameSettings::LoadDemoSettings(ILTStream *pStream)
 {
-	for(int i=0; i <= numDemoSettings; i++)
+	for(int i=0; i < numDemoSettings; i++)
 	{
 		float temp;
 		(*pStream) >> temp;
@@ -337,7 +337,7 @@ void CGameSettings::LoadDemoSettings(ILTStream *pStream)
 
 void CGameSettings::SaveDemoSettings(ILTStream *pStream)
 {
-	for(int i=0; i <= numDemoSettings; i++)
+	for(int i=0; i < numDemoSettings; i++)
 	{
 		float temp = GetFloatVar(demoSettings[i]);
 		(*pStream) << temp;

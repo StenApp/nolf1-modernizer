@@ -3356,6 +3356,8 @@ void CGameServerShell::HandleConsoleTriggerMsg(HCLIENT hSender, HMESSAGEREAD hMe
 
 	// Special case if we're supposed to list objects of a certain type...
 
+	if (!pMsg) return;
+
 	if (_strnicmp(pMsg, "LIST", 4) == 0)
 	{
         ILTCommon* pCommon = g_pLTServer->Common();

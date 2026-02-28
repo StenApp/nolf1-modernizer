@@ -1694,6 +1694,7 @@ void CGameClientShell::OnEvent(uint32 dwEventID, uint32 dwParam)
 					g_prcClip = debug_new(RECT);
 				}
 
+				if (!g_hMainWnd || !IsWindow(g_hMainWnd)) break;
 				GetWindowRect(g_hMainWnd, g_prcClip);
 				ClipCursor(g_prcClip);
 			}
