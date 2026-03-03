@@ -321,10 +321,10 @@ void KeyPad::SetupDisabledState()
 
 	theStruct.m_Pos = vPos;
 	
-	//TODO  set m_bThiefCodeBreaker on thiefmission 2+3 in LTA file
+	//To show the thief code breaker set m_bThiefCodeBreaker on keypad in DEdit (thiefmission 2+3 in LTA file)
 	if (m_bThiefCodeBreaker)
 	{	
-		SAFE_STRCPY(theStruct.m_Filename, "guns\\models_hh\\PS2SafeCracker_HH.abc");
+		SAFE_STRCPY(theStruct.m_Filename, "Guns\\Models_hh\\PS2SafeCracker_HH.abc");
 		SAFE_STRCPY(theStruct.m_SkinName, "Guns\\Skins_PV\\PS2SafeCracker_PV.dtx");
 	}
 	else
@@ -475,9 +475,8 @@ void KeyPad::SpawnGadget()
 			// Spawn the weapon using the id because the name has a space
 			// in it (which screws up parsing)...
 
-			//TODO distinguish between the code breakers
-            //const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : "Code Breaker";
-			const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : (m_bThiefCodeBreaker ? "Thief Safe Cracker" : "Code Breaker");
+			//Distinguish between the code breakers
+            const char* pGadgetName = m_bSpaceCodeBreaker ? "Space Code Breaker" : (m_bThiefCodeBreaker ? "Thief Safe Cracker" : "Code Breaker");
 
             WEAPON* pWeapon = g_pWeaponMgr->GetWeapon((char*)pGadgetName);
 			if (pWeapon)

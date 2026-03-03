@@ -1,6 +1,6 @@
 typedef union 
 {
-	char	szString[256];
+    char szString[1024]; // fix for C6386
 } YYSTYPE;
 #define	ERROR_TOKEN	258
 #define	PROPERTIES	259
