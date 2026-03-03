@@ -6311,10 +6311,14 @@ void CGameClientShell::ExitLevel()
 
 	TurnOffAlternativeCamera(CT_FULLSCREEN);
 
+	// Reset spectator/clip mode on level change
+	if (m_bSpectatorMode)
+	{
+		SetSpectatorMode(LTFALSE);
+	}
 
 	// We are officially no longer in a world...
-
-    m_bInWorld = LTFALSE;
+	m_bInWorld = LTFALSE;
 
 	// Go to the the next level...
 	SetCurrentLevel(m_nCurrentLevel + 1);
