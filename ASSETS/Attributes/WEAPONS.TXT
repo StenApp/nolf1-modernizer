@@ -2118,9 +2118,7 @@ WeaponAniOverride	= ""
 /*
 ** Dummy Ammo for aquire weapons
 */
-
 [Ammo54]
-
 Name			= "dummy"
 NameId			= 4109
 DescId			= 4309
@@ -2151,9 +2149,7 @@ WeaponAniOverride	= ""
 /*
 ** Ammo55 - Safe Cracker Gadget ammo
 */
-
 [Ammo55]
-
 Name				= "Safe Cra Gadget"
 NameId              = 4146
 DescId              = 4346
@@ -2179,9 +2175,7 @@ FireRecoilMult		= 1.000000
 /*
 ** Ammo56 - Pen dart bolt ammo
 */
-
 [Ammo56]
-
 Name				= "Nib"
 NameId				= 4147
 DescId				= 4347
@@ -5309,7 +5303,6 @@ HideWhenEmpty		= 0
 */
 
 [Weapon45]
-
 Name				= "Thief Safe Cracker"
 NameId				 = 4033
 DescriptionId			= 4083
@@ -5328,8 +5321,8 @@ VectorsPerRound			= 1
 PVModel				= "Guns\Models_PV\PS2SafeCracker_PV.abc"
 PVSkin				= "Guns\Skins_PV\PS2SafeCracker_PV.dtx"
 PVMuzzleFXName			= ""
-HHModel				= "guns\models_hh\PS2SafeCracker_HH.abc"
-HHSkin				= "Guns\Skins_HH\PS2SafeCracker_HH.dtx"  
+HHModel				= "guns\models_HH\PS2SafeCracker_HH.abc"
+HHSkin				= "Guns\Skins_PV\PS2SafeCracker_pv.dtx"  
 HHModelScale			= <1.000000, 1.000000, 1.000000>
 HHBreachOffset			= -10.000000
 HHMuzzleFXName			= ""
@@ -5368,7 +5361,6 @@ HideWhenEmpty			= 1
 */
 
 [Weapon46]
-
 Name				= "Pen Dart"
 NameId				= 4035
 DescriptionId			= 4085
@@ -5387,10 +5379,10 @@ VectorsPerRound			= 1
 PVModel				= "Guns\Models_PV\PS2pendart_pv.abc"
 PVSkin				= "Guns\Skins_PV\PS2pendart_pv.dtx"
 PVSkin2				= "Guns\Skins_PV\ActionHands_pv.dtx"
-PVSkin3				= "Guns\Skins_PV\PS2pendart2_pv.dtx"
+//PVSkin3				= "Guns\Skins_PV\PS2pendart2_pv.dtx" PC supports only 2!
 PVMuzzleFXName			= ""
 HHModel				= "Guns\Models_HH\PS2pendart_hh.abc"
-HHSkin				= "Guns\Skins_HH\PS2pendart_pv.dtx"
+HHSkin				= "Guns\Skins_PV\PS2pendart_pv.dtx"
 HHModelScale			= <1.000000, 1.000000, 1.000000>
 HHBreachOffset			= -10.000000
 HHMuzzleFXName			= ""
@@ -5430,7 +5422,6 @@ HideWhenEmpty			= 0
 */
 
 [Weapon47]
-
 Name				= "Thief Lock Pick"
 NameId				= 4034
 DescriptionId			= 4084
@@ -5450,7 +5441,7 @@ PVModel				= "Guns\Models_PV\PS2lockpick_pv.abc"
 PVSkin				= "Guns\Skins_PV\PS2lockpick_pv.dtx"
 PVMuzzleFXName			= ""
 HHModel				= "Guns\Models_HH\PS2lockpick_hh.abc"
-HHSkin				= "Guns\Skins_HH\PS2lockpick_hh.dtx" 
+HHSkin				= "Guns\Skins_PV\PS2lockpick_pv.dtx" 
 HHModelScale			= <1.000000, 1.000000, 1.000000>
 HHBreachOffset			= 0.000000
 HHMuzzleFXName			= ""
@@ -5472,16 +5463,17 @@ ShotsPerClip			= 1
 AmmoMultiplier			= 1
 FireRecoilPitch			= 0.100000
 FireRecoilDecay			= 0.175000
-AmmoName0			= "BarretteLockpick"
+AmmoName0				= "BarretteLockpick"
 AIMinBurstInterval		= 0.500000
 AIMaxBurstInterval		= 1.500000
 AIMinBurstShots			= 1
 AIMaxBurstShots			= 5
 LooksDangerous			= 0
 CanBeDefault			= 0
-CanBeMapped			= 1
-FireDelay			= 800
+CanBeMapped				= 1
+FireDelay				= 800
 HideWhenEmpty			= 0
+
 
 /************************************************************************
 **
