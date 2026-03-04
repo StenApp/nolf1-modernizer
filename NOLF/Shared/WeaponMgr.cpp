@@ -52,6 +52,8 @@ extern CGameClientShell* g_pGameClientShell;
 #define WMGR_WEAPON_VECTORSPERROUND		"VectorsPerRound"
 #define WMGR_WEAPON_PVMODEL				"PVModel"
 #define WMGR_WEAPON_PVSKIN				"PVSkin"
+#define WMGR_WEAPON_PVSKIN2   			"PVSkin2"
+#define WMGR_WEAPON_PVSKIN3   			"PVSkin3"
 #define WMGR_WEAPON_PVMUZZLEFXNAME		"PVMuzzleFXName"
 #define WMGR_WEAPON_HHMODEL				"HHModel"
 #define WMGR_WEAPON_HHSKIN				"HHSkin"
@@ -848,6 +850,8 @@ WEAPON::WEAPON()
 
 	szPVModel[0]	= '\0';
 	szPVSkin[0]		= '\0';
+	szPVSkin2[0] 	= '\0';
+	szPVSkin3[0] 	= '\0';
 	szHHModel[0]	= '\0';
 	szHHSkin[0]		= '\0';
 
@@ -985,7 +989,18 @@ LTBOOL WEAPON::Init(CButeMgr & buteMgr, char* aTagName)
 	{
 		strncpy(szPVSkin, (char*)(LPCSTR)str, ARRAY_LEN(szPVSkin));
 	}
-
+	
+	str = buteMgr.GetString(aTagName, WMGR_WEAPON_PVSKIN2);
+	if (!str.IsEmpty())
+	{	
+		strncpy(szPVSkin2, (char*)(LPCSTR)str, ARRAY_LEN(szPVSkin2));
+	}
+	
+	str = buteMgr.GetString(aTagName, WMGR_WEAPON_PVSKIN3);
+	if (!str.IsEmpty())
+	{	
+		strncpy(szPVSkin3, (char*)(LPCSTR)str, ARRAY_LEN(szPVSkin3));
+	}
 	str = buteMgr.GetString(aTagName, WMGR_WEAPON_HHMODEL);
 	if (!str.IsEmpty())
 	{
@@ -1196,7 +1211,17 @@ void WEAPON::Cache(CWeaponMgr* pWeaponMgr)
 	{
         g_pLTServer->CacheFile(FT_TEXTURE, szPVSkin);
 	}
-
+	
+	if (szPVSkin2[0]) 
+	{
+		g_pLTServer->CacheFile(FT_TEXTURE, szPVSkin2);
+	}
+	
+	if (szPVSkin3[0]) 
+	{	
+		g_pLTServer->CacheFile(FT_TEXTURE, szPVSkin3);
+	}
+	
 	if (szHHModel[0])
 	{
         g_pLTServer->CacheFile(FT_MODEL, szHHModel);
