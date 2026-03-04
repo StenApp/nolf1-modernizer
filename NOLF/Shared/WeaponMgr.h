@@ -264,8 +264,6 @@ struct WEAPON
 
 	char	szPVModel[WMGR_MAX_FILE_PATH];
 	char	szPVSkin[WMGR_MAX_FILE_PATH];
-	char	szPVSkin2[WMGR_MAX_FILE_PATH];
-	char	szPVSkin3[WMGR_MAX_FILE_PATH];
 	char	szHHModel[WMGR_MAX_FILE_PATH];
 	char	szHHSkin[WMGR_MAX_FILE_PATH];
 	char	szInterfaceModel[WMGR_MAX_FILE_PATH];

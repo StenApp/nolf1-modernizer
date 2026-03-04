@@ -1174,11 +1174,7 @@ void CWeaponModel::CreateModel()
 		}
 	}
 
-	if (m_pWeapon->szPVSkin3[0])
-	{	
-		SAFE_STRCPY(createStruct.m_SkinNames[2], m_pWeapon->szPVSkin3);
-	}
-	
+
 	m_hObject = CreateModelObject(m_hObject, createStruct);
 	if (!m_hObject) return;
 
@@ -4580,11 +4576,7 @@ void CWeaponModel::SetupModel()
 		}
 	}
 
-	if (m_pWeapon->szPVSkin3[0])
-    {    
-        SAFE_STRCPY(createStruct.m_SkinNames[2], m_pWeapon->szPVSkin3);
-    }
-	
+
 	// Set the filenames...
 
     g_pLTClient->Common()->SetObjectFilenames(m_hObject, &createStruct);
