@@ -4,9 +4,12 @@
 This repo uses the Modernizer 1.006 patch 4 code to implement the PS2 thiefmissions
 ## Features
 
- - integrated thiefmission 1-3
- - added PS2 music to the Jukebox
- - Play PS2 music during all pc levels
+ - Integrated by thiefmission 1-3
+ - Converted Thief code breaker and lock picking tools
+ - Added Pen dart (PS2 exclusive)
+ - Added "Nine years ago.." loading screen
+ - Added PS2 music to the Jukebox
+ - Decide whether to play PS2 music during all pc levels
  - Create EN/FR/DE CRes.dlls by editing rc files
 
 ## Building
