@@ -4,7 +4,7 @@
 This repo uses the Modernizer 1.006 patch 4 code to implement the PS2 thiefmissions
 ## Features
 
- - Integrated by thiefmission 1-3
+ - Integrated thiefmissions 1-3
  - Converted Thief code breaker and lock picking tools
  - Added Pen dart (PS2 exclusive)
  - Added "Nine years ago.." loading screen
@@ -26,6 +26,8 @@ The following build configurations are setup to build:
 ## Localization
 
 There have been community efforts to localize Modernizer into other languages.
+
+    nolf1-modernizer/NOLF/ClientRes/Lang/XX ; XX= EN, FR, DE
 
 First off modify the string table located in CRes.dll (Client Resource). Use an Texteditor and modify the source code (rc file), save it as ANSI coded. 
 You may also attempt to use other programs lie Resource Hacker to modify the string table directly in the dll. 
