@@ -47,3 +47,17 @@ I don't recommend using this application. I've fixed the majority of the slowdow
 ## License
 
 This code is still bound to the original EULA found in the NO ONE LIVES FOREVER Source Code v1.003. This can be viewed in the readme.txt file.
+
+## BIG Thanks to
+
+- Haekb/Oopsallnaps/JakeB/Heytherecoffee - groundwork of the PS2 formats, levels, models, Godot level viewer and converter, Blender plugin
+- cmbasnett+amphos/five-damned-dollarz+... - creating the io_scene_lithtech Blender plugin
+- Spookstah - Fixing LTA level files
+- burmaraider - DAT-viewer and 32P palettized texture converter
+- AkvenJan - DTX-Meta-Transfer
+- Tilo4246 - playtesting thief missions
+- Monolith for creating this awesome game!
+- Lithfaq discord for hoarding lots of usefull informations
+- My wife and daughter who supported me always
+- Anyone not listed here that had part of the creating process
+
