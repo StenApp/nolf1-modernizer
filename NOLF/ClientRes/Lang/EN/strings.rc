@@ -435,7 +435,7 @@ BEGIN
     IDS_PRESSANYKEY         "Press a key..."
     IDS_EMPTY               "    [ empty ]"
     IDS_PRESSKEYTOCONTINUE  "Press Enter to continue."
-    IDS_SUREWANTQUIT        "Are you sure you want to quit?"
+    IDS_SUREWANTQUIT        "\nAre you sure you want to quit?\n"
     IDS_BUMPER_LOADING      "Loading..."
     IDS_INTEL_ROSTER        "Roster %1!d!"
     IDS_INTEL_ITEMS         "Intelligence Items:"
