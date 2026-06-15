@@ -68,6 +68,27 @@ LTBOOL CGameButeMgr::Parse(ILTCSBase *pInterface, const char* sButeFile)
     if (!sButeFile)	return(LTFALSE);
 
 
+	// -------------------------------------------------------------------
+	// DEdit/editor case: no valid server (g_pLTServer == NULL).
+	// Resources are unpacked for DEdit, and the plugin already passes a
+	// full path via szRezPath (...\Attributes\xxx.txt). So read directly
+	// from disk, without the .rez prefix and without a stream.
+	// (Fixes the null-pointer crash in pInterface->OpenFile under _REZFILE.)
+	// -------------------------------------------------------------------
+	
+	if (!pInterface)
+	{
+		m_strAttributeFile = sButeFile;
+
+		BOOL bRet;
+		if (m_pCryptKey)
+			bRet = m_buteMgr.Parse(m_strAttributeFile, m_pCryptKey);
+		else
+			bRet = m_buteMgr.Parse(m_strAttributeFile);
+
+		return bRet;
+	}
+
 	BOOL bRet = TRUE;
 
 	// NOTE!!! When _REZFILE is defined, this code will need to be 
