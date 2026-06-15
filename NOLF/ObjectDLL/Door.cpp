@@ -20,7 +20,6 @@
 #include "hingeddoor.h"
 #include "CommandMgr.h"
 #include <cmath>
-#include "SDL.h"
 // Defines....
 
 #define UPDATE_DELTA					0.01f
@@ -2169,27 +2168,27 @@ void Door::Load(HMESSAGEREAD hRead, uint32 dwLoadFlags)
 
 	// NAN check -- For some reason the bombs in mission 2 return NAN for MoveDir.
 	if (isnan(m_vMoveDir.x)) {
-		SDL_Log("m_vMoveDir is NAN for some reason! Resetting.");
+		if (g_pLTServer) g_pLTServer->CPrint("m_vMoveDir is NAN for some reason! Resetting.");
 		m_vMoveDir.Init();
 		invalidLoad = LTTRUE;
 	}
 	if (isnan(m_vSoundPos.x)) {
-		SDL_Log("m_vSoundPos is NAN for some reason! Resetting.");
+		if (g_pLTServer) g_pLTServer->CPrint("m_vSoundPos is NAN for some reason! Resetting.");
 		m_vSoundPos.Init();
 		invalidLoad = LTTRUE;
 	}
 	if (isnan(m_vOpenPos.x)) {
-		SDL_Log("m_vOpenPos is NAN for some reason! Resetting.");
+		if (g_pLTServer) g_pLTServer->CPrint("m_vOpenPos is NAN for some reason! Resetting.");
 		m_vOpenPos.Init();
 		invalidLoad = LTTRUE;
 	}
 	if (isnan(m_vClosedPos.x)) {
-		SDL_Log("m_vClosedPos is NAN for some reason! Resetting.");
+		if (g_pLTServer) g_pLTServer->CPrint("m_vClosedPos is NAN for some reason! Resetting.");
 		m_vClosedPos.Init();
 		invalidLoad = LTTRUE;
 	}
 	if (isnan(m_vAttachDir.x)) {
-		SDL_Log("m_vAttachDir is NAN for some reason! Resetting.");
+		if (g_pLTServer) g_pLTServer->CPrint("m_vAttachDir is NAN for some reason! Resetting.");
 		m_vAttachDir.Init();
 		invalidLoad = LTTRUE;
 	}

@@ -65,7 +65,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\lt2\sdk\inc;..\..\lt2\lithshared\incs;..\shared;..\objectdll;..\..\LIBS\SDL2-2.0.10\include;..\..\lt2\lithshared\ButeMgr;..\..\lt2\lithshared\CryptMgr;..\..\lt2\lithshared\lith;..\..\LIBS\json;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lt2\sdk\inc;..\..\lt2\lithshared\incs;..\shared;..\objectdll;..\..\lt2\lithshared\ButeMgr;..\..\lt2\lithshared\CryptMgr;..\..\lt2\lithshared\lith;..\..\LIBS\json;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;NO_PRAGMA_LIBS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\Object.pch</PrecompiledHeaderOutputFile>
@@ -102,16 +102,17 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>debug\object.lto</OutputFile>
       <ImportLibrary>.\Debug\object.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>libcimtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalLibraryDirectories>..\..\lt2\lithshared\built\Debug\ButeMgr;..\..\lt2\lithshared\built\Debug\CryptMgr;..\..\lt2\lithshared\built\Debug\MFCStub;..\..\lt2\lithshared\libs\Debug;..\..\LIBS\SDL2-2.0.10\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lt2\lithshared\built\Debug\ButeMgr;..\..\lt2\lithshared\built\Debug\CryptMgr;..\..\lt2\lithshared\built\Debug\MFCStub;..\..\lt2\lithshared\libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+	  <DebugInformationFormat>None</DebugInformationFormat>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <StringPooling>true</StringPooling>
@@ -119,7 +120,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\lt2\sdk\inc;$(SolutionDir)..\lt2\lithshared\incs;$(SolutionDir)shared;$(SolutionDir)objectdll;$(SolutionDir)..\LIBS\SDL2-2.0.10\include;$(SolutionDir)..\lt2\lithshared\ButeMgr;$(SolutionDir)..\lt2\lithshared\CryptMgr;$(SolutionDir)..\lt2\lithshared\lith;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\lt2\sdk\inc;$(SolutionDir)..\lt2\lithshared\incs;$(SolutionDir)shared;$(SolutionDir)objectdll;$(SolutionDir)..\lt2\lithshared\ButeMgr;$(SolutionDir)..\lt2\lithshared\CryptMgr;$(SolutionDir)..\lt2\lithshared\lith;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_REZFILE;_FINAL;NDEBUG;WIN32;_WINDOWS;_NOLFBUILD;NO_PRAGMA_LIBS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\Object.pch</PrecompiledHeaderOutputFile>
@@ -147,17 +148,21 @@
       <OutputFile>.\Release\Object.bsc</OutputFile>
     </Bscmake>
     <Link>
+	  <GenerateDebugInformation>false</GenerateDebugInformation>
+	  <OptimizeReferences>true</OptimizeReferences>
+	  <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
       <OutputFile>Release\object.lto</OutputFile>
       <ImportLibrary>.\Release\object.lib</ImportLibrary>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ButeMgr.lib;cryptmgr.lib;GameSpyMgr.lib;MFCStub.lib;StdLith.lib;RegMgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libcimtd.lib;\proj\libs\release\StdLith.lib</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\lt2\lithshared\built\Release\ButeMgr;$(SolutionDir)..\lt2\lithshared\built\Release\CryptMgr;$(SolutionDir)..\lt2\lithshared\built\Release\MFCStub;$(SolutionDir)..\lt2\lithshared\libs\Release;$(SolutionDir)..\LIBS\SDL2-2.0.10\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\lt2\lithshared\built\Release\ButeMgr;$(SolutionDir)..\lt2\lithshared\built\Release\CryptMgr;$(SolutionDir)..\lt2\lithshared\built\Release\MFCStub;$(SolutionDir)..\lt2\lithshared\libs\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ForceSymbolReferences>
       </ForceSymbolReferences>
+	  <AdditionalOptions>/DEBUG:NONE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
