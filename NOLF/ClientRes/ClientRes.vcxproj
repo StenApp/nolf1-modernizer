@@ -47,6 +47,9 @@
   <ResourceCompile>
     <PreprocessorDefinitions>LANG_EN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
   </ResourceCompile>
+  <Link>
+    <GenerateDebugInformation>false</GenerateDebugInformation>
+  </Link>
 </ItemDefinitionGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-DE|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -58,6 +61,9 @@
   <ResourceCompile>
     <PreprocessorDefinitions>LANG_DE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
   </ResourceCompile>
+  <Link>
+    <GenerateDebugInformation>false</GenerateDebugInformation>
+  </Link>
 </ItemDefinitionGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-FR|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -69,6 +75,9 @@
   <ResourceCompile>
     <PreprocessorDefinitions>LANG_FR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
   </ResourceCompile>
+  <Link>
+    <GenerateDebugInformation>false</GenerateDebugInformation>
+  </Link>
 </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="..\NOLF.PostBuildCopy.props" />
