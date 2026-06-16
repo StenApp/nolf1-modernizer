@@ -17,12 +17,17 @@
     <TargetCopyDir>$(SolutionDir)..\COMPILED_DEBUG\</TargetCopyDir>
   </PropertyGroup>
 
-  <!-- Kopiert fertiges Artefakt ins Zielverzeichnis -->
+<!-- Kopiert fertiges Artefakt ins Zielverzeichnis -->
   <Target Name="PostBuildCopy" AfterTargets="Build" Condition=" '$(TargetCopyDir)' != '' ">
     <MakeDir Directories="$(TargetCopyDir)" />
     <Copy SourceFiles="$(TargetPath)"
           DestinationFolder="$(TargetCopyDir)"
           SkipUnchangedFiles="true" />
+    <!-- PDB nur mitkopieren, wenn eine existiert (also im Debug-Build) -->
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb"
+          DestinationFolder="$(TargetCopyDir)"
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
   </Target>
 
 </Project>
