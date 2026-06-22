@@ -4328,6 +4328,12 @@ void CInterfaceMgr::OnRButtonDown(int x, int y)
 		{
 			m_MainWnd.HandleRButtonDown(x,y);
 		}	break;
+	case GS_POPUP:
+		{
+			// DG: allow closing popups (like the one when picking up an intelligence item)
+			//     with right mouse button instead of just Escape which is a bit hard to reach
+			m_PopupText.Clear();
+		} break;
 	}
 }
 
