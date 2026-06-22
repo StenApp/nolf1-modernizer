@@ -99,6 +99,9 @@ class CGameServerShell : public IServerShell
         void    Load(HMESSAGEREAD hRead, uint32 dwLoadFlags);
 
 		GameType		GetGameType()	const { return (GameType)m_GameInfo.m_byType; }
+
+		// Music-Throttle: target server frametime (matches NOLF2)
+		LTFLOAT			GetMaxServerFrametime() { return (1.0f / 100.0f); }
 		GameDifficulty	GetDifficulty() const { return m_eDifficulty; }
 		LTBOOL			GetFadeBodies() const { return m_bFadeBodies; }
         LTBOOL           IsMultiplayerTeamBasedGame();

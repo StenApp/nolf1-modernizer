@@ -157,7 +157,7 @@ void CCharacterMgr::PostStartWorld(uint8 nLoadGameFlags)
 
 	if ( nLoadGameFlags == LOAD_RESTORE_GAME )
 	{
-		if ( g_pMusicMgr && g_pMusicMgr->IsMoodLocked() )
+		if ( g_pMusicMgr )
 		{
 			g_pMusicMgr->RestoreMusicIntensity();
 		}

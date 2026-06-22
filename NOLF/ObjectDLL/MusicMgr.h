@@ -51,6 +51,9 @@ class CMusicMgr
 
 		void Update();
 
+		// Throttle (server max frametime gating)
+		bool IsItTimeToRun();
+
 		// Lock
 
 		void LockMood() { m_bLockedMood = LTTRUE; }
@@ -95,6 +98,11 @@ class CMusicMgr
 		LTFLOAT		m_afMoods[kNumMoods];
 
 		Mood		m_eLastMood;
+
+		// --- Music fix (Issue #41) ---
+		LTFLOAT		m_fLastTime;            // throttle: time of last run
+		uint32		m_iLastIntensity;       // last intensity actually sent
+		LTFLOAT		m_fNextReassertTime;    // next reassert time (absolute sim time)
 
 		uint32		m_acMoods[kNumMoods];
 		uint32		m_aanMoods[kNumMoods][kMaxLevelsPerMood];

@@ -34,6 +34,10 @@ static const char* s_aszEvents[] = { "PlayerDie", "AIDie", "AIDodge" };
 
 static const LTFLOAT s_fMax = 10.0f;
 
+// Reassert interval (seconds): self-heal window for a swallowed DirectMusic
+// transition. Raise (8-10) if re-sending the same intensity audibly re-triggers.
+static const LTFLOAT s_fReassertInterval = 4.0f;
+
 // ----------------------------------------------------------------------- //
 
 CMusicMgr::CMusicMgr()
@@ -57,6 +61,11 @@ CMusicMgr::CMusicMgr()
 
 	m_bLockedMood = LTFALSE;
 	m_bLockedEvent = LTFALSE;
+
+	// --- Music fix (Issue #41) ---
+	m_fLastTime          = 0.0f;
+	m_iLastIntensity     = (uint32)-1;
+	m_fNextReassertTime  = 0.0f;
 
 	m_bInitialized = LTFALSE;
 }
@@ -192,6 +201,22 @@ void CMusicMgr::Load(HMESSAGEREAD hRead)
 
 // ----------------------------------------------------------------------- //
 
+bool CMusicMgr::IsItTimeToRun()
+{
+	LTFLOAT fCurrentTime = g_pLTServer->GetTime();
+	LTFLOAT fDelta       = fCurrentTime - m_fLastTime;
+
+	if ( fDelta >= g_pGameServerShell->GetMaxServerFrametime() )
+	{
+		m_fLastTime = fCurrentTime;
+		return true;
+	}
+
+	return false;
+}
+
+// ----------------------------------------------------------------------- //
+
 void CMusicMgr::Update()
 {
 	if ( !m_bEnabled ) return;
@@ -200,34 +225,52 @@ void CMusicMgr::Update()
 //	g_pLTServer->CPrint("MusicMgr: Events are%s locked", m_bLockedEvent ? "" : " not");
 //	g_pLTServer->CPrint("MusicMgr: Moods are%s locked", m_bLockedMood ? "" : " not");
 
-	if ( m_bLockedMood )
+	// --- PATCH 1: restore saved intensity after load, regardless of lock ---
+	if ( m_bRestoreMusicIntensity )
 	{
-		if ( m_bRestoreMusicIntensity )
-		{
-			char szMusic[128];
-			sprintf(szMusic, "MUSIC I %d measure", m_iRestoreMusicIntensity);
+		char szMusic[128];
+		sprintf(szMusic, "MUSIC I %d measure", m_iRestoreMusicIntensity);
 
-			HSTRING hMusic = g_pLTServer->CreateString(szMusic);
-			HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
-			g_pLTServer->WriteToMessageHString(hMessage, hMusic);
-			g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
-			FREE_HSTRING(hMusic);
+		HSTRING hMusic = g_pLTServer->CreateString(szMusic);
+		HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
+		g_pLTServer->WriteToMessageHString(hMessage, hMusic);
+		g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
+		FREE_HSTRING(hMusic);
 
-			m_eLastMood = eMoodInvalid;
-			m_bRestoreMusicIntensity = LTFALSE;
-		}
-
-		return;
+		m_iLastIntensity         = m_iRestoreMusicIntensity;
+		m_fNextReassertTime      = g_pLTServer->GetTime() + s_fReassertInterval;
+		m_eLastMood              = eMoodInvalid;
+		m_bRestoreMusicIntensity = LTFALSE;
 	}
+
+	if ( m_bLockedMood ) return;
+
+	// --- PATCH A: throttle to server max frametime ---
+	if ( !IsItTimeToRun() ) return;
 
 	LTBOOL bChoseMood = LTFALSE;
 
 	for ( int32 iMood = kNumMoods-1 ; iMood >= 0 ; --iMood )
 	{
-		if ( !bChoseMood && (m_afMoods[iMood] != 0.0f || (iMood == eMoodNone)) )
+		if ( !bChoseMood && (m_afMoods[iMood] != 0.0f || (iMood == eMoodNone)) && m_acMoods[iMood] > 0 )
 		{
 			if ( m_eLastMood == iMood )
 			{
+				// --- PATCH 2: heartbeat reassert of the exact last intensity ---
+				if ( m_iLastIntensity != (uint32)-1 && g_pLTServer->GetTime() >= m_fNextReassertTime )
+				{
+					char szMusic[128];
+					sprintf(szMusic, "MUSIC I %d measure", m_iLastIntensity);
+
+					HSTRING hMusic = g_pLTServer->CreateString(szMusic);
+					HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
+					g_pLTServer->WriteToMessageHString(hMessage, hMusic);
+					g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
+					FREE_HSTRING(hMusic);
+
+					m_fNextReassertTime = g_pLTServer->GetTime() + s_fReassertInterval;
+				}
+
 				bChoseMood = LTTRUE;
 			}
 			else
@@ -237,7 +280,8 @@ void CMusicMgr::Update()
 #endif
 				char szMusic[128];
 				uint32 iLevel = GetRandom(0, m_acMoods[iMood]-1);
-				sprintf(szMusic, "MUSIC I %d measure", m_aanMoods[iMood][iLevel]);
+				m_iLastIntensity = m_aanMoods[iMood][iLevel];
+				sprintf(szMusic, "MUSIC I %d measure", m_iLastIntensity);
 //				g_pLTServer->CPrint(szMusic);
 
 				HSTRING hMusic = g_pLTServer->CreateString(szMusic);
@@ -256,11 +300,12 @@ void CMusicMgr::Update()
 				}
 */
 				m_eLastMood = (Mood)iMood;
+				m_fNextReassertTime = g_pLTServer->GetTime() + s_fReassertInterval;
 				bChoseMood = LTTRUE;
 			}
 		}
 
-		m_afMoods[iMood] = Max<LTFLOAT>(m_afMoods[iMood] - g_pLTServer->GetFrameTime(), 0.0f);
+		m_afMoods[iMood] = Max<LTFLOAT>(m_afMoods[iMood] - g_pGameServerShell->GetMaxServerFrametime(), 0.0f);
 
 //		g_pLTServer->CPrint("%s Mood = %f", s_aszMoods[iMood], m_afMoods[iMood]);
 	}
