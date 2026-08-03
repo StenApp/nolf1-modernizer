@@ -3297,6 +3297,31 @@ void CGameServerShell::PauseGame(LTBOOL bPause)
 	}
 
     g_pLTServer->SetServerFlags (nFlags);
+
+	// TEMP DEBUG - remove once verified. Unconditional (not #ifndef _FINAL)
+	// so it's visible in Release builds too, since _FINAL is tied to the
+	// Release config in this project (Debug has no _FINAL but has the
+	// debug-heap 0xCD noise instead).
+	g_pLTServer->CPrint("[MusicDebug] PauseGame(%s) -> SS_PAUSED=%s",
+		bPause ? "TRUE" : "FALSE",
+		(g_pLTServer->GetServerFlags() & SS_PAUSED) ? "SET" : "CLEAR");
+}
+
+// ----------------------------------------------------------------------- //
+//
+//	ROUTINE:	CGameServerShell::IsPaused
+//
+//	PURPOSE:	Check if server is paused. (Borrowed from NOLF2 Modernizer,
+//				Issue #41 / #52 - the music mood system must not keep
+//				accumulating/decaying while the game is paused, e.g. in a
+//				menu, or moods desync from the actual game state.)
+//
+// ----------------------------------------------------------------------- //
+
+bool CGameServerShell::IsPaused()
+{
+	uint32 nFlags = g_pLTServer->GetServerFlags();
+	return (( nFlags & SS_PAUSED ) != 0 );
 }
 
 // ----------------------------------------------------------------------- //

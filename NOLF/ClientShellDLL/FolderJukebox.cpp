@@ -212,6 +212,12 @@ LTBOOL CFolderJukebox::Build()
 		{
 			// We'll need this info later..
 			m_ThemeIDsToSkip.push_back(i);
+
+			// IMPORTANT: still push an (empty) entry so m_Songs stays index-aligned
+			// with the theme IDs. Any theme after this one in the attribute file
+			// would otherwise write out of bounds into m_Songs[nThemeID].
+			std::map<std::string, int> EmptySongMap;
+			m_Songs.push_back(EmptySongMap);
 			continue;
 		}
 
@@ -359,6 +365,10 @@ void CFolderJukebox::OnFocus(LTBOOL bFocus)
 
 	// Restore the music that was playing before they entered this menu.
 	g_pGameClientShell->GetMusic()->RestoreMusicState(m_PreviousMusicState);
+	// RestoreMusicState() only restores Directory/ControlFile, not the
+	// intensity itself (engine limitation, matches NOLF2 Modernizer's
+	// own Jukebox fix) - so restore the intensity explicitly too.
+	g_pGameClientShell->GetMusic()->ChangeIntensity(m_PreviousMusicState.nIntensity);
 
 	CBaseFolder::OnFocus(bFocus);
 }

@@ -201,7 +201,7 @@ void CMusicMgr::Load(HMESSAGEREAD hRead)
 
 // ----------------------------------------------------------------------- //
 
-bool CMusicMgr::IsItTimeToRun()
+bool CMusicMgr::IsItTimeToRun(LTFLOAT& fOutDelta)
 {
 	LTFLOAT fCurrentTime = g_pLTServer->GetTime();
 	LTFLOAT fDelta       = fCurrentTime - m_fLastTime;
@@ -209,6 +209,7 @@ bool CMusicMgr::IsItTimeToRun()
 	if ( fDelta >= g_pGameServerShell->GetMaxServerFrametime() )
 	{
 		m_fLastTime = fCurrentTime;
+		fOutDelta   = fDelta;
 		return true;
 	}
 
@@ -219,6 +220,18 @@ bool CMusicMgr::IsItTimeToRun()
 
 void CMusicMgr::Update()
 {
+	// --- Music fix (borrowed from NOLF2 Modernizer, Issue #41 / #52) ---
+	// Don't update music mood/intensity while the game is paused (e.g. in
+	// a menu) - otherwise moods keep accumulating/decaying in the
+	// background and desync from what's actually happening once unpaused.
+	if ( g_pGameServerShell->IsPaused() )
+	{
+		// TEMP DEBUG - remove once verified. Unconditional, see note in
+		// GameServerShell.cpp::PauseGame().
+		g_pLTServer->CPrint("[MusicDebug] Update() skipped - IsPaused() == true");
+		return;
+	}
+
 	if ( !m_bEnabled ) return;
 	if ( g_pGameServerShell->GetGameType() != SINGLE ) return;
 
@@ -246,7 +259,11 @@ void CMusicMgr::Update()
 	if ( m_bLockedMood ) return;
 
 	// --- PATCH A: throttle to server max frametime ---
-	if ( !IsItTimeToRun() ) return;
+	// fDelta is the REAL elapsed time since the last successful run, so
+	// decay below always matches what DoMood() accumulated in that span,
+	// regardless of actual framerate (fixes the >100fps desync, Issue #2).
+	LTFLOAT fDelta;
+	if ( !IsItTimeToRun(fDelta) ) return;
 
 	LTBOOL bChoseMood = LTFALSE;
 
@@ -305,7 +322,7 @@ void CMusicMgr::Update()
 			}
 		}
 
-		m_afMoods[iMood] = Max<LTFLOAT>(m_afMoods[iMood] - g_pGameServerShell->GetMaxServerFrametime(), 0.0f);
+		m_afMoods[iMood] = Max<LTFLOAT>(m_afMoods[iMood] - fDelta, 0.0f);
 
 //		g_pLTServer->CPrint("%s Mood = %f", s_aszMoods[iMood], m_afMoods[iMood]);
 	}

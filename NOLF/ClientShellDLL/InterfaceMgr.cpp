@@ -3219,6 +3219,13 @@ LTBOOL CInterfaceMgr::PreMenuState(GameState eCurState)
 
 	ForceScreenFadeIn(g_vtScreenFadeInTime.GetFloat());
 
+	// --- Music fix (borrowed from NOLF2 Modernizer, Issue #41 / #52) ---
+	// Pause the game so the server-side music mood system (CMusicMgr)
+	// stops accumulating/decaying while menus (incl. Jukebox) are open.
+	// Without this, moods keep drifting in the background and desync
+	// from what's actually happening once you return to gameplay.
+    g_pGameClientShell->PauseGame(LTTRUE, LTTRUE);
+
     return LTTRUE;
 }
 
@@ -3235,6 +3242,13 @@ LTBOOL CInterfaceMgr::PostMenuState(GameState eNewState)
     if (eNewState == GS_MENU) return LTFALSE;
 
     UseCursor(LTFALSE);
+
+	// --- Music fix (borrowed from NOLF2 Modernizer, Issue #41 / #52) ---
+	// Unpause again - counterpart to PreMenuState()'s PauseGame(TRUE).
+	// PrePlayingState() deliberately skips unpausing when coming from
+	// GS_MENU, so this is the only place that does it on the way out.
+    g_pGameClientShell->PauseGame(LTFALSE);
+
     return LTTRUE;
 }
 

@@ -51,8 +51,12 @@ class CMusicMgr
 
 		void Update();
 
-		// Throttle (server max frametime gating)
-		bool IsItTimeToRun();
+		// Throttle (server max frametime gating).
+		// fOutDelta receives the REAL elapsed time since the last time this
+		// returned true (not the fixed GetMaxServerFrametime() constant) so
+		// that decay in Update() always matches whatever DoMood() actually
+		// accumulated in the meantime, regardless of the real framerate.
+		bool IsItTimeToRun(LTFLOAT& fOutDelta);
 
 		// Lock
 

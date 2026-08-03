@@ -111,6 +111,10 @@ class CGameServerShell : public IServerShell
 
         void        PauseGame(LTBOOL b=LTTRUE);
 
+		// --- Music fix (Issue #41 / borrowed from NOLF2 Modernizer) ---
+		// Reads the SS_PAUSED server flag that PauseGame() already sets/clears.
+		bool        IsPaused();
+
 		TimeRamp*	GetTimeRamp(uint32 i);
 
 		CMissionData*	GetMissionData()			  { return &m_MissionData; }
