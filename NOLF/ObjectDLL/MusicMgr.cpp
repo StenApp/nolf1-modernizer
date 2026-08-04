@@ -9,14 +9,14 @@
 
 class CMusicButeMgr : public CGameButeMgr
 {
-	public : // Public member variables
+public: // Public member variables
 
-        LTBOOL	Init(ILTCSBase *pInterface, const char* szAttributeFile = "Attributes\\Music.txt")
-		{
-			return Parse(pInterface, szAttributeFile);
-		}
+	LTBOOL	Init(ILTCSBase* pInterface, const char* szAttributeFile = "Attributes\\Music.txt")
+	{
+		return Parse(pInterface, szAttributeFile);
+	}
 
-		CButeMgr* GetButeMgr() { return &m_buteMgr; }
+	CButeMgr* GetButeMgr() { return &m_buteMgr; }
 };
 
 static CMusicButeMgr s_MusicButeMgr;
@@ -45,12 +45,12 @@ CMusicMgr::CMusicMgr()
 	m_bEnabled = LTFALSE;
 	g_pMusicMgr = this;
 
-	for ( uint32 iMood = 0 ; iMood < kNumMoods ; ++iMood )
+	for (uint32 iMood = 0; iMood < kNumMoods; ++iMood)
 	{
 		m_afMoods[iMood] = 0.0f;
 	}
 
-	for ( uint32 iEvent = 0 ; iEvent < kNumEvents ; ++iEvent )
+	for (uint32 iEvent = 0; iEvent < kNumEvents; ++iEvent)
 	{
 		m_afEventChances[iEvent] = 1.0f;
 	}
@@ -63,9 +63,9 @@ CMusicMgr::CMusicMgr()
 	m_bLockedEvent = LTFALSE;
 
 	// --- Music fix (Issue #41) ---
-	m_fLastTime          = 0.0f;
-	m_iLastIntensity     = (uint32)-1;
-	m_fNextReassertTime  = 0.0f;
+	m_fLastTime = 0.0f;
+	m_iLastIntensity = (uint32)-1;
+	m_fNextReassertTime = 0.0f;
 
 	m_bInitialized = LTFALSE;
 }
@@ -83,31 +83,31 @@ CMusicMgr::~CMusicMgr()
 
 void CMusicMgr::Init(const char* szMusicControlFile)
 {
-	if ( m_bInitialized  ) return;
+	if (m_bInitialized) return;
 
-	if ( !s_MusicButeMgr.Init(g_pLTServer) )
+	if (!s_MusicButeMgr.Init(g_pLTServer))
 	{
 		return;
 	}
 
 	strcpy(m_szTheme, szMusicControlFile);
 	char* pchDot;
-	if ( pchDot = strchr(m_szTheme, '.') )
+	if (pchDot = strchr(m_szTheme, '.'))
 	{
 		*pchDot = 0;
 	}
 
-    _strlwr(m_szTheme);
+	_strlwr(m_szTheme);
 
-	for ( uint32 iMood = 0 ; iMood < kNumMoods ; ++iMood )
+	for (uint32 iMood = 0; iMood < kNumMoods; ++iMood)
 	{
 		m_acMoods[iMood] = 0;
 
-		for ( uint32 iLevel = 0 ; iLevel < kMaxLevelsPerMood ; iLevel++ )
+		for (uint32 iLevel = 0; iLevel < kMaxLevelsPerMood; iLevel++)
 		{
 			char szMood[128];
 			sprintf(szMood, "%s%d", s_aszMoods[iMood], iLevel);
-			if ( g_pMusicButeMgr->Exist(m_szTheme, szMood) )
+			if (g_pMusicButeMgr->Exist(m_szTheme, szMood))
 			{
 				m_aanMoods[iMood][m_acMoods[iMood]] = g_pMusicButeMgr->GetInt(m_szTheme, szMood);
 				m_acMoods[iMood]++;
@@ -117,17 +117,24 @@ void CMusicMgr::Init(const char* szMusicControlFile)
 				break;
 			}
 		}
+
+		// TEMP DEBUG - remove once verified. Shows how many intensity
+		// levels were actually found per mood for this level's theme
+		// ("m_szTheme") in Music.txt - if e.g. Aggressive shows 0, that
+		// mood can never be selected here regardless of what DoMood() does.
+		g_pLTServer->CPrint("[MusicDebug] Init theme=\"%s\" mood=\"%s\" levelsFound=%d",
+			m_szTheme, s_aszMoods[iMood], m_acMoods[iMood]);
 	}
 
-	for ( uint32 iEvent = 0 ; iEvent < kNumEvents ; ++iEvent )
+	for (uint32 iEvent = 0; iEvent < kNumEvents; ++iEvent)
 	{
 		m_acEvents[iEvent] = 0;
 
-		for ( uint32 iMotif = 0 ; iMotif < kMaxMotifsPerEvent ; iMotif++ )
+		for (uint32 iMotif = 0; iMotif < kMaxMotifsPerEvent; iMotif++)
 		{
 			char szEvent[128];
 			sprintf(szEvent, "%s%d", s_aszEvents[iEvent], iMotif);
-			if ( g_pMusicButeMgr->Exist(m_szTheme, szEvent) )
+			if (g_pMusicButeMgr->Exist(m_szTheme, szEvent))
 			{
 				strcpy(m_aaszEvents[iEvent][m_acEvents[iEvent]], g_pMusicButeMgr->GetString(m_szTheme, szEvent));
 				m_acEvents[iEvent]++;
@@ -139,9 +146,9 @@ void CMusicMgr::Init(const char* szMusicControlFile)
 		}
 	}
 
-	m_afEventChances[eEventPlayerDie]	= (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DieChance");
-	m_afEventChances[eEventAIDie]		= (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DieChance");
-	m_afEventChances[eEventAIDodge]		= (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DodgeChance");
+	m_afEventChances[eEventPlayerDie] = (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DieChance");
+	m_afEventChances[eEventAIDie] = (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DieChance");
+	m_afEventChances[eEventAIDodge] = (LTFLOAT)g_pMusicButeMgr->GetDouble("settings", "DodgeChance");
 
 	// Jake: Hack for the tech demo!
 	if (stricmp("NolfDance.txt", szMusicControlFile) == 0) {
@@ -155,7 +162,7 @@ void CMusicMgr::Init(const char* szMusicControlFile)
 
 void CMusicMgr::Term()
 {
-	if ( !m_bInitialized ) return;
+	if (!m_bInitialized) return;
 
 	m_bLockedMood = LTFALSE;
 	m_bLockedEvent = LTFALSE;
@@ -163,7 +170,7 @@ void CMusicMgr::Term()
 	m_eLastMood = eMoodInvalid;
 	m_bEnabled = LTFALSE;
 
-	for ( uint32 iMood = 0 ; iMood < kNumMoods ; ++iMood )
+	for (uint32 iMood = 0; iMood < kNumMoods; ++iMood)
 	{
 		m_afMoods[iMood] = 0.0f;
 	}
@@ -175,7 +182,7 @@ void CMusicMgr::Term()
 
 void CMusicMgr::Save(HMESSAGEWRITE hWrite)
 {
-	for ( uint32 iMood = 0 ; iMood < kNumMoods ; iMood++ )
+	for (uint32 iMood = 0; iMood < kNumMoods; iMood++)
 	{
 		SAVE_FLOAT(m_afMoods[iMood]);
 	}
@@ -189,7 +196,7 @@ void CMusicMgr::Save(HMESSAGEWRITE hWrite)
 
 void CMusicMgr::Load(HMESSAGEREAD hRead)
 {
-	for ( uint32 iMood = 0 ; iMood < kNumMoods ; iMood++ )
+	for (uint32 iMood = 0; iMood < kNumMoods; iMood++)
 	{
 		LOAD_FLOAT(m_afMoods[iMood]);
 	}
@@ -204,12 +211,12 @@ void CMusicMgr::Load(HMESSAGEREAD hRead)
 bool CMusicMgr::IsItTimeToRun(LTFLOAT& fOutDelta)
 {
 	LTFLOAT fCurrentTime = g_pLTServer->GetTime();
-	LTFLOAT fDelta       = fCurrentTime - m_fLastTime;
+	LTFLOAT fDelta = fCurrentTime - m_fLastTime;
 
-	if ( fDelta >= g_pGameServerShell->GetMaxServerFrametime() )
+	if (fDelta >= g_pGameServerShell->GetMaxServerFrametime())
 	{
 		m_fLastTime = fCurrentTime;
-		fOutDelta   = fDelta;
+		fOutDelta = fDelta;
 		return true;
 	}
 
@@ -224,7 +231,7 @@ void CMusicMgr::Update()
 	// Don't update music mood/intensity while the game is paused (e.g. in
 	// a menu) - otherwise moods keep accumulating/decaying in the
 	// background and desync from what's actually happening once unpaused.
-	if ( g_pGameServerShell->IsPaused() )
+	if (g_pGameServerShell->IsPaused())
 	{
 		// TEMP DEBUG - remove once verified. Unconditional, see note in
 		// GameServerShell.cpp::PauseGame().
@@ -232,14 +239,14 @@ void CMusicMgr::Update()
 		return;
 	}
 
-	if ( !m_bEnabled ) return;
-	if ( g_pGameServerShell->GetGameType() != SINGLE ) return;
+	if (!m_bEnabled) return;
+	if (g_pGameServerShell->GetGameType() != SINGLE) return;
 
-//	g_pLTServer->CPrint("MusicMgr: Events are%s locked", m_bLockedEvent ? "" : " not");
-//	g_pLTServer->CPrint("MusicMgr: Moods are%s locked", m_bLockedMood ? "" : " not");
+	//	g_pLTServer->CPrint("MusicMgr: Events are%s locked", m_bLockedEvent ? "" : " not");
+	//	g_pLTServer->CPrint("MusicMgr: Moods are%s locked", m_bLockedMood ? "" : " not");
 
-	// --- PATCH 1: restore saved intensity after load, regardless of lock ---
-	if ( m_bRestoreMusicIntensity )
+		// --- PATCH 1: restore saved intensity after load, regardless of lock ---
+	if (m_bRestoreMusicIntensity)
 	{
 		char szMusic[128];
 		sprintf(szMusic, "MUSIC I %d measure", m_iRestoreMusicIntensity);
@@ -250,31 +257,31 @@ void CMusicMgr::Update()
 		g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
 		FREE_HSTRING(hMusic);
 
-		m_iLastIntensity         = m_iRestoreMusicIntensity;
-		m_fNextReassertTime      = g_pLTServer->GetTime() + s_fReassertInterval;
-		m_eLastMood              = eMoodInvalid;
+		m_iLastIntensity = m_iRestoreMusicIntensity;
+		m_fNextReassertTime = g_pLTServer->GetTime() + s_fReassertInterval;
+		m_eLastMood = eMoodInvalid;
 		m_bRestoreMusicIntensity = LTFALSE;
 	}
 
-	if ( m_bLockedMood ) return;
+	if (m_bLockedMood) return;
 
 	// --- PATCH A: throttle to server max frametime ---
 	// fDelta is the REAL elapsed time since the last successful run, so
 	// decay below always matches what DoMood() accumulated in that span,
 	// regardless of actual framerate (fixes the >100fps desync, Issue #2).
 	LTFLOAT fDelta;
-	if ( !IsItTimeToRun(fDelta) ) return;
+	if (!IsItTimeToRun(fDelta)) return;
 
 	LTBOOL bChoseMood = LTFALSE;
 
-	for ( int32 iMood = kNumMoods-1 ; iMood >= 0 ; --iMood )
+	for (int32 iMood = kNumMoods - 1; iMood >= 0; --iMood)
 	{
-		if ( !bChoseMood && (m_afMoods[iMood] != 0.0f || (iMood == eMoodNone)) && m_acMoods[iMood] > 0 )
+		if (!bChoseMood && (m_afMoods[iMood] != 0.0f || (iMood == eMoodNone)) && m_acMoods[iMood] > 0)
 		{
-			if ( m_eLastMood == iMood )
+			if (m_eLastMood == iMood)
 			{
 				// --- PATCH 2: heartbeat reassert of the exact last intensity ---
-				if ( m_iLastIntensity != (uint32)-1 && g_pLTServer->GetTime() >= m_fNextReassertTime )
+				if (m_iLastIntensity != (uint32)-1 && g_pLTServer->GetTime() >= m_fNextReassertTime)
 				{
 					char szMusic[128];
 					sprintf(szMusic, "MUSIC I %d measure", m_iLastIntensity);
@@ -292,30 +299,32 @@ void CMusicMgr::Update()
 			}
 			else
 			{
-#ifndef _FINAL
-				g_pLTServer->CPrint("Choosing Mood \"%s\"", s_aszMoods[iMood]);
-#endif
+				// TEMP DEBUG - was #ifndef _FINAL, made unconditional since
+				// _FINAL is tied to the Release config in this project and
+				// this is the single most useful line: fires only when the
+				// SYSTEM's actually-selected mood changes (not per-object).
+				g_pLTServer->CPrint("[MusicDebug] Choosing Mood \"%s\"", s_aszMoods[iMood]);
 				char szMusic[128];
-				uint32 iLevel = GetRandom(0, m_acMoods[iMood]-1);
+				uint32 iLevel = GetRandom(0, m_acMoods[iMood] - 1);
 				m_iLastIntensity = m_aanMoods[iMood][iLevel];
 				sprintf(szMusic, "MUSIC I %d measure", m_iLastIntensity);
-//				g_pLTServer->CPrint(szMusic);
+				//				g_pLTServer->CPrint(szMusic);
 
 				HSTRING hMusic = g_pLTServer->CreateString(szMusic);
 				HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
 				g_pLTServer->WriteToMessageHString(hMessage, hMusic);
 				g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
 				FREE_HSTRING(hMusic);
-/*
-				if ( m_eLastMood == eMoodInvalid )
-				{
-					HSTRING hMusic = g_pLTServer->CreateString("play play");
-					HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
-					g_pLTServer->WriteToMessageHString(hMessage, hMusic);
-					g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
-					FREE_HSTRING(hMusic);
-				}
-*/
+				/*
+								if ( m_eLastMood == eMoodInvalid )
+								{
+									HSTRING hMusic = g_pLTServer->CreateString("play play");
+									HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
+									g_pLTServer->WriteToMessageHString(hMessage, hMusic);
+									g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
+									FREE_HSTRING(hMusic);
+								}
+				*/
 				m_eLastMood = (Mood)iMood;
 				m_fNextReassertTime = g_pLTServer->GetTime() + s_fReassertInterval;
 				bChoseMood = LTTRUE;
@@ -324,7 +333,7 @@ void CMusicMgr::Update()
 
 		m_afMoods[iMood] = Max<LTFLOAT>(m_afMoods[iMood] - fDelta, 0.0f);
 
-//		g_pLTServer->CPrint("%s Mood = %f", s_aszMoods[iMood], m_afMoods[iMood]);
+		//		g_pLTServer->CPrint("%s Mood = %f", s_aszMoods[iMood], m_afMoods[iMood]);
 	}
 }
 
@@ -339,17 +348,17 @@ void CMusicMgr::DoMood(Mood eMood)
 
 void CMusicMgr::DoEvent(Event eEvent)
 {
-	if ( !m_bEnabled ) return;
-	if ( g_pGameServerShell->GetGameType() != SINGLE ) return;
+	if (!m_bEnabled) return;
+	if (g_pGameServerShell->GetGameType() != SINGLE) return;
 
-	if ( m_bLockedEvent ) return;
+	if (m_bLockedEvent) return;
 
-	if ( m_acEvents[eEvent] != 0 && (m_afEventChances[eEvent] > GetRandom(0.0, 1.0f)) )
+	if (m_acEvents[eEvent] != 0 && (m_afEventChances[eEvent] > GetRandom(0.0, 1.0f)))
 	{
 		char szMusic[128];
-		uint32 iEvent = GetRandom(0, m_acEvents[eEvent]-1);
+		uint32 iEvent = GetRandom(0, m_acEvents[eEvent] - 1);
 		sprintf(szMusic, "MUSIC PM %s %s Beat", m_szTheme, m_aaszEvents[eEvent][iEvent]);
-//		g_pLTServer->CPrint(szMusic);
+		//		g_pLTServer->CPrint(szMusic);
 
 		HSTRING hMusic = g_pLTServer->CreateString(szMusic);
 		HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(NULL, MID_MUSIC);
