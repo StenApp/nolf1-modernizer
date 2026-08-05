@@ -300,10 +300,14 @@ void CMusicMgr::Update()
 			else
 			{
 				// TEMP DEBUG - was #ifndef _FINAL, made unconditional since
-				// _FINAL is tied to the Release config in this project and
-				// this is the single most useful line: fires only when the
-				// SYSTEM's actually-selected mood changes (not per-object).
-				g_pLTServer->CPrint("[MusicDebug] Choosing Mood \"%s\"", s_aszMoods[iMood]);
+				// _FINAL is tied to the Release config in this project.
+				// Now also shows the raw m_afMoods[] values at the moment
+				// of selection, to see whether e.g. Aggressive/Investigate
+				// had already decayed to 0.0 or simply weren't being fed.
+				g_pLTServer->CPrint("[MusicDebug] Choosing Mood \"%s\" | None=%.2f Routine=%.2f Investigate=%.2f Aggressive=%.2f",
+					s_aszMoods[iMood],
+					m_afMoods[eMoodNone], m_afMoods[eMoodRoutine],
+					m_afMoods[eMoodInvestigate], m_afMoods[eMoodAggressive]);
 				char szMusic[128];
 				uint32 iLevel = GetRandom(0, m_acMoods[iMood] - 1);
 				m_iLastIntensity = m_aanMoods[iMood][iLevel];
