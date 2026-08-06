@@ -116,6 +116,8 @@ void CIntelItemMgr::AddItem(uint8 nType, uint32 nID)
 	int nMissionNum = g_pGameClientShell->GetCurrentMission();
 	int nIndex = 0;
 	CPoint item((int)nType,(int)nID);
+	
+	//DEBUGING Intelligence items
 	g_pLTClient->CPrint("AddItem: Type=%d, ID=%d", nType, nID);
 
 	LTBOOL bFound = LTFALSE;
