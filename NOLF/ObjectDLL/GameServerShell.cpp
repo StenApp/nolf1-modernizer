@@ -3302,8 +3302,9 @@ void CGameServerShell::PauseGame(LTBOOL bPause)
 	// so it's visible in Release builds too, since _FINAL is tied to the
 	// Release config in this project (Debug has no _FINAL but has the
 	// debug-heap 0xCD noise instead).
-	//g_pLTServer->CPrint("[MusicDebug] PauseGame(%s) -> SS_PAUSED=%s", bPause ? "TRUE" : "FALSE",
-	//	(g_pLTServer->GetServerFlags() & SS_PAUSED) ? "SET" : "CLEAR");
+	g_pLTServer->CPrint("[MusicDebug] PauseGame(%s) -> SS_PAUSED=%s",
+		bPause ? "TRUE" : "FALSE",
+		(g_pLTServer->GetServerFlags() & SS_PAUSED) ? "SET" : "CLEAR");
 }
 
 // ----------------------------------------------------------------------- //

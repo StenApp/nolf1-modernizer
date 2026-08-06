@@ -122,7 +122,8 @@ void CMusicMgr::Init(const char* szMusicControlFile)
 		// levels were actually found per mood for this level's theme
 		// ("m_szTheme") in Music.txt - if e.g. Aggressive shows 0, that
 		// mood can never be selected here regardless of what DoMood() does.
-		//g_pLTServer->CPrint("[MusicDebug] Init theme=\"%s\" mood=\"%s\" levelsFound=%d", m_szTheme, s_aszMoods[iMood], m_acMoods[iMood]);
+		g_pLTServer->CPrint("[MusicDebug] Init theme=\"%s\" mood=\"%s\" levelsFound=%d",
+			m_szTheme, s_aszMoods[iMood], m_acMoods[iMood]);
 	}
 
 	for (uint32 iEvent = 0; iEvent < kNumEvents; ++iEvent)
@@ -234,7 +235,7 @@ void CMusicMgr::Update()
 	{
 		// TEMP DEBUG - remove once verified. Unconditional, see note in
 		// GameServerShell.cpp::PauseGame().
-		//g_pLTServer->CPrint("[MusicDebug] Update() skipped - IsPaused() == true");
+		g_pLTServer->CPrint("[MusicDebug] Update() skipped - IsPaused() == true");
 		return;
 	}
 
@@ -298,13 +299,15 @@ void CMusicMgr::Update()
 			}
 			else
 			{
-#ifndef _FINAL
-
+				// TEMP DEBUG - was #ifndef _FINAL, made unconditional since
+				// _FINAL is tied to the Release config in this project.
+				// Now also shows the raw m_afMoods[] values at the moment
+				// of selection, to see whether e.g. Aggressive/Investigate
+				// had already decayed to 0.0 or simply weren't being fed.
 				g_pLTServer->CPrint("[MusicDebug] Choosing Mood \"%s\" | None=%.2f Routine=%.2f Investigate=%.2f Aggressive=%.2f",
 					s_aszMoods[iMood],
 					m_afMoods[eMoodNone], m_afMoods[eMoodRoutine],
 					m_afMoods[eMoodInvestigate], m_afMoods[eMoodAggressive]);
-#endif
 				char szMusic[128];
 				uint32 iLevel = GetRandom(0, m_acMoods[iMood] - 1);
 				m_iLastIntensity = m_aanMoods[iMood][iLevel];
