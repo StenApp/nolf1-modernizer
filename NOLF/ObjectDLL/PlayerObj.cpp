@@ -915,7 +915,10 @@ LTBOOL CPlayerObj::HandleMissionFailedMessage(char* pMsg)
 {
     if (!pMsg || !pMsg[0]) return LTFALSE;
 
-	// Tell the client to draw the mission failed screen
+	// Send the failure text to the client first (guaranteed delivery),
+	// before removing the player below - avoids a race with the client's
+	// own real-death path (GameClientShell::Update(), IsPlayerDead())
+	// overwriting this text with "You were killed".
 
 	char* pArg = strtok(pMsg, " ");
     if (!pArg || !pArg[0]) return LTFALSE;
@@ -928,6 +931,16 @@ LTBOOL CPlayerObj::HandleMissionFailedMessage(char* pMsg)
     g_pLTServer->WriteToMessageByte(hMessage, 0);
     g_pLTServer->WriteToMessageFloat(hMessage, (LTFLOAT)dwTextId);
     g_pLTServer->EndMessage2(hMessage, MESSAGE_GUARANTEED | MESSAGE_NAGGLE);
+
+	// Server keeps running after a scripted mission failure, so remove
+	// the player from the world (same as SetSpectatorMode() elsewhere)
+	// to stop the AI from landing further hits while the failure/summary
+	// screen is up.
+
+	if (m_eState == PS_ALIVE)
+	{
+		SetSpectatorMode(LTTRUE);
+	}
 
     return LTTRUE;
 }
