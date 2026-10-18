@@ -1030,7 +1030,8 @@ Rank5			= "S 1"
 Rank6			= "Ar 1"
 Level0			= "Worlds\m07s01"
 Level1			= "Worlds\m07s02"
-Level2			= "Worlds\m07s03"
+Level2			= "Worlds\m07s03a"
+Level3			= "Worlds\m07s03b"
 
 [Mission13]
 //	Further Investigation Required

@@ -659,8 +659,7 @@ Name			= "Style8"
 Name			= "Dancin"
 
 [Style18]
-
-Name            = "Thief"
+Name			= "Thief"
 
 /* 
 ** Skeleton [node group] Attributes
