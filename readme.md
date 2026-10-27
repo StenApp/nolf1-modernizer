@@ -1,4 +1,4 @@
-# No One Lives Forever Modernizer
+# No One Lives Forever Modernizer - Thief V1.1
 
 
 This repo uses the Modernizer 1.006 patch 4 code to implement the PS2 thiefmissions
@@ -9,6 +9,7 @@ This repo uses the Modernizer 1.006 patch 4 code to implement the PS2 thiefmissi
  - Added Pen dart (PS2 exclusive)
  - Added "Nine years ago.." loading screen
  - Added thief cate model to levels and in the menu (during the night)
+ - Added thief cate in multiplayer
  - Made thief mission pickups appear in intel gallery
  - Added PS2 music to the Jukebox
  - Decide whether to play PS2 music during all pc levels
