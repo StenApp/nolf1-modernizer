@@ -88,6 +88,7 @@ class CPlayerObj : public CCharacter
         void Respawn(uint8 nServerLoadGameFlags=LOAD_NEW_LEVEL);
         void SetSpectatorMode(LTBOOL bOn);
 		void ToggleRunLock();
+		void ToggleCrouchLock();
 		void ToggleGodMode();
 
 		void FullAmmoCheat();
@@ -107,6 +108,7 @@ class CPlayerObj : public CCharacter
 
         void ChangeWeapon(uint8 nCommandId, LTBOOL bAuto=LTFALSE, int32 nAmmoId=-1);
         void SetRunLock(LTBOOL bRunLock)     { m_bRunLock = bRunLock; }
+		void SetCrouchLock(LTBOOL bCrouchLock)     { m_bCrouchLock = bCrouchLock; }
 		void ChangeState(PlayerState eNewState);
 		PlayerState GetState() const { return m_eState; }
 
@@ -312,6 +314,7 @@ class CPlayerObj : public CCharacter
 		// Info about cheats...
 
         LTBOOL       m_bRunLock;
+		LTBOOL       m_bCrouchLock;
         LTBOOL       m_bTweakingMovement;
         LTBOOL       m_bGodMode;
 

@@ -52,6 +52,7 @@ public:
     LTBOOL       RunLock()                   { return GetBoolVar("RunLock"); }
 
     void        SetRunLock (LTBOOL bRunLock) { SetBoolVar("RunLock",bRunLock); }
+	void        SetCrouchLock (LTBOOL bCrouchLock) { SetBoolVar("CrouchLock",bCrouchLock); }
 
 	// sound access functions
 

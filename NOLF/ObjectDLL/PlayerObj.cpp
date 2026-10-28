@@ -188,6 +188,7 @@ CPlayerObj::CPlayerObj() : CCharacter()
 	m_eState				= PS_DEAD;
     m_bGodMode              = LTFALSE;
     m_bRunLock              = LTFALSE;
+	m_bCrouchLock           = LTFALSE;
     m_bAllowInput           = LTTRUE;
     m_b3rdPersonView        = LTFALSE;
 	m_eGameType				= SINGLE;
@@ -1752,6 +1753,31 @@ void CPlayerObj::ToggleRunLock()
     HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(m_hClient, MID_COMMAND_TOGGLE);
     g_pLTServer->WriteToMessageByte(hMessage, COMMAND_ID_RUNLOCK);
     g_pLTServer->WriteToMessageByte(hMessage, m_bRunLock);
+    g_pLTServer->EndMessage(hMessage);
+}
+
+// ----------------------------------------------------------------------- //
+//
+//	ROUTINE:	CPlayerObj::ToggleCrouchLock
+//
+//	PURPOSE:	Turn on/off crouch lock
+//
+// ----------------------------------------------------------------------- //
+
+void CPlayerObj::ToggleCrouchLock()
+{
+	if (!m_hClient) return;
+
+	// Toggle run lock...
+
+	m_bCrouchLock = !m_bCrouchLock;
+
+
+	// Tell client about the change...
+
+    HMESSAGEWRITE hMessage = g_pLTServer->StartMessage(m_hClient, MID_COMMAND_TOGGLE);
+    g_pLTServer->WriteToMessageByte(hMessage, COMMAND_ID_CROUCHLOCK);
+    g_pLTServer->WriteToMessageByte(hMessage, m_bCrouchLock);
     g_pLTServer->EndMessage(hMessage);
 }
 
