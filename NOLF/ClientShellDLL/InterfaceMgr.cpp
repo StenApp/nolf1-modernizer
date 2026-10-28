@@ -5367,12 +5367,12 @@ HLTSOUND CInterfaceMgr::UpdateInterfaceSound()
 
 void CInterfaceMgr::NextMovie()
 {
-	// I feel slightly bad for disabling all these movies by default, 
+	/* // I feel slightly bad for disabling all these movies by default, 
 	// but the video mgr must be using the window handle directly, which conflicts with the hacky way I've shoved in SDL2.
 	// Future folks who have engine access can probably clean this up.
 	SwitchToFolder(GetMainFolder());
-	return;
-	/*
+	return; */
+	
 	ILTVideoMgr* pVideoMgr = g_pLTClient->VideoMgr();
 	if (!pVideoMgr) return;
 
@@ -5399,7 +5399,7 @@ void CInterfaceMgr::NextMovie()
 	}
 
  	m_nCurMovie++;
-	*/
+	
 }
 
 // --------------------------------------------------------------------------- //
