@@ -1440,6 +1440,7 @@ void CPlayerStats::DrawPlayerStats(HSURFACE hScreen, int nLeft, int nTop, int nR
 		{
 			if (g_pInterfaceMgr->GetSunglassMode() == SUN_NONE)
 				DrawScope(hScreen,nLeft,nTop,nRight,nBottom);
+			DrawScopeWidescreenBorders(hScreen); // DG: even when using sunglasses we want the widescreen borders around the scope
 		} break;
 
 	case OVM_SCUBA:
@@ -2870,27 +2871,6 @@ void CPlayerStats::DrawScope(HSURFACE hScreen, int nLeft, int nTop, int nRight, 
 	srect.bottom = 2;
 	srect.right = 2;
 
-	// Draw some filler for widescreen users
-	int xo = g_pInterfaceResMgr->GetXOffset();
-
-	// These use to be FillRect. Scaling a texture is way faster than whatever that was doing.
-	if (xo > 0)
-	{
-		rect.left = 0;
-		rect.right = xo;
-		rect.top = 0;
-		rect.bottom = g_pInterfaceResMgr->GetScreenHeight();
-
-		g_pOptimizedRenderer->FillRect(hScreen, &rect, LTNULL);
-
-		rect.right = g_pInterfaceResMgr->GetScreenWidth();
-		rect.left = g_pInterfaceResMgr->GetScreenWidth() - xo;
-		rect.top = 0;
-		rect.bottom = g_pInterfaceResMgr->GetScreenHeight();
-
-		g_pOptimizedRenderer->FillRect(hScreen, &rect, LTNULL);
-	}
-
 	switch (nType)
 	{
 	case 0:
@@ -3028,6 +3008,40 @@ void CPlayerStats::DrawScope(HSURFACE hScreen, int nLeft, int nTop, int nRight, 
 	}
 
 
+}
+
+// ----------------------------------------------------------------------- //
+//
+//	ROUTINE:	CPlayerStats::DrawScopeWidescreenBorders()
+//
+//	PURPOSE:	In widescreen resolutions, draw black bars left/right of the scope mask
+//              to get the proper "whole screen is black except for round scope area in center"
+//
+// ----------------------------------------------------------------------- //
+void CPlayerStats::DrawScopeWidescreenBorders(HSURFACE hScreen)
+{
+	// DG: added this
+	// Draw some filler for widescreen users
+	int xo = g_pInterfaceResMgr->GetXOffset();
+
+	// These use to be FillRect. Scaling a texture is way faster than whatever that was doing.
+	if (xo > 0)
+	{
+		LTRect rect;
+		rect.left = 0;
+		rect.right = xo;
+		rect.top = 0;
+		rect.bottom = g_pInterfaceResMgr->GetScreenHeight();
+
+		g_pOptimizedRenderer->FillRect(hScreen, &rect, LTNULL);
+
+		rect.right = g_pInterfaceResMgr->GetScreenWidth();
+		rect.left = g_pInterfaceResMgr->GetScreenWidth() - xo;
+		rect.top = 0;
+		rect.bottom = g_pInterfaceResMgr->GetScreenHeight();
+
+		g_pOptimizedRenderer->FillRect(hScreen, &rect, LTNULL);
+	}
 }
 
 // ----------------------------------------------------------------------- //
