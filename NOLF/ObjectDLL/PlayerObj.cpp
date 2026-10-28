@@ -1328,7 +1328,7 @@ void CPlayerObj::UpdateCommands()
 
         if (!m_bBodyOnLadder && !m_bSpectatorMode && !IsLiquid(m_eContainerCode))
         {
-            if (g_pLTServer->IsCommandOn(m_hClient, COMMAND_ID_DUCK) || m_bForceDuck)
+            if (g_pLTServer->IsCommandOn(m_hClient, COMMAND_ID_DUCK) || m_bForceDuck || m_bCrouchLock)
 		    {
 				m_Animator.SetMovement(CAnimatorPlayer::eCrouching);
 		    }
