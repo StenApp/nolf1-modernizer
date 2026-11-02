@@ -10,6 +10,7 @@ This repo uses the Modernizer 1.006 patch 4 code to implement the PS2 thiefmissi
  - Added "Nine years ago.." loading screen
  - Added thief cate model to levels and in the menu (during the night)
  - Added thief cate in multiplayer
+ - Added PS2 HD models
  - Made thief mission pickups appear in intel gallery
  - Added PS2 music to the Jukebox
  - Decide whether to play PS2 music during all pc levels
